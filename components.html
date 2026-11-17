@@ -727,7 +727,7 @@
         <p class="cc-desc">상품 상세에서 날짜, 시간, 수량을 고르는 패널.</p>
         <dl class="cc-notes">
           <div><dt>구성</dt><dd>옵션 행(48px), 수량, 픽패스 할인 띠, 최종금액과 장바구니 버튼</dd></div>
-          <div><dt>동작</dt><dd><ul><li><b>날짜</b><span>누르면 캘린더</span></li><li><b>시간</b><span>누르면 드롭다운</span></li><li><b>선택 완료</b><span>장바구니 버튼이 검정으로 활성</span></li></ul></dd></div>
+          <div><dt>동작</dt><dd><ul><li><b>날짜</b><span>누르면 <a href="#date-picker">DatePicker</a>가 뜸</span></li><li><b>시간</b><span>누르면 드롭다운</span></li><li><b>선택 완료</b><span>장바구니 버튼이 검정으로 활성</span></li></ul></dd></div>
           <div><dt>규칙</dt><dd>캘린더와 드롭다운은 누른 행 아래 9px에 행과 같은 폭으로 뜸. 아래 공간이 모자라면 행 위쪽. 열린 행은 밑줄이 진해짐</dd></div>
           <div><dt>크기</dt><dd><ul><li><b>PC</b><span>우측 360px</span></li><li><b>MO</b><span>BottomSheet 안에서 같은 행을 쓰고, 달력과 목록은 행 아래에 펼침</span></li></ul></dd></div>
         </dl>
@@ -771,13 +771,13 @@
             <button class="variant-btn" data-target="dp-variants" data-v="mo" aria-pressed="false">MO (펼침)</button>
           </div>
         </div>
-        <p class="cc-desc">옵션 패널에서 날짜를 누르면 뜨는 캘린더.</p>
+        <p class="cc-desc">날짜를 고르는 캘린더. 상품 상세와 픽패스 예약의 옵션 선택에 사용.</p>
         <dl class="cc-notes">
           <div><dt>상태</dt><dd><ul><li><b>지난 날</b><span>비활성</span></li><li><b>오늘</b><span>회색 원</span></li><li><b>선택한 날</b><span>검정 원</span></li></ul></dd></div>
-          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>누른 행 아래에 떠 있는 창</span></li><li><b>MO</b><span>옵션 시트 안에서 행 아래에 테두리 박스로 펼침</span></li></ul></dd></div>
+          <div><dt>사용처</dt><dd><ul><li><b>상품 상세 PC</b><span><a href="#option-panel">OptionPanel</a>에서 누른 행 아래에 떠 있는 창</span></li><li><b>상품 상세 MO</b><span>옵션 시트 안에서 행 아래에 테두리 박스로 펼침</span></li><li><b>픽패스 예약</b><span><a href="#option-box">OptionBox</a> 아래에 테두리 박스로 펼침</span></li></ul></dd></div>
         </dl>
         <div class="cc-detail-inner">
-          <details class="props-fold"><summary><h3>Specs</h3><span>7개</span></summary>
+          <details class="props-fold"><summary><h3>Specs</h3><span>8개</span></summary>
           <div class="spec-grid">
             <div class="spec-card"><b>Container</b><code>318x472px (달력 394 + 안내 78)<br>bg #FFFFFF<br>r 4px<br>달력 영역 p 12px<br>shadow 0 0 20px rgba(0,0,0,.12)</code></div>
             <div class="spec-card"><b>Header</b><code>H 40px<br>제목 16px SemiBold / 20px, 가운데</code></div>
@@ -786,6 +786,7 @@
             <div class="spec-card"><b>Day</b><code>40x40px, r 29px<br>14px Regular / 20px<br>지난 날 #C2C2C2<br>오늘 bg #F3F4F6<br>선택 가능 #000000<br>선택한 날 bg #000000, #FFFFFF<br>행 gap 10px, 6행 고정(H 290px)</code></div>
             <div class="spec-card"><b>Notice</b><code>달력 아래 전체 폭<br>bg #F9FAFB<br>p 12px<br>12px Regular / 18px #9E9E9E</code></div>
             <div class="spec-card"><b>MO (펼침)</b><code>332x475px<br>border 1px #757575, r 4px<br>그림자 없음<br>옵션 시트 안, 누른 행 바로 아래<br>빈 칸은 다음 달 날짜로 채움</code></div>
+            <div class="spec-card"><b>픽패스 예약 (펼침)</b><code>MO 332x467px, PC 768x459px<br>border 1px #757575, r 4px, 그림자 없음<br>달력 영역 p 12px: 헤더 H 32px(버튼 32px), 요일 40px, 날짜 290px<br>날짜 행 gap MO 10px, PC 12px<br>안내 bg #F9FAFB, p 12px, border-top 1px #EBEBEB</code></div>
           </div>
           </details>
         </div>
@@ -807,7 +808,7 @@
         </div>
         <p class="cc-desc">옵션 패널에서 행을 누르면 그 행 아래에 뜨는 선택 창.</p>
         <dl class="cc-notes">
-          <div><dt>종류</dt><dd><ul><li><b>인원</b><span>단계 버튼과 확인</span></li><li><b>시간</b><span>목록과 안내</span></li><li><b>이름</b><span>입력 칸과 취소·확인</span></li><li><b>날짜</b><span>DatePicker 사용</span></li></ul></dd></div>
+          <div><dt>종류</dt><dd><ul><li><b>인원</b><span>단계 버튼과 확인</span></li><li><b>시간</b><span>목록과 안내</span></li><li><b>이름</b><span>입력 칸과 취소·확인</span></li><li><b>날짜</b><span><a href="#date-picker">DatePicker</a> 사용</span></li></ul></dd></div>
           <div><dt>크기</dt><dd><ul><li><b>MO</b><span>떠 있는 창 대신 그림자 없는 테두리 박스(border 1px #757575)로 행 아래에 펼침</span></li></ul></dd></div>
         </dl>
         <div class="cc-detail-inner">
@@ -845,7 +846,7 @@
         </div>
         <p class="cc-desc">픽패스 예약에서 일정을 고르는 박스형 옵션.</p>
         <dl class="cc-notes">
-          <div><dt>동작</dt><dd><ul><li><b>날짜</b><span>박스 아래에 테두리 있는 달력이 펼쳐지고 화살표가 위로 바뀜</span></li><li><b>시간</b><span>박스 아래에 목록이 펼쳐짐</span></li></ul></dd></div>
+          <div><dt>동작</dt><dd><ul><li><b>날짜</b><span>박스 아래에 <a href="#date-picker">DatePicker</a>가 펼쳐지고 화살표가 위로 바뀜</span></li><li><b>시간</b><span>박스 아래에 목록이 펼쳐짐</span></li></ul></dd></div>
           <div><dt>크기</dt><dd><ul><li><b>PC</b><span>같은 구성에 폭만 768px</span></li></ul></dd></div>
         </dl>
         <div class="cc-detail-inner">
@@ -854,7 +855,7 @@
             <div class="spec-card"><b>Box</b><code>H 48px<br>bg #FFFFFF<br>border 1px #EBEBEB<br>r 4px<br>px 16px<br>박스 사이 8px</code></div>
             <div class="spec-card"><b>Label</b><code>14px Medium / 20px<br>#757575</code></div>
             <div class="spec-card"><b>Value</b><code>14px Regular / 20px<br>선택 전 #9E9E9E<br>선택 후 #212121<br>chevron 20px #9E9E9E, 펼치면 위 방향</code></div>
-            <div class="spec-card"><b>Calendar (펼침)</b><code>MO 332x467px<br>border 1px #757575, r 4px, 그림자 없음<br>박스와 위아래 8px<br>달력 영역 p 12px: 헤더 H 32px(버튼 32px), 요일 40px, 날짜 290px(행 gap 10px)<br>안내 bg #F9FAFB, p 12px, border-top 1px #EBEBEB</code></div>
+            <div class="spec-card"><b>Calendar (펼침)</b><code>박스와 위아래 8px<br>달력은 DatePicker의 픽패스 예약 형태</code></div>
             <div class="spec-card"><b>Time list (펼침)</b><code>박스 아래 8px<br>border 1px #757575, r 4px, 그림자 없음<br>항목 H 40px, px 12px<br>14px Regular / 20px #757575</code></div>
             <div class="spec-card"><b>일정 나중에 선택</b><code>H 48px, 배경 없음<br>border 1px #EBEBEB, r 4px, p 13px 15px<br>라디오 + 라벨 gap 8px<br>14px Medium / 20px #5C5C5C</code></div>
             <div class="spec-card"><b>꼭 읽어주세요</b><code>H 40px<br>border 1px dashed #E0E0E0<br>r 4px<br>아이콘 + 글자 gap 6px<br>14px Medium / 20px #5C5C5C<br>위 박스와 12px</code></div>
@@ -1621,6 +1622,19 @@
 const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
 const sections=[...document.querySelectorAll('.comp-section')];
 const overview=document.getElementById('comp-overview');
+// 모바일: 긴 칩 목록 대신 '전체 보기' + 컴포넌트 선택 상자
+const jump=document.createElement('select');jump.className='comp-jump';jump.setAttribute('aria-label','컴포넌트 선택');
+(function(){
+  const side=document.querySelector('.comp-sidebar');side.classList.add('has-jump');
+  jump.add(new Option('컴포넌트 선택',''));
+  let group=null;
+  [...side.children].forEach(el=>{
+    if(el.matches('.comp-sidebar-label')){group=document.createElement('optgroup');group.label=el.textContent;jump.appendChild(group)}
+    else if(el.matches('a')&&!el.matches('.comp-all')&&group)group.appendChild(new Option(el.textContent,el.getAttribute('href').slice(1)));
+  });
+  side.appendChild(jump);
+  jump.addEventListener('change',()=>{location.hash=jump.value});
+})();
 (function buildOverview(){
   const fits=[];overview.hidden=false;
   const groups=new Map();
@@ -1668,6 +1682,7 @@ function route(){
   overview.hidden=!!cur;
   sections.forEach(s=>{s.hidden=s!==cur});
   sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')===(cur?'#'+id:'#')));
+  jump.value=cur?id:'';
   window.scrollTo(0,0);
   if(cur)annotate(cur);
 }
