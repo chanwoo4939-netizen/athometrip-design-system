@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overview | athometrip Design System</title>
+<meta name="description" content="앳홈트립 디자인 시스템. 컬러, 타이포그래피, 토큰, 아이콘, 컴포넌트, 페이지 패턴을 한곳에서 확인합니다.">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+<style>
+.hero-card{padding:0;min-height:480px;display:flex}
+.hero{padding:80px 64px;align-self:center}
+.hero-logo{height:72px;margin-bottom:16px;filter:invert(1)}
+.idx-sec{padding-top:48px}
+.idx{display:flex;flex-direction:column;gap:8px}
+.idx-group{margin:0 0 16px;font-size:15px;font-weight:600;color:var(--sub)}
+.idx+.idx-group{margin-top:64px}
+.idx a{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:32px;align-items:center;min-height:120px;padding:16px 16px 16px 32px;border-radius:12px;background:var(--surface);transition:background-color .2s}
+.idx a:hover{background:var(--warm-light)}
+.idx h3{font-size:28px;font-weight:700;letter-spacing:-.02em}
+.idx p{font-size:14px;color:var(--muted);line-height:1.6}
+.idx-spec{display:flex;justify-content:flex-end;align-items:center;gap:8px;color:var(--ink)}
+.idx-spec i{width:32px;height:32px;border-radius:var(--r);border:1px solid var(--border)}
+.c1{background:var(--ink)}.c2{background:var(--warm)}.c3{background:var(--warm-light)}.c4{background:var(--coral)}.c5{background:var(--teal)}.c6{background:var(--blue)}
+.idx-type{font-size:28px;font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+.idx-spec .r{width:40px;height:40px;background:var(--warm-light)}
+.idx-spec .r0{border-radius:0}.idx-spec .r6{border-radius:6px}.idx-spec .r22{border-radius:22px}
+.idx-spec svg{width:24px;height:24px;margin-left:8px}
+.idx-spec .btn{pointer-events:none}
+.idx-g{display:block;width:160px;height:88px;border-radius:6px}
+@media(max-width:768px){
+  .hero-card{min-height:0}
+  .hero{padding:48px 32px}
+  .idx a{grid-template-columns:minmax(0,1fr);gap:8px;padding:24px 20px}
+  .idx h3{font-size:24px}
+  .idx-spec{justify-content:flex-start;margin-top:8px}
+  .idx-spec svg{margin-left:0;margin-right:8px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<div class="w">
+<div class="hero-card" data-r>
+<div class="hero">
+  <img src="logo.svg" alt="athometrip" class="hero-logo">
+  <h1>Simply Good <em>Design</em></h1>
+  <p class="hero-sub">앳홈트립의 디자인 언어.<br>컴포넌트, 인터랙션, 토큰을 하나의 기준으로 정의합니다.</p>
+</div>
+</div>
+</div>
+
+<section class="idx-sec"><div class="w">
+  <h2 class="idx-group">Foundations</h2>
+  <div class="idx">
+    <a href="color.html">
+      <h3>Color</h3>
+      <p>12 Primitive 팔레트와 역할 기반 Semantic 토큰.<br>Gray, Warm, Cool + Brand 컬러.</p>
+      <div class="idx-spec" aria-hidden="true"><img class="idx-g" src="graphics/idx-color.svg" width="160" height="88" alt=""></div>
+    </a>
+    <a href="type.html">
+      <h3>Typography</h3>
+      <p>Pretendard. 크기와 행간 토큰,<br>역할별 스타일과 사용 규칙.</p>
+      <div class="idx-spec" aria-hidden="true"><img class="idx-g" src="graphics/idx-typography.svg" width="160" height="88" alt=""></div>
+    </a>
+    <a href="tokens.html">
+      <h3>Spacing &amp; Tokens</h3>
+      <p>간격 9종, Radius 7종, Shadow 5종.</p>
+      <div class="idx-spec" aria-hidden="true"><img class="idx-g" src="graphics/idx-tokens.svg" width="160" height="88" alt=""></div>
+    </a>
+    <a href="icons.html">
+      <h3>Icons</h3>
+      <p>43개 커스텀 아이콘. 5 카테고리.<br>직각 모서리 라인 스타일.</p>
+      <div class="idx-spec" aria-hidden="true"><img class="idx-g" src="graphics/idx-icons.svg" width="160" height="88" alt=""></div>
+    </a>
+  </div>
+  <h2 class="idx-group">Components &amp; Patterns</h2>
+  <div class="idx">
+    <a href="components.html">
+      <h3>Components</h3>
+      <p>40개 컴포넌트. Navigation, Action,<br>Input, Display, Feedback, Layout.</p>
+      <div class="idx-spec" aria-hidden="true"><img class="idx-g" src="graphics/idx-components.svg" width="160" height="88" alt=""></div>
+    </a>
+    <a href="patterns.html">
+      <h3>Page Patterns</h3>
+      <p>페이지 타입별 섹션 구조와<br>사용 컴포넌트 맵.</p>
+      <div class="idx-spec" aria-hidden="true"><img class="idx-g" src="graphics/idx-patterns.svg" width="160" height="88" alt=""></div>
+    </a>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+</body>
+</html>

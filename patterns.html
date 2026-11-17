@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Patterns | athometrip Design System</title>
+<meta name="description" content="앳홈트립 주요 페이지의 섹션 구조와 사용 컴포넌트.">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+<style>
+.pt{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start;padding:48px 0;border-top:1px solid var(--border)}
+.pt figure img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:var(--r)}
+.pt .pt-tall img{width:auto;max-width:100%;max-height:600px;margin:0 auto;border:0}
+.pt .pt-tall{padding:24px 0 16px;border-radius:var(--r);background:var(--warm-light);text-align:center}
+.pt figcaption{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.6}
+.pt h2{font-size:28px;font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
+.flow{list-style:none;counter-reset:step;border-top:1px solid var(--line)}
+.flow li{counter-increment:step;display:grid;grid-template-columns:32px minmax(0,1fr);padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.flow li::before{content:counter(step);color:var(--muted);font-variant-numeric:tabular-nums}
+.pt h3{margin-top:24px;margin-bottom:8px;font-size:13px;font-weight:600;color:var(--sub)}
+.uses{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.uses a,.uses span{display:inline-flex;align-items:center;height:32px;padding:0 12px;border:1px solid var(--border);border-radius:22px;font-size:13px;color:var(--sub)}
+.uses a{transition:border-color .15s,color .15s}
+.uses a:hover{border-color:var(--ink);color:var(--ink)}
+.uses span{border-style:dashed}
+@media(max-width:768px){.pt{grid-template-columns:minmax(0,1fr);gap:24px;padding:32px 0}}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html" class="on">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<!-- PATTERNS -->
+<section><div class="w">
+  <div class="sh" data-r><h1>Page Patterns</h1><p>페이지 타입별 섹션 구조와 사용 컴포넌트.</p></div>
+  <div class="pts">
+    <article class="pt">
+      <figure><img src="patterns/region-home.jpg" width="1280" height="577" decoding="async" alt="지역 홈(하와이) 화면 캡처"><figcaption>지역 홈(하와이) 첫 화면.</figcaption></figure>
+      <div>
+        <h2>메인 랜딩</h2>
+        <ol class="flow"><li>GNB</li><li>통계 배너</li><li>지역 선택 카드</li><li>픽패스 프로모</li><li>파트너십</li><li>Why athometrip</li><li>로컬 쿠폰</li><li>후기</li><li>푸터</li></ol>
+        <h3>사용 컴포넌트</h3>
+        <ul class="uses"><li><a href="components.html#header">Header</a></li><li><span>CityCard</span></li><li><a href="components.html#product-card">ProductCard</a></li><li><a href="components.html#review-card">ReviewCard</a></li></ul>
+      </div>
+    </article>
+    <article class="pt">
+      <figure><img src="patterns/product-detail.jpg" width="1280" height="577" loading="lazy" decoding="async" alt="상품 상세 화면 캡처"><figcaption>상품 상세 첫 화면.</figcaption></figure>
+      <div>
+        <h2>상품 상세</h2>
+        <ol class="flow"><li>GNB</li><li>이미지 갤러리</li><li>안내사항</li><li>ContentTab (5종)</li><li>상품 설명</li><li>우측 OptionPanel (PC)</li></ol>
+        <h3>사용 컴포넌트</h3>
+        <ul class="uses"><li><a href="components.html#header">Header</a></li><li><a href="components.html#content-tab">ContentTab</a></li><li><a href="components.html#option-panel">OptionPanel</a></li><li><a href="components.html#badge">Badge</a></li></ul>
+      </div>
+    </article>
+    <article class="pt">
+      <figure><img src="patterns/pickpass-my.jpg" width="1280" height="577" loading="lazy" decoding="async" alt="나의 픽패스 화면 캡처"><figcaption>나의 픽패스 첫 화면.</figcaption></figure>
+      <div>
+        <h2>나의 픽패스</h2>
+        <ol class="flow"><li>X 헤더</li><li>LocationTab</li><li>FilterChip</li><li>정렬</li><li>PickpassCard 리스트</li><li>BottomCTA</li></ol>
+        <h3>사용 컴포넌트</h3>
+        <ul class="uses"><li><a href="components.html#location-tab">LocationTab</a></li><li><a href="components.html#filter-chip">FilterChip</a></li><li><a href="components.html#pickpass-card">PickpassCard</a></li><li><a href="components.html#status-label">StatusLabel</a></li></ul>
+      </div>
+    </article>
+    <article class="pt">
+      <figure><img src="patterns/cart.jpg" width="1280" height="577" loading="lazy" decoding="async" alt="장바구니 화면 캡처"><figcaption>장바구니 첫 화면(빈 상태).</figcaption></figure>
+      <div>
+        <h2>장바구니</h2>
+        <ol class="flow"><li>GNB</li><li>탭 (단품/픽패스)</li><li>지역 필터</li><li>상품 리스트</li><li>결제 금액 패널</li></ol>
+        <h3>사용 컴포넌트</h3>
+        <ul class="uses"><li><a href="components.html#content-tab">ContentTab</a></li><li><a href="components.html#location-tab">LocationTab</a></li><li><a href="components.html#button">Button</a></li></ul>
+      </div>
+    </article>
+    <article class="pt">
+      <figure class="pt-tall"><img src="patterns/coupon-select.png" width="612" height="1031" loading="lazy" decoding="async" alt="장바구니 쿠폰 사용 창"><figcaption>결제 화면의 쿠폰 사용 창(PC).</figcaption></figure>
+      <div>
+        <h2>쿠폰 선택</h2>
+        <ol class="flow"><li>제목과 닫기</li><li>금액 요약 (쿠폰 할인 반영)</li><li>쿠폰 등록</li><li>적용 가능 쿠폰 목록</li><li>쿠폰 사용 안 함</li><li>적용 불가 쿠폰 목록</li><li>쿠폰 적용하기 버튼</li></ol>
+        <h3>사용 컴포넌트</h3>
+        <ul class="uses"><li><a href="components.html#dialog">Dialog</a></li><li><a href="components.html#price-summary">PriceSummary</a></li><li><a href="components.html#text-field">TextField</a></li><li><a href="components.html#coupon-card">CouponCard</a></li><li><a href="components.html#radio">Radio</a></li><li><a href="components.html#button">Button</a></li></ul>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+
+</body>
+</html>

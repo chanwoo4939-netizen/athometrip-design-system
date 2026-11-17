@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ic_check">
+<g clip-path="url(#clip0_0_6)">
+<rect width="16" height="16" rx="8" fill="black"/>
+<g id="Vector">
+</g>
+<g id="ic_check_2" clip-path="url(#clip1_0_6)">
+<g id="Vector_2">
+</g>
+<path id="Vector_3" d="M4.45569 8.01226L6.81041 10.367L11.1233 6.05412" stroke-width="1.5" stroke="white"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_6">
+<rect width="16" height="16" rx="8" fill="white"/>
+</clipPath>
+<clipPath id="clip1_0_6">
+<rect width="12" height="12" fill="white" transform="translate(2 2)"/>
+</clipPath>
+</defs>
+</svg>

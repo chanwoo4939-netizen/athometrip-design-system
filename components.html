@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Components | athometrip Design System</title>
+<meta name="description" content="앳홈트립 컴포넌트 40종의 미리보기, Props, 스펙.">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><i class="nav-sep"></i><a href="components.html" class="on">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<!-- COMPONENTS -->
+<section><div class="w">
+  <div class="sh" data-r><h1>Components</h1><p>Navigation, Action, Input, Display, Feedback, Layout.</p></div>
+
+  <div class="comp-layout">
+    <!-- Sidebar Nav -->
+    <aside class="comp-sidebar" data-r>
+      <a href="#" class="comp-all">전체 보기</a>
+      <div class="comp-sidebar-label">Navigation</div>
+      <a href="#header">Header</a>
+      <a href="#location-tab">LocationTab</a>
+      <a href="#content-tab">ContentTab</a>
+      <a href="#segmented-tab">SegmentedTab</a>
+      <a href="#breadcrumb">Breadcrumb</a>
+      <div class="comp-sidebar-label">Action</div>
+      <a href="#button">Button</a>
+      <a href="#bottom-cta">BottomCTA</a>
+      <a href="#icon-button">IconButton</a>
+      <div class="comp-sidebar-label">Input</div>
+      <a href="#filter-chip">FilterChip</a>
+      <a href="#search-field">SearchField</a>
+      <a href="#text-field">TextField</a>
+      <a href="#select">Select</a>
+      <a href="#info-entry-button">InfoEntryButton</a>
+      <a href="#radio">Radio</a>
+      <a href="#consent-check">ConsentCheck</a>
+      <a href="#people-counter">PeopleCounter</a>
+      <a href="#keyword-chip">KeywordChip</a>
+      <a href="#option-panel">OptionPanel</a>
+      <a href="#date-picker">DatePicker</a>
+      <a href="#option-popover">OptionPopover</a>
+      <a href="#option-box">OptionBox</a>
+      <div class="comp-sidebar-label">Display</div>
+      <a href="#badge">Badge</a>
+      <a href="#status-label">StatusLabel</a>
+      <a href="#product-card">ProductCard</a>
+      <a href="#pickpass-card">PickpassCard</a>
+      <a href="#coupon-card">CouponCard</a>
+      <a href="#review-card">ReviewCard</a>
+      <a href="#booking-card">BookingCard</a>
+      <a href="#cart-item">CartItem</a>
+      <a href="#unavailable-item">UnavailableItem</a>
+      <a href="#price-summary">PriceSummary</a>
+      <a href="#accordion">Accordion</a>
+      <a href="#rating-summary">RatingSummary</a>
+      <div class="comp-sidebar-label">Feedback</div>
+      <a href="#toast">Toast</a>
+      <a href="#dialog">Dialog</a>
+      <a href="#callout">Callout</a>
+      <a href="#notice-bar">NoticeBar</a>
+      <a href="#empty-state">EmptyState</a>
+      <a href="#bottom-sheet">BottomSheet</a>
+      <div class="comp-sidebar-label">Layout</div>
+      <a href="#divider">Divider</a>
+    </aside>
+
+    <!-- Component List -->
+    <div class="comp-list">
+      <div id="comp-overview" hidden></div>
+
+      <!-- ==================== HEADER ==================== -->
+      <div class="comp-section" id="header" data-sum="화면 상단의 로고, 페이지 타이틀, 메뉴 영역.">
+        <div class="comp-section-head"><h2>Header</h2><span class="cc-cat">Navigation</span></div>
+        <div class="cc-preview cc-stack">
+          <div class="hd-wrap"><small>MO</small>
+            <div class="hd hd-mo"><div class="hd-l"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3.3728 5.09831H20.6271" stroke="black" stroke-width="1.5"></path><path d="M3.3728 12H20.6271" stroke="black" stroke-width="1.5"></path><path d="M3.3728 18.9017H20.6271" stroke="black" stroke-width="1.5"></path></svg><svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M3.15227 9.67422L12.1482 2.87578L20.8477 9.67422V21.1242H3.15227V9.67422Z" stroke="black" stroke-width="1.5"></path><path d="M8.6821 12.2765H15.3179V21.1242H8.6821V12.2765Z" stroke="black" stroke-width="1.5"></path></svg><i></i><span>뉴욕 홈</span></div><span class="hd-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18.5101 7.12687L18.9603 20.7128H5.04041L5.4906 7.12687H18.5101Z" stroke="black" stroke-width="1.5"></path><path d="M9.25647 11.0997V3.24357H14.7434V11.0997" stroke="black" stroke-width="1.5"></path></svg></span></div>
+          </div>
+          <div class="hd-wrap hd-wrap-pc"><small>PC</small>
+            <div class="hd hd-pc"><div class="hd-l"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4.49719 6.79775H27.5029M4.49719 16H27.5029M4.49719 25.2022H27.5029" stroke="black" stroke-width="1.5"></path></svg><div class="hd-logo"><img src="samples/logo.png" width="481" height="82" alt="athometrip"><i></i><span>가이드투어</span></div></div><div class="hd-r"><div class="hd-nav"><span>홈</span><span class="on">뉴욕</span><span>미서부</span><span>칸쿤</span><span>하와이</span></div><div class="hd-ics"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M27.4768 19.0571V27.519H4.52368V19.0571H27.4768ZM16.009 5.39207C18.6027 5.39207 20.7052 7.49459 20.7053 10.0884C20.7053 12.6822 18.6029 14.7846 16.009 14.7846C13.4154 14.7844 11.3127 12.682 11.3127 10.0884C11.3129 7.57571 13.2864 5.52373 15.7678 5.39793L16.009 5.39207Z" stroke="black" stroke-width="1.5"></path></svg><svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M24.9211 9.25249L25.5383 27.8677H6.46211L7.07832 9.25249H24.9211Z" stroke="black" stroke-width="1.5"></path><path d="M12.342 14.7996V4.32476H19.658V14.7996" stroke="black" stroke-width="1.5"></path></svg></div></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".hd-l" data-side="left">햄버거, 로고, 페이지 타이틀</li><li data-for=".hd-ic" data-side="right">우측 아이콘</li></ol>
+        </div>
+        <p class="cc-desc">화면 상단의 로고, 페이지 타이틀, 메뉴 영역.</p>
+        <dl class="cc-notes">
+          <div><dt>크기</dt><dd><ul><li><b>MO</b><span>H 56px, 로고 자리에 홈 아이콘</span></li><li><b>PC</b><span>H 96px</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>4개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>leftIcon</td>
+                <td><span class="type"><code>"hamburger"</code> | <code>"x-close"</code> | <code>"back"</code></span></td>
+                <td><code>"hamburger"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>hamburger:</b> 메인/탐색 진입 화면</li>
+                    <li><b>x-close:</b> 모달·바텀시트·검색 오버레이</li>
+                    <li><b>back:</b> 상세·하위 depth 화면</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>title</td>
+                <td><span class="type"><code>string</code> | <code>undefined</code></span></td>
+                <td><code>undefined</code></td>
+                <td>로고 우측에 표시되는 페이지 타이틀. 미지정 시 로고만 표시.</td>
+              </tr>
+              <tr>
+                <td>showLogo</td>
+                <td><span class="type"><code>boolean</code></span></td>
+                <td><code>true</code></td>
+                <td>false 시 로고 숨김. back 아이콘 + title 조합에 사용.</td>
+              </tr>
+              <tr>
+                <td>rightIcons</td>
+                <td><span class="type"><code>("home" | "cart" | "user" | "search")[]</code></span></td>
+                <td><code>["cart"]</code></td>
+                <td>우측 아이콘 배열. 순서대로 배치.</td>
+              </tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>7개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>MO</b><code>H 56px<br>bg #FAF9F4<br>px 16px<br>아이콘 24px, gap 12px</code></div>
+            <div class="spec-card"><b>PC</b><code>H 96px (py 32px)<br>bg #FAF9F4<br>컨테이너 1200px<br>하단 보더 없음</code></div>
+            <div class="spec-card"><b>Left MO</b><code>햄버거 24px + 홈 아이콘 24px<br>구분선 2x16px #E2DCD0<br>타이틀 14px Regular</code></div>
+            <div class="spec-card"><b>Left PC</b><code>햄버거 32px, gap 24px<br>로고 111x19px<br>구분선 1x20px #E2DDD1<br>타이틀 18px Regular</code></div>
+            <div class="spec-card"><b>Right</b><code>MO: 장바구니 24px<br>PC: 지역 nav + 아이콘 32px(gap 24px), gap 40px</code></div>
+            <div class="spec-card"><b>Nav Active</b><code>16px Medium #000000</code></div>
+            <div class="spec-card"><b>Nav Inactive</b><code>16px Regular #C2C2C2<br>gap 40px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== LOCATION TAB ==================== -->
+      <div class="comp-section" id="location-tab">
+        <div class="comp-section-head"><h2>LocationTab</h2><span class="cc-cat">Navigation</span></div>
+        <div class="cc-preview">
+          <div class="tabs tabs-eq"><span class="on">뉴욕</span><span>미서부</span><span>칸쿤</span><span>하와이</span></div>
+        </div>
+        <p class="cc-desc">나의 픽패스 상단의 지역 탭. 균등 분할, 활성 탭 하단 2px 라인.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>2개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>items</td><td><span class="type"><code>string[]</code></span></td><td>없음</td><td>도시명 배열. 헤더 내부 또는 랜딩 상단에 사용.</td></tr>
+              <tr><td>activeIndex</td><td><span class="type"><code>number</code></span></td><td><code>0</code></td><td>현재 선택된 탭 인덱스.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>2개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Active</b><code>SemiBold black<br>bottom 2px solid #000</code></div>
+            <div class="spec-card"><b>Inactive</b><code>Regular<br>color #757575</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== CONTENT TAB ==================== -->
+      <div class="comp-section" id="content-tab">
+        <div class="comp-section-head"><h2>ContentTab</h2><span class="cc-cat">Navigation</span></div>
+        <div class="cc-preview">
+          <div class="tabs tabs-hug"><span class="on">상품 정보</span><span>이용 안내</span><span>Q&amp;A</span><span>취소 및 환불 규정</span><span>후기</span></div>
+        </div>
+        <p class="cc-desc">상품 상세 본문 탭 5종. 글자 폭만큼, gap 16px.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>2개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>items</td><td><span class="type"><code>string[]</code></span></td><td>없음</td><td>탭 라벨 배열. 상품상세 섹션 앵커로 사용.</td></tr>
+              <tr><td>activeIndex</td><td><span class="type"><code>number</code></span></td><td><code>0</code></td><td>스크롤 위치에 따라 자동 변경.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Active</b><code>SemiBold black<br>bottom 2px solid #000</code></div>
+            <div class="spec-card"><b>Inactive</b><code>Regular<br>color #757575</code></div>
+            <div class="spec-card"><b>Container</b><code>bg #FAF9F4<br>sticky top:56px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+      <div class="comp-section" id="segmented-tab">
+        <div class="comp-section-head"><h2>SegmentedTab</h2><span class="cc-cat">Navigation</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="sg-variants">
+            <div data-variant="pill" class="show"><div class="sg"><span class="on">픽패스 시작하기</span><span>픽패스 알아보기</span></div></div>
+            <div data-variant="box"><div class="sg sg-box"><span class="on">새로 시작하기</span><span>보유 픽패스 사용</span></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="탭 형태">
+            <button class="variant-btn on" data-target="sg-variants" data-v="pill" aria-pressed="true">Pill</button>
+            <button class="variant-btn" data-target="sg-variants" data-v="box" aria-pressed="false">Box</button>
+          </div>
+        </div>
+        <p class="cc-desc">2분할 전환 탭. 픽패스 시작 화면은 알약 모양, 픽패스 예약 화면은 모서리 4px의 박스 모양.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Track</b><code>H 52px<br>p 6px<br>gap 8px<br>bg #F5F3ED<br>r full</code></div>
+            <div class="spec-card"><b>Active</b><code>H 40px<br>p 8px 20px<br>bg #FFFFFF<br>r full<br>14px Medium #000000</code></div>
+            <div class="spec-card"><b>Inactive</b><code>14px Regular #9E9E9E<br>배경 없음</code></div>
+            <div class="spec-card"><b>Box</b><code>트랙 H 48px, p 4px, gap 8px, bg #F5F3ED, r 4px<br>활성 H 40px, bg #FFFFFF, r 3px, 14px Medium #000000<br>비활성 14px Regular #9E9E9E</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+      <div class="comp-section" id="breadcrumb">
+        <div class="comp-section-head"><h2>Breadcrumb</h2><span class="cc-cat">Navigation</span></div>
+        <div class="cc-preview">
+          <div class="bcr"><span>홈</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="#9E9E9E"></path></svg><span class="cur">가이드투어</span></div>
+        </div>
+        <p class="cc-desc">상품 상세 제목 위의 경로 표시. 현재 위치만 진한 색.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Row</b><code>py 8px<br>gap 4px</code></div>
+            <div class="spec-card"><b>Parent</b><code>12px Regular / 16px<br>#9E9E9E</code></div>
+            <div class="spec-card"><b>Current</b><code>12px Regular / 16px<br>#5C5C5C</code></div>
+            <div class="spec-card"><b>Separator</b><code>chevron 12px<br>stroke #9E9E9E</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+
+
+      <!-- ==================== BUTTON ==================== -->
+      <div class="comp-section" id="button">
+        <div class="comp-section-head"><h2>Button</h2><span class="cc-cat">Action</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="btn-variants">
+            <div data-variant="filled" class="show"><span class="btn btn-f btn-l">옵션 선택</span></div>
+            <div data-variant="disabled"><span class="btn btn-d btn-l">장바구니 담기</span></div>
+            <div data-variant="outlined"><span class="btn btn-ok btn-c">쿠폰 받기</span></div>
+            <div data-variant="outlined-gray"><span class="btn btn-og btn-m">모든 후기 보기</span></div>
+            <div data-variant="small"><span class="btn btn-os btn-s">픽패스 변경 · 환불</span></div>
+            <div data-variant="tonal"><span class="btn btn-l" style="background:#F8F8F8;color:var(--sub)">확인</span></div>
+            <div data-variant="danger"><span class="btn btn-l" style="background:#F13B38;color:#fff">삭제하기</span></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="버튼 종류">
+            <button class="variant-btn on" data-target="btn-variants" data-v="filled" aria-pressed="true">Filled</button>
+            <button class="variant-btn" data-target="btn-variants" data-v="disabled" aria-pressed="false">Disabled</button>
+            <button class="variant-btn" data-target="btn-variants" data-v="outlined" aria-pressed="false">Outlined</button>
+            <button class="variant-btn" data-target="btn-variants" data-v="outlined-gray" aria-pressed="false">Outlined Gray</button>
+            <button class="variant-btn" data-target="btn-variants" data-v="small" aria-pressed="false">Small</button>
+            <button class="variant-btn" data-target="btn-variants" data-v="tonal" aria-pressed="false">Tonal</button>
+            <button class="variant-btn" data-target="btn-variants" data-v="danger" aria-pressed="false">Danger</button>
+          </div>
+        </div>
+        <p class="cc-desc">버튼 5종. 모두 r 4px.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>4개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>variant</td>
+                <td><span class="type"><code>"filled"</code> | <code>"outlined"</code> | <code>"outlined-gray"</code> | <code>"outlined-muted"</code> | <code>"tonal"</code> | <code>"disabled"</code> | <code>"danger"</code></span></td>
+                <td><code>"filled"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>filled:</b> 주요 CTA (구매, 확인)</li>
+                    <li><b>outlined:</b> 보조 액션 (알아보기, 취소)</li>
+                    <li><b>outlined-gray:</b> 약한 보조 (바로가기, 더보기)</li>
+                    <li><b>tonal:</b> 비강조 영역 내 액션</li>
+                    <li><b>danger:</b> 삭제, 해지 등 위험 액션</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td><span class="type"><code>"large"</code> | <code>"medium"</code> | <code>"small"</code></span></td>
+                <td><code>"medium"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>large:</b> 풀와이드 CTA, BottomCTA 내부</li>
+                    <li><b>medium:</b> 일반 액션, 폼 제출</li>
+                    <li><b>small:</b> 인라인, 카드 내 보조 버튼</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr><td>fullWidth</td><td><span class="type"><code>boolean</code></span></td><td><code>false</code></td><td>true 시 width:100%. BottomCTA, 모달 내부에 사용.</td></tr>
+              <tr><td>disabled</td><td><span class="type"><code>boolean</code></span></td><td><code>false</code></td><td>비활성 상태. 필수값 미입력 시 사용.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>5개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Filled (48)</b><code>H 48px<br>r 4px<br>bg #000000<br>#FFFFFF<br>15~16px</code></div>
+            <div class="spec-card"><b>Disabled (48)</b><code>H 48px<br>r 4px<br>bg #E0E0E0<br>#FFFFFF<br>15px Medium</code></div>
+            <div class="spec-card"><b>Outlined dark (42)</b><code>H 42px<br>p 8px 16px<br>r 4px<br>border 1px #2F2B22<br>15px Medium #212121</code></div>
+            <div class="spec-card"><b>Outlined gray (40)</b><code>H 40px<br>r 4px<br>border 1px #E0E0E0<br>14px Medium #5C5C5C</code></div>
+            <div class="spec-card"><b>Small (30)</b><code>H 30px<br>p 4px 8px<br>r 4px<br>border 1px #D1D5DB<br>bg #FFFFFF<br>12px Medium #5C5C5C</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== BOTTOM CTA ==================== -->
+      <div class="comp-section" id="bottom-cta" data-sum="화면 아래에 고정되는 금액과 버튼 바.">
+        <div class="comp-section-head"><h2>BottomCTA</h2><span class="cc-cat">Action</span></div>
+        <div class="cc-preview cc-stack">
+          <div class="bc bc-detail"><div><div class="op-foot-top"><span>택스 포함 최종금액</span><span class="op-save">$ 10 SAVE</span></div><div class="op-price"><b>$ 62</b><s>$ 72</s></div></div><span class="bc-btn bc-fill bc-160">옵션 선택</span></div>
+          <div class="bc bc-my"><span class="bc-btn bc-line">픽패스 구매하기</span><span class="bc-btn bc-fill"><svg aria-hidden="true" width="20" height="20" preserveAspectRatio="none" overflow="visible" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M21.7638 5.9916C21.8916 5.9916 21.9866 6.11 21.9591 6.23477L21.047 10.3412C21.0265 10.4325 20.9453 10.4975 20.8517 10.4975H19.3156C19.2221 10.4977 19.1405 10.5634 19.1202 10.6547L18.9327 11.4994L18.5421 13.2582C18.5144 13.383 18.6097 13.5012 18.7374 13.5014H20.0958C20.2237 13.5014 20.3187 13.6197 20.2911 13.7445L19.3781 17.852C19.3576 17.9432 19.2763 18.0081 19.1827 18.0082H2.6095C2.28983 18.008 2.05195 17.7119 2.12122 17.3998L4.56946 6.3832C4.62033 6.15462 4.82358 5.99175 5.05774 5.9916H21.7638ZM9.43469 7.94473C9.34105 7.94473 9.25981 8.00961 9.23938 8.10098L7.52551 15.8119C7.49776 15.9368 7.59288 16.0551 7.72083 16.0551H9.1134C9.20703 16.055 9.2884 15.9903 9.30872 15.8988L9.83997 13.5082C9.86044 13.4169 9.94167 13.352 10.0353 13.352H13.3195C13.413 13.3517 13.4945 13.2861 13.5148 13.1947L14.6271 8.18789C14.6547 8.06312 14.5595 7.94489 14.4318 7.94473H9.43469ZM12.3546 9.74648C12.4183 9.74679 12.466 9.80634 12.4523 9.86855L12.0958 11.4711C12.0856 11.5167 12.0449 11.5491 11.9982 11.5492H10.4005C10.3366 11.5491 10.289 11.4895 10.3029 11.4271L10.6593 9.82559C10.6695 9.7799 10.7101 9.74648 10.757 9.74648H12.3546Z" fill="#FB6764"></path><path d="M14.4318 7.94482C14.5597 7.94482 14.6549 8.06309 14.6271 8.18799L13.5148 13.1958C13.4943 13.2871 13.4131 13.352 13.3195 13.3521H10.0353C9.94167 13.3521 9.8604 13.4169 9.84 13.5083L9.30875 15.8989C9.28841 15.9904 9.20717 16.0552 9.11343 16.0552H7.72086C7.59297 16.0551 7.4978 15.9369 7.52554 15.812L9.23941 8.10107C9.25978 8.00961 9.34101 7.94482 9.43472 7.94482H14.4318ZM10.757 9.74658C10.7101 9.74661 10.6695 9.77995 10.6593 9.82568L10.3029 11.4282C10.2894 11.4903 10.337 11.5491 10.4005 11.5493H11.9982C12.045 11.5493 12.0856 11.5169 12.0959 11.4712L12.4523 9.86865C12.4662 9.80621 12.4186 9.74659 12.3546 9.74658H10.757Z" fill="#F36B7C"></path></g></svg>픽패스 사용하기</span></div>
+          <div class="bc bc-step"><span class="bc-reset">초기화</span><span class="bc-btn bc-fill bc-120">다음</span></div>
+          <div class="bc bc-step"><span class="bc-reset">초기화</span><span class="bc-btn bc-fill bc-120 bc-off">다음</span></div>
+        </div>
+        <p class="cc-desc">화면 아래에 고정되는 금액과 버튼 바.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>상품 상세 (MO)</b><span>금액 + 옵션 선택 버튼</span></li><li><b>나의 픽패스</b><span>버튼 2개</span></li><li><b>픽패스 예약</b><span>초기화 + 다음</span></li></ul></dd></div>
+          <div><dt>규칙</dt><dd>픽패스 예약의 다음 버튼은 고른 것이 없으면 흐리게 비활성</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>2개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>buttons</td>
+                <td><span class="type"><code>ButtonProps[]</code></span></td>
+                <td>없음</td>
+                <td>1~2개 버튼 배열. 2개일 때 좌=secondary, 우=primary.</td>
+              </tr>
+              <tr><td>shadow</td><td><span class="type"><code>boolean</code></span></td><td><code>true</code></td><td>상단 그림자 표시. 스크롤 시 콘텐츠와 구분.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>5개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>상품 상세 (MO)</b><code>bg #FFFFFF<br>H 80px<br>p 16px<br>gap 12px<br>버튼 160x48</code></div>
+            <div class="spec-card"><b>나의 픽패스</b><code>bg #FFFFFF<br>MO p 12px 16px<br>PC p 12px 24px 40px<br>gap 8px<br>버튼 균등 분할 H 48px</code></div>
+            <div class="spec-card"><b>픽패스 예약</b><code>초기화 14px Medium #757575<br>다음 120x48<br>비활성 opacity .4</code></div>
+            <div class="spec-card"><b>Button</b><code>r 4px<br>filled: bg #000000, #FFFFFF<br>outlined: border 1px #E0E0E0, #000000</code></div>
+            <div class="spec-card"><b>Label</b><code>옵션 선택 16px Regular<br>픽패스 버튼 15px Medium<br>아이콘 20px #FB6764</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+      <div class="comp-section" id="icon-button">
+        <div class="comp-section-head"><h2>IconButton</h2><span class="cc-cat">Action</span></div>
+        <div class="cc-preview" style="gap:8px">
+          <span class="ibt"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15.8333L4.16669 9.99996L10 4.16663" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.8334 10H4.16669" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="ibt ibt-r"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15.8333L4.16669 9.99996L10 4.16663" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.8334 10H4.16669" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        </div>
+        <p class="cc-desc">캐러셀 이전·다음 버튼. 원형 배경에 화살표.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Button</b><code>32px circle<br>bg #F5F3ED</code></div>
+            <div class="spec-card"><b>Icon</b><code>20px<br>stroke #757575 1.5px<br>다음은 180도 회전</code></div>
+            <div class="spec-card"><b>Gap</b><code>8px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+
+      <!-- ==================== FILTER CHIP ==================== -->
+      <div class="comp-section" id="filter-chip" data-sum="목록을 상태별로 거르는 알약 모양 칩.">
+        <div class="comp-section-head"><h2>FilterChip</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="chip-variants">
+            <div data-variant="active" class="show"><span class="chip-a">전체 1</span></div>
+            <div data-variant="inactive"><span class="chip-i">준비완료</span></div>
+            <div data-variant="count"><span class="chip-i">예약필요 1</span></div>
+            <div data-variant="group"><span class="chip-a">전체 1</span><span class="chip-i">예약필요 1</span><span class="chip-i">준비완료</span><span class="chip-i">지난여행</span></div>
+            <div data-variant="large"><span class="chip-a chip-l">전체</span><span class="chip-i chip-l">예약 · 패스</span><span class="chip-i chip-l">이용 안내</span><span class="chip-i chip-l">결제</span></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="칩 상태">
+            <button class="variant-btn on" data-target="chip-variants" data-v="active" aria-pressed="true">Active</button>
+            <button class="variant-btn" data-target="chip-variants" data-v="inactive" aria-pressed="false">Inactive</button>
+            <button class="variant-btn" data-target="chip-variants" data-v="count" aria-pressed="false">With Count</button>
+            <button class="variant-btn" data-target="chip-variants" data-v="group" aria-pressed="false">Group</button>
+            <button class="variant-btn" data-target="chip-variants" data-v="large" aria-pressed="false">Large (FAQ)</button>
+          </div>
+        </div>
+        <p class="cc-desc">목록을 상태별로 거르는 알약 모양 칩.</p>
+        <dl class="cc-notes">
+          <div><dt>크기</dt><dd>H 32px, 14px, 칩 사이 6px</dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>Active</b><span>검정 채움, r 22px</span></li><li><b>Inactive</b><span>테두리, r 41px</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>3개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>state</td>
+                <td><span class="type"><code>"active"</code> | <code>"inactive"</code></span></td>
+                <td><code>"inactive"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>active:</b> 현재 선택된 필터</li>
+                    <li><b>inactive:</b> 미선택 상태</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr><td>label</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>칩 라벨 텍스트.</td></tr>
+              <tr><td>count</td><td><span class="type"><code>number</code> | <code>undefined</code></span></td><td><code>undefined</code></td><td>라벨 우측에 표시되는 카운트. 예약필요 등.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>2개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Active</b><code>bg #000<br>text #FFF<br>r 22px<br>14px Medium<br>shadow y:2 blur:8 12%</code></div>
+            <div class="spec-card"><b>Inactive</b><code>bg transparent<br>border 1px #E0E0E0<br>r 41px<br>14px Regular<br>text #9E9E9E</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+      <div class="comp-section" id="search-field">
+        <div class="comp-section-head"><h2>SearchField</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="sf-variants">
+            <div data-variant="faq" class="show"><div class="sf"><div class="sf-in"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z" stroke="#C2C2C2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>궁금한 키워드를 입력해 보세요</span></div><span class="sf-btn">검색</span></div></div>
+            <div data-variant="pp"><div class="shd"><div class="shd-l"><img class="ico shd-back" src="icons/pickpass/back-24.svg" width="24" height="24" alt=""><div class="shd-pill shd-268"><span class="shd-q"><img class="ico" src="icons/pickpass/search-16.svg" width="16" height="16" alt="">뉴욕 인기 명소</span><span class="shd-ppl"><i></i>성인1, 어린이1</span></div></div><span class="shd-cart"><img class="ico" src="icons/pickpass/cart-24.svg" width="24" height="24" alt=""><em>1</em></span></div></div>
+            <div data-variant="typing"><div class="shd shd-g"><div class="shd-pill"><span class="shd-q shd-on"><img class="ico" src="icons/pickpass/search-16.svg" width="16" height="16" alt="">서밋</span></div><span class="shd-cancel">취소</span></div></div>
+            <div data-variant="pc"><div class="shd shd-pc"><span class="shd-b32"><img class="ico shd-back" src="icons/pickpass/back-24.svg" width="24" height="24" alt=""></span><div class="shd-pill"><span class="shd-q shd-on"><img class="ico" src="icons/pickpass/search-16.svg" width="16" height="16" alt="">탑 오브 더 락 전망대</span><span class="shd-ppl"><i></i>성인1, 어린이1</span></div><span class="shd-r"><span class="shd-cart"><img class="ico" src="icons/pickpass/cart-32.svg" width="32" height="32" alt=""><em>2</em></span><img class="ico" src="icons/pickpass/close-32.svg" width="32" height="32" alt=""></span></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="검색창 종류">
+            <button class="variant-btn on" data-target="sf-variants" data-v="faq" aria-pressed="true">FAQ</button>
+            <button class="variant-btn" data-target="sf-variants" data-v="pp" aria-pressed="false">픽패스 (기본)</button>
+            <button class="variant-btn" data-target="sf-variants" data-v="typing" aria-pressed="false">픽패스 (입력 중)</button>
+            <button class="variant-btn" data-target="sf-variants" data-v="pc" aria-pressed="false">픽패스 (PC)</button>
+          </div>
+        </div>
+        <p class="cc-desc">검색어를 입력하는 창.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>FAQ</b><span>입력창과 검색 버튼이 붙은 형태</span></li><li><b>픽패스</b><span>헤더 안에 들어가는 알약 모양, 오른쪽에 선택한 인원 표시</span></li></ul></dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>입력 전</b><span>FAQ는 검색 버튼이 비활성 색</span></li><li><b>입력 중</b><span>픽패스는 뒤로 가기와 장바구니 대신 취소</span></li></ul></dd></div>
+          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>픽패스는 600px 상단 바에 닫기 버튼 추가</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>8개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>픽패스: Field</b><code>H 40px<br>bg #FFFFFF<br>border 1px #EEEBE2<br>r 39px<br>px 16px<br>MO 기본 W 268px, 그 외 남는 폭</code></div>
+            <div class="spec-card"><b>픽패스: Text</b><code>아이콘 16px, 글자와 gap 8px<br>14px Regular / 16px, 자간 -0.14px<br>입력 전 #999999, 입력 후 #000000<br>인원 12px Medium / 16px #5C5C5C<br>구분선 H 16px, gap 12px</code></div>
+            <div class="spec-card"><b>픽패스: Header (MO)</b><code>375x56px<br>bg #FAF9F4<br>p 16px, gap 12px<br>뒤로 가기·장바구니 24px<br>취소 14px Regular / 20px #5C5C5C</code></div>
+            <div class="spec-card"><b>픽패스: Top bar (PC)</b><code>600x64px<br>px 8px, gap 12px<br>아이콘 32px<br>바 아래 border 1px #EBEBEB<br>장바구니 수 10px SemiBold, 검정 원</code></div>
+            <div class="spec-card"><b>Field</b><code>H 48px<br>bg #FFFFFF<br>border 1px #E0E0E0(우측 없음)<br>r 6px 0 0 6px<br>px 20px<br>gap 12px</code></div>
+            <div class="spec-card"><b>Icon</b><code>20px<br>stroke #C2C2C2 1.5px</code></div>
+            <div class="spec-card"><b>Placeholder</b><code>15px<br>#C2C2C2</code></div>
+            <div class="spec-card"><b>Button</b><code>W 120px, H 48px<br>15px Medium #FFFFFF<br>비활성 bg #E0E0E0<br>r 0 6px 6px 0</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="text-field">
+        <div class="comp-section-head"><h2>TextField</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="tf-variants">
+            <div data-variant="empty" class="show"><div class="tf"><span class="tf-l">이메일 *</span><div class="tf-in tf-ph"><span>example@athometrip.com</span></div></div></div>
+            <div data-variant="filled"><div class="tf"><span class="tf-l">이름 (한글) *</span><div class="tf-in tf-on"><span>홍길동</span></div></div></div>
+            <div data-variant="error"><div class="tf"><span class="tf-l">전화번호 *</span><div class="tf-in tf-err"><span>01054218469151</span></div><span class="tf-help tf-err-t">10자리 이상의 숫자를 입력해주세요.</span></div></div>
+            <div data-variant="help"><div class="tf"><span class="tf-l">이메일 *</span><div class="tf-in tf-ph"><span>example@athometrip.com</span></div><span class="tf-help">입력하신 이메일로 티켓과 주문내역이 발송됩니다. 정확히 입력해 주세요.</span></div></div>
+            <div data-variant="date"><div class="tf"><span class="tf-l">출국일</span><div class="tf-in tf-ph"><span>연도 / 월 / 일</span><img class="ico" src="icons/checkout/calendar-24.svg" width="24" height="24" alt=""></div><span class="tf-help">투어 참여 날짜를 선택해주세요</span></div></div>
+            <div data-variant="dropdown"><div class="tf"><span class="tf-l">유심 수령 방법</span><div class="tf-in tf-ph"><span>선택하세요</span><img class="ico" src="icons/checkout/chevron-20.svg" width="20" height="20" alt=""></div><span class="tf-help">유심 수령 방법을 선택해주세요</span></div></div>
+            <div data-variant="code"><div class="cf"><span>쿠폰 등록</span><div class="cf-row"><div class="cf-in">쿠폰 코드 입력</div><b class="cf-btn">등록</b></div></div></div>
+            <div data-variant="code-on"><div class="cf"><span>쿠폰 등록</span><div class="cf-row"><div class="cf-in cf-on">A0123S9RW<img class="ico" src="icons/coupon/delete-16.svg" width="16" height="16" alt=""></div><b class="cf-btn cf-on">등록</b></div></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".tf-l" data-side="left">라벨</li><li data-for=".tf-in" data-side="right">입력</li><li data-for=".tf-help" data-side="bottom">도움말</li></ol>
+          <div class="cc-var-ctl" role="group" aria-label="입력 상태">
+            <button class="variant-btn on" data-target="tf-variants" data-v="empty" aria-pressed="true">Placeholder</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="filled" aria-pressed="false">Filled</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="error" aria-pressed="false">오류</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="help" aria-pressed="false">도움말</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="date" aria-pressed="false">날짜</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="dropdown" aria-pressed="false">드롭다운</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="code" aria-pressed="false">쿠폰 등록</button>
+            <button class="variant-btn" data-target="tf-variants" data-v="code-on" aria-pressed="false">쿠폰 등록 (입력 후)</button>
+          </div>
+        </div>
+        <p class="cc-desc">밑줄형 입력창. 결제 화면의 예약자 정보와 여행자 정보 입력에 사용.</p>
+        <dl class="cc-notes">
+          <div><dt>규칙</dt><dd>필수 항목은 라벨 뒤에 *</dd></div>
+          <div><dt>종류</dt><dd><ul><li><b>날짜</b><span>오른쪽에 캘린더 아이콘</span></li><li><b>드롭다운</b><span>선택 항목이 3개 이상일 때</span></li><li><b>쿠폰 등록</b><span>테두리 박스형 입력창 + 등록 버튼</span></li></ul></dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>Filled</b><span>입력한 글자가 진한 색</span></li><li><b>오류</b><span>밑줄과 안내 글이 빨강</span></li><li><b>쿠폰 입력 후</b><span>테두리와 등록 버튼이 검정</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>9개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>쿠폰 등록</b><code>라벨 14px Medium / 20px #000000, 입력창과 gap 6px<br>입력창 H 40px, px 16px, r 4px, bg #FFFFFF<br>입력 전 border 1px #E0E0E0, 14px #9E9E9E<br>입력 후 border 1px #000000, 14px #000000, 지우기 16px<br>버튼 60x40, r 4px, 13px Medium #FFFFFF<br>입력 전 bg #E0E0E0, 입력 후 bg #000000<br>입력창과 버튼 gap 8px</code></div>
+            <div class="spec-card"><b>Label</b><code>12px Medium / 16px<br>#5C5C5C<br>필수는 뒤에 *<br>입력과 gap 4px</code></div>
+            <div class="spec-card"><b>Input</b><code>H 40px<br>border-bottom 1px #C2C2C2<br>배경 없음<br>p 12px 0<br>14px Regular / 16px</code></div>
+            <div class="spec-card"><b>Placeholder</b><code>#C2C2C2<br>예: 홍길동, YYYY-MM-DD</code></div>
+            <div class="spec-card"><b>Filled</b><code>글자 #111827<br>border-bottom 1px #111827</code></div>
+            <div class="spec-card"><b>Error</b><code>border-bottom 1px #F13B38<br>안내 11px Regular / 16px #F13B38</code></div>
+            <div class="spec-card"><b>Help</b><code>12px Regular / 16px<br>#757575<br>입력과 gap 4px</code></div>
+            <div class="spec-card"><b>Trailing icon</b><code>날짜: 캘린더 24px #5C5C5C<br>드롭다운: chevron 20px #5C5C5C</code></div>
+            <div class="spec-card"><b>PC</b><code>라벨 14px Medium / 20px<br>입력 16px Regular / 24px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="select">
+        <div class="comp-section-head"><h2>Select</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="sel-variants">
+            <div data-variant="off" class="show"><div class="sel"><span>쿠폰 사용</span><img class="ico" src="icons/checkout/chevron-16.svg" width="16" height="16" alt=""></div></div>
+            <div data-variant="on"><div class="sel sel-on"><span class="sel-l"><img class="ico" src="icons/checkout/check-circle-16.svg" width="16" height="16" alt=""><b>추석 황금연휴 뉴욕 여행 슈퍼위크 할인 추석 황금연휴 뉴욕 여행 슈퍼위크 할인</b><em>-$3.5</em></span><img class="ico" src="icons/checkout/chevron-16.svg" width="16" height="16" alt=""></div></div>
+            <div data-variant="pc-off"><div class="sel sel-pc"><span>쿠폰 사용</span><img class="ico" src="icons/checkout/chevron-20.svg" width="20" height="20" alt=""></div></div>
+            <div data-variant="pc-on"><div class="sel sel-on sel-pc"><span class="sel-l"><img class="ico" src="icons/checkout/check-circle-16.svg" width="16" height="16" alt=""><b>선착순 장바구니 100%</b><em>-$8.5</em></span><img class="ico" src="icons/checkout/chevron-20.svg" width="20" height="20" alt=""></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="선택 상태">
+            <button class="variant-btn on" data-target="sel-variants" data-v="off" aria-pressed="true">선택 전</button>
+            <button class="variant-btn" data-target="sel-variants" data-v="on" aria-pressed="false">쿠폰 적용</button>
+            <button class="variant-btn" data-target="sel-variants" data-v="pc-off" aria-pressed="false">PC 선택 전</button>
+            <button class="variant-btn" data-target="sel-variants" data-v="pc-on" aria-pressed="false">PC 쿠폰 적용</button>
+          </div>
+        </div>
+        <p class="cc-desc">테두리형 선택 상자. 장바구니와 결제 화면의 쿠폰 선택에 사용.</p>
+        <dl class="cc-notes">
+          <div><dt>상태</dt><dd><ul><li><b>기본</b><span>안내 문구와 화살표</span></li><li><b>쿠폰 적용</b><span>체크 아이콘, 쿠폰명, 할인 금액</span></li></ul></dd></div>
+          <div><dt>규칙</dt><dd>쿠폰명이 길면 한 줄 말줄임</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>6개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Box (MO)</b><code>H 40px<br>border 1px #E0E0E0<br>r 4px<br>px 12px</code></div>
+            <div class="spec-card"><b>Text (MO)</b><code>13px Regular / 20px<br>#2F2B22</code></div>
+            <div class="spec-card"><b>Applied (MO)</b><code>체크 16px + 쿠폰명 13px Medium #2F2B22, gap 8px<br>할인 12px Regular / 16px #8F846B, gap 4px<br>chevron과 gap 12px</code></div>
+            <div class="spec-card"><b>Chevron</b><code>MO 16px, PC 20px<br>stroke #5C5C5C 1.5px</code></div>
+            <div class="spec-card"><b>Box (PC)</b><code>H 48px<br>px 16px<br>15px Regular / 20px #000000</code></div>
+            <div class="spec-card"><b>Applied (PC)</b><code>쿠폰명 15px Medium<br>할인 14px Regular / 20px #8F846B</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="info-entry-button">
+        <div class="comp-section-head"><h2>InfoEntryButton</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="ieb-variants">
+            <div data-variant="req" class="show"><div class="ieb ieb-req"><span>여행자 정보를 입력해주세요.</span><span class="ieb-r"><i class="ieb-pill">필수입력</i><img class="ico" src="icons/checkout/chevron-16.svg" width="16" height="16" alt=""></span></div></div>
+            <div data-variant="done"><div class="ieb"><span class="ieb-l"><img class="ico" src="icons/checkout/check-circle-16.svg" width="16" height="16" alt=""><b>여행자 정보 입력 완료</b></span><span class="ieb-edit">수정</span></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="입력 상태">
+            <button class="variant-btn on" data-target="ieb-variants" data-v="req" aria-pressed="true">입력 전</button>
+            <button class="variant-btn" data-target="ieb-variants" data-v="done" aria-pressed="false">입력 완료</button>
+          </div>
+        </div>
+        <p class="cc-desc">결제 화면의 주문 상품마다 붙는 여행자 정보 입력 버튼.</p>
+        <dl class="cc-notes">
+          <div><dt>동작</dt><dd>누르면 여행자 정보 입력 바텀시트가 열림</dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>입력 전</b><span>빨간 테두리와 "필수입력" 표시</span></li><li><b>입력 후</b><span>체크와 "수정"</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Box</b><code>H 40px<br>r 4px<br>px 12px<br>입력 전 border 1px #F13B38<br>입력 완료 border 1px #E0E0E0</code></div>
+            <div class="spec-card"><b>Text</b><code>입력 전 13px Regular / 16px #2F2B22<br>입력 완료 13px Medium #2F2B22</code></div>
+            <div class="spec-card"><b>필수입력</b><code>H 20px, px 6px, r 24px<br>bg #FFE1E0<br>11px Regular / 16px #F13B38<br>chevron 16px과 gap 6px</code></div>
+            <div class="spec-card"><b>입력 완료</b><code>체크 16px(검정 원 + 흰 체크), gap 8px<br>수정 12px Regular / 16px #757575</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="radio">
+        <div class="comp-section-head"><h2>Radio</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="rd-variants">
+            <div data-variant="mo" class="show"><div class="rd"><span><img class="ico" src="icons/checkout/radio-on-20.svg" width="20" height="20" alt="">남성</span><span><img class="ico" src="icons/checkout/radio-off-20.svg" width="20" height="20" alt="">여성</span></div></div>
+            <div data-variant="pc"><div class="rd rd-pc"><span><img class="ico" src="icons/checkout/radio-on-20.svg" width="24" height="24" alt="">남성</span><span><img class="ico" src="icons/checkout/radio-off-20.svg" width="24" height="24" alt="">여성</span></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="화면 크기">
+            <button class="variant-btn on" data-target="rd-variants" data-v="mo" aria-pressed="true">MO</button>
+            <button class="variant-btn" data-target="rd-variants" data-v="pc" aria-pressed="false">PC</button>
+          </div>
+        </div>
+        <p class="cc-desc">둘 중 하나를 고르는 선택. 여행자 정보 입력의 성별 등에 사용.</p>
+        <dl class="cc-notes">
+          <div><dt>규칙</dt><dd>선택 항목이 3개 이상이면 드롭다운을 씀</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>MO</b><code>아이콘 20px + 라벨 14px Medium / 20px #000000<br>gap 8px<br>항목 사이 24px<br>행 H 40px</code></div>
+            <div class="spec-card"><b>PC</b><code>아이콘 24px + 라벨 16px Medium / 24px #0A0A0A</code></div>
+            <div class="spec-card"><b>Selected</b><code>흰 원에 검정 테두리 6px</code></div>
+            <div class="spec-card"><b>Unselected</b><code>border 1.5px #E0E0E0</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="consent-check">
+        <div class="comp-section-head"><h2>ConsentCheck</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="cs-variants">
+            <div data-variant="mo" class="show"><div class="cs"><div class="cs-t"><p><b>(필수)</b> 체크인 정보 제출 요청</p><span>결제 완료 후 '앳홈스테이' 카카오톡 채널 추가 → 예약자 정보를 전송해 주세요.<br>결제 후 발송되는 이메일을 반드시 확인해 주세요.</span></div><div class="cs-box"><img class="ico" src="icons/checkout/check-24.svg" width="24" height="24" alt=""><span>위 안내사항을 확인했습니다.</span></div></div></div>
+            <div data-variant="pc"><div class="cs cs-pc"><div class="cs-t"><p><b>(필수)</b> 체크인 정보 제출 요청</p><span>결제 완료 후 '앳홈스테이' 카카오톡 채널 추가 → 예약자 정보를 전송해 주세요.<br>결제 후 발송되는 이메일을 반드시 확인해 주세요.</span></div><div class="cs-box"><img class="ico" src="icons/checkout/check-24.svg" width="24" height="24" alt=""><span>위 안내사항을 확인했습니다.</span></div></div></div>
+            <div data-variant="agree"><div class="ag"><img class="ico" src="icons/pickpass/agree-off-24.svg" width="24" height="24" alt=""><p><b>(선택)</b> 지금 결제 수단을 저장하고, 나중에 결제 상품 결제에 사용합니다.</p></div></div>
+            <div data-variant="agree-on"><div class="ag ag-on"><img class="ico" src="icons/pickpass/agree-on-24.svg" width="24" height="24" alt=""><p><b>(필수)</b> 앳홈트립 이용약관 및 개인정보처리방침 과 취소 및 환불규정에 동의합니다.</p></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="화면 크기">
+            <button class="variant-btn on" data-target="cs-variants" data-v="mo" aria-pressed="true">안내 확인 (MO)</button>
+            <button class="variant-btn" data-target="cs-variants" data-v="pc" aria-pressed="false">안내 확인 (PC)</button>
+            <button class="variant-btn" data-target="cs-variants" data-v="agree" aria-pressed="false">약관 동의 (선택 전)</button>
+            <button class="variant-btn" data-target="cs-variants" data-v="agree-on" aria-pressed="false">약관 동의 (선택 후)</button>
+          </div>
+        </div>
+        <p class="cc-desc">안내문을 읽고 확인을 받는 체크 박스.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>안내 확인</b><span>안내문 아래에 확인 박스 하나</span></li><li><b>약관 동의</b><span>항목마다 박스 하나씩</span></li></ul></dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>선택 전</b><span>테두리만, 체크 회색</span></li><li><b>선택 후</b><span>Warm 200으로 채움, 체크 검정</span></li></ul></dd></div>
+          <div><dt>규칙</dt><dd>항목 앞의 (필수)는 검정, (선택)은 회색</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>6개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>약관 동의</b><code>p 12px, r 4px, gap 8px<br>선택 전 border 1px #E0E0E0, 체크 #C2C2C2<br>선택 후 bg #EEEBE2, 체크 #000000<br>12px Regular / 16px #5C5C5C<br>(필수) SemiBold #000000, (선택) SemiBold #9E9E9E<br>항목 사이 8px</code></div>
+            <div class="spec-card"><b>Title</b><code>MO 12px, PC 14px<br>(필수)는 Bold, 나머지 Medium<br>#5C5C5C</code></div>
+            <div class="spec-card"><b>Description</b><code>12px Regular / 16px<br>#757575<br>제목과 gap 4px</code></div>
+            <div class="spec-card"><b>Box (MO)</b><code>bg #F9FAFB<br>r 4px<br>p 8px 12px, gap 12px<br>12px Regular / 16px #5C5C5C<br>안내문과 gap 12px</code></div>
+            <div class="spec-card"><b>Box (PC)</b><code>H 48px<br>bg #F5F3ED<br>p 8px 16px, gap 8px<br>13px Regular / 18px #5C5C5C<br>안내문과 gap 16px</code></div>
+            <div class="spec-card"><b>Check</b><code>24px<br>선택 전 stroke #C2C2C2 2px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="people-counter" data-sum="픽패스 예약에서 성인과 어린이 수를 정하는 박스.">
+        <div class="comp-section-head"><h2>PeopleCounter</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="pcs-variants">
+            <div data-variant="empty" class="show"><div class="pcs"><div class="pcb"><b>성인</b><div class="op-step"><span class="op-btn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#C7C7C7" stroke-width="1.5"></path></svg></span><b>0</b><span class="op-btn po-plus"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#000" stroke-width="1.5"></path></svg></span></div></div><div class="pcb"><b>어린이</b><div class="op-step"><span class="op-btn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#C7C7C7" stroke-width="1.5"></path></svg></span><b>0</b><span class="op-btn po-plus"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#000" stroke-width="1.5"></path></svg></span></div></div></div></div>
+            <div data-variant="filled"><div class="pcs"><div class="pcb"><b>성인</b><div class="op-step"><span class="op-btn po-plus"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#000" stroke-width="1.5"></path></svg></span><b>1</b><span class="op-btn po-plus"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#000" stroke-width="1.5"></path></svg></span></div></div><div class="pcb"><b>어린이</b><div class="op-step"><span class="op-btn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#C7C7C7" stroke-width="1.5"></path></svg></span><b>0</b><span class="op-btn po-plus"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#000" stroke-width="1.5"></path></svg></span></div></div></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".pcb > b" data-side="left">라벨</li><li data-for=".op-step" data-side="right">단계 버튼</li></ol>
+          <div class="cc-var-ctl" role="group" aria-label="인원 상태">
+            <button class="variant-btn on" data-target="pcs-variants" data-v="empty" aria-pressed="true">0명</button>
+            <button class="variant-btn" data-target="pcs-variants" data-v="filled" aria-pressed="false">1명 이상</button>
+          </div>
+        </div>
+        <p class="cc-desc">픽패스 예약 첫 단계에서 인원을 정하는 박스.</p>
+        <dl class="cc-notes">
+          <div><dt>상태</dt><dd><ul><li><b>0명</b><span>빼기 버튼 비활성</span></li><li><b>1명 이상</b><span>양쪽 모두 테두리 버튼</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Box</b><code>MO 332x58px<br>bg #FFFFFF<br>border 1px #F5F3ED<br>r 6px<br>p 12px 16px<br>박스 사이 8px</code></div>
+            <div class="spec-card"><b>Label</b><code>14px SemiBold / 20px<br>#000000</code></div>
+            <div class="spec-card"><b>Stepper</b><code>버튼 32px 원, gap 8px<br>비활성 bg #F8F8F8, 아이콘 #C7C7C7<br>활성 border 1px #E0E0E0, 아이콘 #000000</code></div>
+            <div class="spec-card"><b>Value</b><code>16px SemiBold / 24px<br>#111111<br>W 24px, 가운데 정렬</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="keyword-chip">
+        <div class="comp-section-head"><h2>KeywordChip</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview">
+          <div class="kc"><b>자주 찾는 키워드</b><span>#픽패스</span><span>#티켓</span><span>#전망대</span><span>#앳홈스테이</span></div>
+        </div>
+        <p class="cc-desc">검색창 아래의 추천 키워드. 라벨 뒤에 해시태그 칩이 이어짐.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Label</b><code>14px Medium / 20px<br>#2F2B22</code></div>
+            <div class="spec-card"><b>Chip</b><code>H 28px<br>p 4px 8px<br>bg #F5F3ED<br>14px Regular #8F846B<br>모서리 직각</code></div>
+            <div class="spec-card"><b>Gap</b><code>12px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+
+      <!-- ==================== OPTION PANEL ==================== -->
+      <div class="comp-section" id="option-panel" data-sum="상품 상세에서 날짜, 시간, 수량을 고르는 패널.">
+        <div class="comp-section-head"><h2>OptionPanel</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="op-variants">
+          <i class="op-state s-default show" data-variant="default"></i><i class="op-state s-date" data-variant="date"></i><i class="op-state s-time" data-variant="time"></i><i class="op-state s-done" data-variant="done"></i>
+          <div class="op-wrap">
+          <div class="op">
+            <div class="op-body">
+              <b class="op-title">옵션 선택</b>
+              <div class="op-rows">
+                <div class="op-row op-date"><span>날짜</span><span class="op-val op-v0">선택<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12.6667 6L8 10.6667L3.33333 6" stroke="#C2C2C2" stroke-width="1.2" stroke-linecap="square"></path></svg></span><span class="op-val op-v1">2026.11.20 (금)<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12.6667 6L8 10.6667L3.33333 6" stroke="#C2C2C2" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div>
+                <div class="op-row op-time"><span>시간을 선택해 주세요</span><span class="op-val op-v0">선택<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12.6667 6L8 10.6667L3.33333 6" stroke="#C2C2C2" stroke-width="1.2" stroke-linecap="square"></path></svg></span><span class="op-val op-v1">18:00 - 21:00<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12.6667 6L8 10.6667L3.33333 6" stroke="#C2C2C2" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div>
+              </div>
+            </div>
+            <div class="op-qty"><span>수량</span><div class="op-step"><span class="op-btn"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#E0E0E0" stroke-width="1.5" stroke-linejoin="round"></path></svg></span><b>1</b><span class="op-btn"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#E0E0E0" stroke-width="1.5" stroke-linejoin="round"></path></svg></span></div></div>
+            <div class="op-pp"><span class="op-pp-l"><svg width="24" height="24" aria-hidden="true" preserveAspectRatio="none" overflow="visible" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M21.7638 5.9916C21.8916 5.9916 21.9866 6.11 21.9591 6.23477L21.047 10.3412C21.0265 10.4325 20.9453 10.4975 20.8517 10.4975H19.3156C19.2221 10.4977 19.1405 10.5634 19.1202 10.6547L18.9327 11.4994L18.5421 13.2582C18.5144 13.383 18.6097 13.5012 18.7374 13.5014H20.0958C20.2237 13.5014 20.3187 13.6197 20.2911 13.7445L19.3781 17.852C19.3576 17.9432 19.2763 18.0081 19.1827 18.0082H2.6095C2.28983 18.008 2.05195 17.7119 2.12122 17.3998L4.56946 6.3832C4.62033 6.15462 4.82358 5.99175 5.05774 5.9916H21.7638ZM9.43469 7.94473C9.34105 7.94473 9.25981 8.00961 9.23938 8.10098L7.52551 15.8119C7.49776 15.9368 7.59288 16.0551 7.72083 16.0551H9.1134C9.20703 16.055 9.2884 15.9903 9.30872 15.8988L9.83997 13.5082C9.86044 13.4169 9.94167 13.352 10.0353 13.352H13.3195C13.413 13.3517 13.4945 13.2861 13.5148 13.1947L14.6271 8.18789C14.6547 8.06312 14.5595 7.94489 14.4318 7.94473H9.43469ZM12.3546 9.74648C12.4183 9.74679 12.466 9.80634 12.4523 9.86855L12.0958 11.4711C12.0856 11.5167 12.0449 11.5491 11.9982 11.5492H10.4005C10.3366 11.5491 10.289 11.4895 10.3029 11.4271L10.6593 9.82559C10.6695 9.7799 10.7101 9.74648 10.757 9.74648H12.3546Z" fill="white"></path><path d="M14.4318 7.94482C14.5597 7.94482 14.6549 8.06309 14.6271 8.18799L13.5148 13.1958C13.4943 13.2871 13.4131 13.352 13.3195 13.3521H10.0353C9.94167 13.3521 9.8604 13.4169 9.84 13.5083L9.30875 15.8989C9.28841 15.9904 9.20717 16.0552 9.11343 16.0552H7.72086C7.59297 16.0551 7.4978 15.9369 7.52554 15.812L9.23941 8.10107C9.25978 8.00961 9.34101 7.94482 9.43472 7.94482H14.4318ZM10.757 9.74658C10.7101 9.74661 10.6695 9.77995 10.6593 9.82568L10.3029 11.4282C10.2894 11.4903 10.337 11.5491 10.4005 11.5493H11.9982C12.045 11.5493 12.0856 11.5169 12.0959 11.4712L12.4523 9.86865C12.4662 9.80621 12.4186 9.74659 12.3546 9.74658H10.757Z" fill="#F36B7C"></path></g></svg>픽패스 할인가로 구매</span><span class="op-pp-r"><span class="op-pp-save">$21 SAVE</span><b>$41~</b><svg width="12" height="12" aria-hidden="true" preserveAspectRatio="none" overflow="visible" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M4 10L8 6L4 2" stroke-width="1.2" stroke-linecap="square" stroke="white"></path></g></svg></span></div>
+            <div class="op-foot">
+              <div><div class="op-foot-top"><span>택스 포함 최종금액</span><span class="op-save">$ 10 SAVE</span></div><div class="op-price"><b>$62</b><s>$ 72</s></div></div>
+              <span class="op-cta">장바구니 담기</span>
+            </div>
+          </div>
+          <div class="pop pop-date dp"><div class="dp-in"><div class="dp-head"><span class="dp-nav dp-prev"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3.5L5.5 8L10 12.5" stroke="#E0E0E0" stroke-width="1.2"></path></svg></span><b>2026 11월</b><span class="dp-nav dp-next"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#000" stroke-width="1.2"></path></svg></span></div><div class="dp-wd"><span class="wd">일</span><span class="wd">월</span><span class="wd">화</span><span class="wd">수</span><span class="wd">목</span><span class="wd">금</span><span class="wd">토</span></div><div class="dp-grid"><span class="off">1</span><span class="off">2</span><span class="off">3</span><span class="off">4</span><span class="off">5</span><span class="off">6</span><span class="off">7</span><span class="off">8</span><span class="off">9</span><span class="off">10</span><span class="off">11</span><span class="off">12</span><span class="off">13</span><span class="off">14</span><span class="off">15</span><span class="off">16</span><span class="today">17</span><span>18</span><span>19</span><span class="sel">20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span></div></div><div class="dp-note"><p>현지 이용일 기준으로 예약 마감 시간이 적용됩니다.</p><p>접속 지역에 따라 마감 시간이 다르게 보일 수 있으니 참고해 주세요.</p></div></div>
+          <div class="pop pop-time td"><div class="td-opt">18:00 - 21:00</div><p class="td-note">시간을 선택해 주세요</p></div>
+          </div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="옵션 선택 단계">
+            <button class="variant-btn on" data-target="op-variants" data-v="default" aria-pressed="true">기본</button>
+            <button class="variant-btn" data-target="op-variants" data-v="date" aria-pressed="false">날짜 선택</button>
+            <button class="variant-btn" data-target="op-variants" data-v="time" aria-pressed="false">시간 선택</button>
+            <button class="variant-btn" data-target="op-variants" data-v="done" aria-pressed="false">선택 완료</button>
+          </div>
+        </div>
+        <p class="cc-desc">상품 상세에서 날짜, 시간, 수량을 고르는 패널.</p>
+        <dl class="cc-notes">
+          <div><dt>구성</dt><dd>옵션 행(48px), 수량, 픽패스 할인 띠, 최종금액과 장바구니 버튼</dd></div>
+          <div><dt>동작</dt><dd><ul><li><b>날짜</b><span>누르면 캘린더</span></li><li><b>시간</b><span>누르면 드롭다운</span></li><li><b>선택 완료</b><span>장바구니 버튼이 검정으로 활성</span></li></ul></dd></div>
+          <div><dt>규칙</dt><dd>캘린더와 드롭다운은 누른 행 아래 9px에 행과 같은 폭으로 뜸. 아래 공간이 모자라면 행 위쪽. 열린 행은 밑줄이 진해짐</dd></div>
+          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>우측 360px</span></li><li><b>MO</b><span>BottomSheet 안에서 같은 행을 쓰고, 달력과 목록은 행 아래에 펼침</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>2개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>options</td><td><span class="type"><code>OptionRow[]</code></span></td><td>없음</td><td>옵션 행 배열. 드롭다운 또는 수량 타입.</td></tr>
+              <tr><td>sticky</td><td><span class="type"><code>boolean</code></span></td><td><code>true</code></td><td>PC에서 우측 고정 패널로 동작.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>11개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>PC</b><code>W 360px<br>bg #FFFFFF<br>border 1px #F5F3ED<br>r 6px</code></div>
+            <div class="spec-card"><b>MO</b><code>BottomSheet 내부. fullWidth</code></div>
+            <div class="spec-card"><b>Title</b><code>18px SemiBold<br>pt 16px, px 20px</code></div>
+            <div class="spec-card"><b>Row</b><code>H 48px, px 20px<br>border-bottom 1px #EBEBEB<br>label 14px Medium #757575<br>value 13px Regular #9E9E9E<br>chevron 16px #C2C2C2</code></div>
+            <div class="spec-card"><b>Stepper</b><code>32px circle, bg #F8F8F8<br>gap 8px<br>value 16px SemiBold #111111</code></div>
+            <div class="spec-card"><b>Pickpass band</b><code>H 42px, p 8px 16px<br>gradient -82deg #FD8959 to #EA4B88<br>text 13px Bold #FFFFFF<br>price 20px Bold</code></div>
+            <div class="spec-card"><b>Footer</b><code>p 16px 20px<br>border-top 1px #EBEBEB<br>label 12px #9E9E9E<br>price 20px Bold<br>CTA 136x48, r 4px, 15px Medium</code></div>
+            <div class="spec-card"><b>Popover 위치</b><code>누른 행 아래 9px<br>행과 같은 폭(318px), 왼쪽 정렬<br>아래 공간이 부족하면 행 위 9px<br>열린 행 밑줄 #5C5C5C</code></div>
+            <div class="spec-card"><b>Selected value</b><code>2026.11.20 (금)<br>13px Regular / 20px #212121<br>chevron 유지</code></div>
+            <div class="spec-card"><b>Time dropdown</b><code>318x82px, bg #FFFFFF, r 4px<br>shadow 0 0 20px rgba(0,0,0,.12)<br>옵션 H 40px, p 10px 12px, 14px Regular / 20px #757575<br>안내 12px Regular / 18px #9E9E9E, bg #F9FAFB, p 12px</code></div>
+            <div class="spec-card"><b>CTA active</b><code>옵션을 모두 고르면 bg #000000<br>136x48, r 4px, 15px Medium #FFFFFF</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="date-picker">
+        <div class="comp-section-head"><h2>DatePicker</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="dp-variants">
+            <div data-variant="pc" class="show"><div class="dp"><div class="dp-in"><div class="dp-head"><span class="dp-nav dp-prev"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3.5L5.5 8L10 12.5" stroke="#E0E0E0" stroke-width="1.2"></path></svg></span><b>2026 11월</b><span class="dp-nav dp-next"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#000" stroke-width="1.2"></path></svg></span></div><div class="dp-wd"><span class="wd">일</span><span class="wd">월</span><span class="wd">화</span><span class="wd">수</span><span class="wd">목</span><span class="wd">금</span><span class="wd">토</span></div><div class="dp-grid"><span class="off">1</span><span class="off">2</span><span class="off">3</span><span class="off">4</span><span class="off">5</span><span class="off">6</span><span class="off">7</span><span class="off">8</span><span class="off">9</span><span class="off">10</span><span class="off">11</span><span class="off">12</span><span class="off">13</span><span class="off">14</span><span class="off">15</span><span class="off">16</span><span class="today">17</span><span>18</span><span>19</span><span class="sel">20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span></div></div><div class="dp-note"><p>현지 이용일 기준으로 예약 마감 시간이 적용됩니다.</p><p>접속 지역에 따라 마감 시간이 다르게 보일 수 있으니 참고해 주세요.</p></div></div></div>
+            <div data-variant="mo"><div class="dp dp-inline"><div class="dp-in"><div class="dp-head"><span class="dp-nav dp-prev"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3.5L5.5 8L10 12.5" stroke="#E0E0E0" stroke-width="1.2"></path></svg></span><b>2026 11월</b><span class="dp-nav dp-next"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#000" stroke-width="1.2"></path></svg></span></div><div class="dp-wd"><span class="wd">일</span><span class="wd">월</span><span class="wd">화</span><span class="wd">수</span><span class="wd">목</span><span class="wd">금</span><span class="wd">토</span></div><div class="dp-grid"><span class="off">1</span><span class="off">2</span><span class="off">3</span><span class="off">4</span><span class="off">5</span><span class="off">6</span><span class="off">7</span><span class="off">8</span><span class="off">9</span><span class="off">10</span><span class="off">11</span><span class="off">12</span><span class="off">13</span><span class="off">14</span><span class="off">15</span><span class="off">16</span><span class="today">17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div></div><div class="dp-note"><p>현지 이용일 기준으로 예약 마감 시간이 적용됩니다.</p><p>접속 지역에 따라 마감 시간이 다르게 보일 수 있으니 참고해 주세요.</p></div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="화면 크기">
+            <button class="variant-btn on" data-target="dp-variants" data-v="pc" aria-pressed="true">PC (떠 있는 창)</button>
+            <button class="variant-btn" data-target="dp-variants" data-v="mo" aria-pressed="false">MO (펼침)</button>
+          </div>
+        </div>
+        <p class="cc-desc">옵션 패널에서 날짜를 누르면 뜨는 캘린더.</p>
+        <dl class="cc-notes">
+          <div><dt>상태</dt><dd><ul><li><b>지난 날</b><span>비활성</span></li><li><b>오늘</b><span>회색 원</span></li><li><b>선택한 날</b><span>검정 원</span></li></ul></dd></div>
+          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>누른 행 아래에 떠 있는 창</span></li><li><b>MO</b><span>옵션 시트 안에서 행 아래에 테두리 박스로 펼침</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>7개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Container</b><code>318x472px (달력 394 + 안내 78)<br>bg #FFFFFF<br>r 4px<br>달력 영역 p 12px<br>shadow 0 0 20px rgba(0,0,0,.12)</code></div>
+            <div class="spec-card"><b>Header</b><code>H 40px<br>제목 16px SemiBold / 20px, 가운데</code></div>
+            <div class="spec-card"><b>Nav button</b><code>40x40px, r 4px<br>비활성: bg #F8F8F8, 화살표 #E0E0E0 1.2px<br>활성: border 1px #E0E0E0, 화살표 #000000</code></div>
+            <div class="spec-card"><b>Weekday</b><code>40x40px 칸<br>13px Medium / 20px<br>#9E9E9E</code></div>
+            <div class="spec-card"><b>Day</b><code>40x40px, r 29px<br>14px Regular / 20px<br>지난 날 #C2C2C2<br>오늘 bg #F3F4F6<br>선택 가능 #000000<br>선택한 날 bg #000000, #FFFFFF<br>행 gap 10px, 6행 고정(H 290px)</code></div>
+            <div class="spec-card"><b>Notice</b><code>달력 아래 전체 폭<br>bg #F9FAFB<br>p 12px<br>12px Regular / 18px #9E9E9E</code></div>
+            <div class="spec-card"><b>MO (펼침)</b><code>332x475px<br>border 1px #757575, r 4px<br>그림자 없음<br>옵션 시트 안, 누른 행 바로 아래<br>빈 칸은 다음 달 날짜로 채움</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="option-popover" data-sum="옵션 행을 누르면 그 아래에 뜨는 선택 창.">
+        <div class="comp-section-head"><h2>OptionPopover</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="po-variants">
+            <div data-variant="people" class="show"><div class="po"><div class="po-head"><b>인원</b><span>어린이는 성인 동반 필수</span></div><div class="po-row"><div><b>성인</b><span>만 13세 이상</span></div><div class="op-step"><span class="op-btn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#E0E0E0" stroke-width="1.5"></path></svg></span><b>0</b><span class="op-btn po-plus"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#000" stroke-width="1.5"></path></svg></span></div></div><div class="po-row po-off"><div><b>어린이</b><span>만 3–12세</span></div><div class="op-step"><span class="op-btn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#E0E0E0" stroke-width="1.5"></path></svg></span><b>0</b><span class="op-btn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#E0E0E0" stroke-width="1.5"></path></svg></span></div></div><p class="td-note">* 어린이는 성인 동반이 필요한 상품이에요.</p><div class="po-foot"><div class="po-sum"><b>총 인원</b><span>0명</span></div><span class="po-btn po-ok">확인</span></div></div></div>
+            <div data-variant="time"><div class="po td"><div class="td-opt">14:00 - 18:30</div><div class="td-opt">14:00 - 18:30</div><div class="td-opt">14:00 - 18:30</div><div class="td-opt">14:00 - 18:30</div><div class="td-note"><p>* 실시간 예약 현황에 따라, 선택하신 시간대 예약이 어려울 수 있어요.</p><p>* 아래 옵션은 입장 희망 시간이며, 입장 후에는 시간 제한 없이 관람 가능해요.</p></div></div></div>
+            <div data-variant="name"><div class="po"><div class="po-head po-head-plain"><b>대표자 이름 (영문)</b></div><div class="po-form"><label><span>성 <i>Last Name</i></span><em>HONG</em></label><label><span>이름 <i>First Name</i></span><em>GILDONG</em></label></div><div class="po-foot"><span class="po-btn po-cancel">취소</span><span class="po-btn po-ok">확인</span></div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="선택 창 종류">
+            <button class="variant-btn on" data-target="po-variants" data-v="people" aria-pressed="true">인원 선택</button>
+            <button class="variant-btn" data-target="po-variants" data-v="time" aria-pressed="false">시간 선택</button>
+            <button class="variant-btn" data-target="po-variants" data-v="name" aria-pressed="false">이름 입력</button>
+          </div>
+        </div>
+        <p class="cc-desc">옵션 패널에서 행을 누르면 그 행 아래에 뜨는 선택 창.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>인원</b><span>단계 버튼과 확인</span></li><li><b>시간</b><span>목록과 안내</span></li><li><b>이름</b><span>입력 칸과 취소·확인</span></li><li><b>날짜</b><span>DatePicker 사용</span></li></ul></dd></div>
+          <div><dt>크기</dt><dd><ul><li><b>MO</b><span>떠 있는 창 대신 그림자 없는 테두리 박스(border 1px #757575)로 행 아래에 펼침</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>8개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Container</b><code>PC W 318px (옵션 행과 같은 폭)<br>bg #FFFFFF<br>r 4px<br>shadow 0 0 20px rgba(0,0,0,.12)<br>MO W 343px, 그림자 없이 border 1px #757575</code></div>
+            <div class="spec-card"><b>Header</b><code>H 40px, p 12px<br>제목 14px Medium / 20px #757575<br>보조 12px Regular / 18px #757575<br>인원은 border-bottom 1px #EBEBEB</code></div>
+            <div class="spec-card"><b>인원 행</b><code>p 12px, border-bottom 1px #EBEBEB<br>라벨 12px Medium / 18px #5C5C5C<br>설명 12px Regular #C2C2C2, gap 4px<br>선택 불가 행은 라벨도 #C2C2C2</code></div>
+            <div class="spec-card"><b>Stepper</b><code>버튼 32px 원, gap 8px<br>비활성 bg #F8F8F8<br>활성 border 1.2px #E0E0E0<br>값 16px SemiBold / 24px #111111, W 24px</code></div>
+            <div class="spec-card"><b>시간 목록</b><code>옵션 H 40px, p 12px<br>14px Regular / 20px #757575</code></div>
+            <div class="spec-card"><b>안내</b><code>bg #F9FAFB<br>p 12px<br>12px Regular / 18px #9E9E9E</code></div>
+            <div class="spec-card"><b>이름 입력</b><code>영역 bg #F9FAFB, p 12px, 2칸 gap 8px<br>라벨 12px #757575 + 영문 #C2C2C2, 입력과 gap 8px<br>입력 H 40px, bg #FFFFFF, border 1px #EBEBEB, r 4px, p 12px, 12px / 16px</code></div>
+            <div class="spec-card"><b>Footer</b><code>p 12px, gap 8px<br>버튼 H 40px, r 4px, 13px Medium / 20px<br>확인 bg #000000, #FFFFFF, 나머지 폭<br>취소 W 112px, border 1px #E0E0E0<br>인원은 위에 border-top 1px #EBEBEB, 왼쪽에 총 인원</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="option-box" data-sum="픽패스 예약에서 일정을 고르는 박스형 옵션.">
+        <div class="comp-section-head"><h2>OptionBox</h2><span class="cc-cat">Input</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="ob-variants">
+            <div data-variant="default" class="show"><div class="ob"><div class="ob-box"><b>날짜</b><span class="ob-v">선택</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-box"><b>시간을 선택해 주세요</b><span class="ob-v">선택</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-box ob-later"><img class="ico" src="icons/checkout/radio-off-20.svg" width="16" height="16" alt=""><b>일정 나중에 선택</b></div><div class="ob-read"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#5C5C5C"></circle><path d="M8 7.2V11.2M8 4.8V5.2" stroke="#fff" stroke-width="1.6"></path></svg>꼭 읽어주세요</div></div></div>
+            <div data-variant="open"><div class="ob ob-open"><div class="ob-box"><b>날짜</b><span class="ob-v">선택</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="dp dp-inline dp-pp"><div class="dp-in"><div class="dp-head"><span class="dp-nav dp-prev"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3.5L5.5 8L10 12.5" stroke="#E0E0E0" stroke-width="1.2"></path></svg></span><b>2026 11월</b><span class="dp-nav dp-next"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#000" stroke-width="1.2"></path></svg></span></div><div class="dp-wd"><span class="wd">일</span><span class="wd">월</span><span class="wd">화</span><span class="wd">수</span><span class="wd">목</span><span class="wd">금</span><span class="wd">토</span></div><div class="dp-grid"><span class="off">1</span><span class="off">2</span><span class="off">3</span><span class="off">4</span><span class="off">5</span><span class="off">6</span><span class="off">7</span><span class="off">8</span><span class="off">9</span><span class="off">10</span><span class="off">11</span><span class="off">12</span><span class="off">13</span><span class="off">14</span><span class="off">15</span><span class="off">16</span><span class="today">17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div></div><div class="dp-note"><p>현지 이용일 기준으로 예약 마감 시간이 적용됩니다.</p><p>접속 지역에 따라 마감 시간이 다르게 보일 수 있으니 참고해 주세요.</p></div></div><div class="ob-box"><b>시간을 선택해 주세요</b><span class="ob-v">선택</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-box ob-later"><img class="ico" src="icons/checkout/radio-off-20.svg" width="16" height="16" alt=""><b>일정 나중에 선택</b></div><div class="ob-read"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#5C5C5C"></circle><path d="M8 7.2V11.2M8 4.8V5.2" stroke="#fff" stroke-width="1.6"></path></svg>꼭 읽어주세요</div></div></div>
+            <div data-variant="time"><div class="ob"><div class="ob-box"><b>날짜</b><span class="ob-v ob-v-on">2026.11.24 (화)</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-box ob-up"><b>시간을 선택해 주세요</b><span class="ob-v">선택</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-list"><span>10:40 - 11:50</span></div><div class="ob-box ob-later"><img class="ico" src="icons/checkout/radio-off-20.svg" width="16" height="16" alt=""><b>일정 나중에 선택</b></div><div class="ob-read"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#5C5C5C"></circle><path d="M8 7.2V11.2M8 4.8V5.2" stroke="#fff" stroke-width="1.6"></path></svg>꼭 읽어주세요</div></div></div>
+            <div data-variant="done"><div class="ob"><div class="ob-box"><b>날짜</b><span class="ob-v ob-v-on">2026.11.24 (화)</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-box"><b>시간을 선택해 주세요</b><span class="ob-v">선택</span><svg aria-hidden="true" class="ob-ch" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ob-box ob-later"><img class="ico" src="icons/checkout/radio-off-20.svg" width="16" height="16" alt=""><b>일정 나중에 선택</b></div><div class="ob-read"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="#5C5C5C"></circle><path d="M8 7.2V11.2M8 4.8V5.2" stroke="#fff" stroke-width="1.6"></path></svg>꼭 읽어주세요</div></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".ob-box b" data-side="left">라벨</li><li data-for=".ob-box .ob-ch" data-side="right">선택 값, 화살표</li></ol>
+          <div class="cc-var-ctl" role="group" aria-label="옵션 상태">
+            <button class="variant-btn on" data-target="ob-variants" data-v="default" aria-pressed="true">기본</button>
+            <button class="variant-btn" data-target="ob-variants" data-v="open" aria-pressed="false">날짜 펼침</button>
+            <button class="variant-btn" data-target="ob-variants" data-v="done" aria-pressed="false">날짜 선택됨</button>
+            <button class="variant-btn" data-target="ob-variants" data-v="time" aria-pressed="false">시간 펼침</button>
+          </div>
+        </div>
+        <p class="cc-desc">픽패스 예약에서 일정을 고르는 박스형 옵션.</p>
+        <dl class="cc-notes">
+          <div><dt>동작</dt><dd><ul><li><b>날짜</b><span>박스 아래에 테두리 있는 달력이 펼쳐지고 화살표가 위로 바뀜</span></li><li><b>시간</b><span>박스 아래에 목록이 펼쳐짐</span></li></ul></dd></div>
+          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>같은 구성에 폭만 768px</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>7개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Box</b><code>H 48px<br>bg #FFFFFF<br>border 1px #EBEBEB<br>r 4px<br>px 16px<br>박스 사이 8px</code></div>
+            <div class="spec-card"><b>Label</b><code>14px Medium / 20px<br>#757575</code></div>
+            <div class="spec-card"><b>Value</b><code>14px Regular / 20px<br>선택 전 #9E9E9E<br>선택 후 #212121<br>chevron 20px #9E9E9E, 펼치면 위 방향</code></div>
+            <div class="spec-card"><b>Calendar (펼침)</b><code>MO 332x467px<br>border 1px #757575, r 4px, 그림자 없음<br>박스와 위아래 8px<br>달력 영역 p 12px: 헤더 H 32px(버튼 32px), 요일 40px, 날짜 290px(행 gap 10px)<br>안내 bg #F9FAFB, p 12px, border-top 1px #EBEBEB</code></div>
+            <div class="spec-card"><b>Time list (펼침)</b><code>박스 아래 8px<br>border 1px #757575, r 4px, 그림자 없음<br>항목 H 40px, px 12px<br>14px Regular / 20px #757575</code></div>
+            <div class="spec-card"><b>일정 나중에 선택</b><code>H 48px, 배경 없음<br>border 1px #EBEBEB, r 4px, p 13px 15px<br>라디오 + 라벨 gap 8px<br>14px Medium / 20px #5C5C5C</code></div>
+            <div class="spec-card"><b>꼭 읽어주세요</b><code>H 40px<br>border 1px dashed #E0E0E0<br>r 4px<br>아이콘 + 글자 gap 6px<br>14px Medium / 20px #5C5C5C<br>위 박스와 12px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== BADGE ==================== -->
+      <div class="comp-section" id="badge" data-sum="이미지와 카드 위에 붙는 작은 표시.">
+        <div class="comp-section-head"><h2>Badge</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview" style="gap:8px;flex-wrap:wrap">
+          <span class="bdg bdg-img">BEST</span><span class="bdg bdg-img">MD's 픽</span>
+          <span class="bdg bdg-o">성인</span>
+          <span style="display:inline-flex;align-items:center;font-size:10px;color:#5C5C5C;background:#EBEBEB;padding:2px 6px;border-radius:2px">Filled</span>
+          <span style="display:inline-flex;align-items:center;font-size:10px;color:#FB6764;background:#FFF5F5;border:0.5px solid #FFC8C7;padding:2px 6px;border-radius:2px">Pickpass</span>
+          <span class="bdg bdg-save">$ 17 SAVE</span><span class="bdg bdg-pp">$ 10 SAVE</span>
+          <span style="display:inline-flex;align-items:center;font-size:10px;color:#fff;background:#000;padding:2px 8px;border-radius:22px">뉴욕</span>
+          <span style="display:inline-flex;align-items:center;font-size:10px;color:#fff;background:#8F846B;padding:2px 8px;border-radius:22px">프리미엄</span>
+          <span style="display:inline-flex;align-items:center;font-size:11px;color:#F13B38;background:#FFE1DF;padding:2px 8px;border-radius:24px">예약필요</span>
+        </div>
+        <p class="cc-desc">이미지 위 뱃지(BEST 등), 성인, SAVE 2종.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>2개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>variant</td>
+                <td><span class="type"><code>"outlined"</code> | <code>"filled"</code> | <code>"pickpass"</code> | <code>"save"</code> | <code>"select-dark"</code> | <code>"select-warm"</code> | <code>"status"</code></span></td>
+                <td><code>"outlined"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>outlined:</b> 상품 카드 메타 태그 (카테고리, 옵션)</li>
+                    <li><b>filled:</b> 강조 메타 태그 (BEST, 추천)</li>
+                    <li><b>pickpass:</b> 픽패스 관련 할인·혜택 표시</li>
+                    <li><b>save:</b> 절약 금액 표시 ($7 SAVE)</li>
+                    <li><b>select-dark:</b> 선택된 지역 (뉴욕, 칸쿤)</li>
+                    <li><b>select-warm:</b> 프리미엄 표시</li>
+                    <li><b>status:</b> 예약 상태 (예약필요, 확정)</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr><td>label</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>뱃지 텍스트.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>11개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Image badge</b><code>H 24px, px 8px<br>bg rgba(0,0,0,.3)<br>13px Medium #FFFFFF<br>r 2px</code></div>
+            <div class="spec-card"><b>Outlined (성인)</b><code>H 16px, px 6px<br>10px Regular #5C5C5C<br>border 1px #EBEBEB<br>r 2px</code></div>
+            <div class="spec-card"><b>SAVE (목록)</b><code>H 20px, px 4px<br>12px Regular #9E9E9E<br>bg #F8F8F8, border 1px #E0E0E0<br>r 2px</code></div>
+            <div class="spec-card"><b>SAVE (옵션 패널)</b><code>H 16px, px 4px<br>10px Regular #FB6764<br>bg #FFF5F5<br>r 2px</code></div>
+            <div class="spec-card"><b>Text/Outlined</b><code>text #5C5C5C 10px<br>border 1px #EBEBEB<br>r 2px</code></div>
+            <div class="spec-card"><b>Text/Filled</b><code>bg #EBEBEB<br>text #5C5C5C 10px<br>r 2px</code></div>
+            <div class="spec-card"><b>Text/Pickpass</b><code>bg #FFF5F5<br>text #FB6764 10px<br>border 0.5px #FFC8C7<br>r 2px</code></div>
+            <div class="spec-card"><b>Text/Save</b><code>bg #F8F8F8<br>text #9E9E9E 10px<br>border 0.5px #E0E0E0<br>r 2px</code></div>
+            <div class="spec-card"><b>Select/Dark</b><code>bg #000<br>text #FFF 10px<br>r 22px</code></div>
+            <div class="spec-card"><b>Select/Warm</b><code>bg #8F846B<br>text #FFF 10px<br>r 22px</code></div>
+            <div class="spec-card"><b>Status/Required</b><code>bg #FFE1DF<br>text #F13B38 11px<br>r 24px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== STATUS LABEL ==================== -->
+      <div class="comp-section" id="status-label" data-sum="예약 상태를 색과 글자로 알려 주는 표시.">
+        <div class="comp-section-head"><h2>StatusLabel</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview" style="gap:24px;flex-wrap:wrap">
+          <span class="st st-r"><i></i>예약필요</span><span class="st st-g"><i></i>준비완료</span><span class="st st-p"><i></i>지난여행</span><span class="st st-c"><i></i>만료임박</span><span class="st st-r">예약필요</span>
+        </div>
+        <p class="cc-desc">점 6px + 12px Regular. 상세 화면은 점과 함께, 목록 카드는 텍스트만.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>2개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>variant</td>
+                <td><span class="type"><code>"required"</code> | <code>"ready"</code> | <code>"past"</code> | <code>"expiring"</code></span></td>
+                <td>없음</td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>required:</b> 예약필요 (Red #E02A28)</li>
+                    <li><b>ready:</b> 준비완료 (Teal #0D9488)</li>
+                    <li><b>past:</b> 지난여행 (Gray #757575)</li>
+                    <li><b>expiring:</b> 만료임박 (Coral #FB6764)</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr><td>label</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>상태 텍스트. variant에 따라 자동 매핑 가능.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Dot</b><code>6px circle<br>variant color<br>상세 화면에서만 표시</code></div>
+            <div class="spec-card"><b>Text</b><code>12px Regular / 16px<br>variant color<br>gap 6px</code></div>
+            <div class="spec-card"><b>예약필요</b><code>#E02A28</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== PRODUCT CARD ==================== -->
+      <div class="comp-section" id="product-card" data-sum="상품 목록에 쓰이는 상품 카드.">
+        <div class="comp-section-head"><h2>ProductCard</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview">
+          <div class="pc">
+            <div class="pc-img"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt="랜드마크 야경스팟 차량투어 상품 이미지"><span class="pc-best">BEST</span></div>
+            <div class="pc-body">
+              <div class="pc-tt"><p class="pc-title">랜드마크 야경스팟 차량투어</p><p class="pc-sub">뉴욕 야경 스팟과 음악이 어우러진 테마 여행</p></div>
+              <div class="pc-meta"><div class="pc-badges"><span class="pc-save">$ 17 SAVE</span></div><b class="pc-price">$51 ~</b><div class="pc-rate"><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#757575"></path></svg><span>4.7 ( 185 )</span></div></div>
+            </div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".pc-best" data-side="left">BEST 뱃지</li><li data-for=".pc-img" data-side="left">4:5 이미지</li><li data-for=".pc-title" data-side="right">상품명</li><li data-for=".pc-sub" data-side="right">부제</li><li data-for=".pc-save" data-side="left">SAVE 뱃지</li><li data-for=".pc-price" data-side="left">가격</li><li data-for=".pc-rate" data-side="left">별점</li></ol>
+        </div>
+        <p class="cc-desc">상품 목록에 쓰이는 상품 카드.</p>
+        <dl class="cc-notes">
+          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>목록에서 282px</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>9개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>image</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>썸네일 이미지 URL.</td></tr>
+              <tr><td>title</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>상품명. 최대 2줄 말줄임.</td></tr>
+              <tr><td>price</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>판매 가격 (USD).</td></tr>
+              <tr><td>originalPrice</td><td><span class="type"><code>number</code> | <code>undefined</code></span></td><td><code>undefined</code></td><td>원가. 있으면 취소선 표시.</td></tr>
+              <tr><td>rating</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>평균 별점 (0~5).</td></tr>
+              <tr><td>reviewCount</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>리뷰 수. 별점 우측에 괄호 표시.</td></tr>
+              <tr>
+                <td>badge</td>
+                <td><span class="type"><code>"best"</code> | <code>"only"</code> | <code>undefined</code></span></td>
+                <td><code>undefined</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>best:</b> 인기 상품 (썸네일 좌상단)</li>
+                    <li><b>only:</b> 단독 상품</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr><td>pickpassDiscount</td><td><span class="type"><code>boolean</code></span></td><td><code>false</code></td><td>픽패스 추가할인 뱃지 표시.</td></tr>
+              <tr><td>saveAmount</td><td><span class="type"><code>number</code> | <code>undefined</code></span></td><td><code>undefined</code></td><td>절약 금액 뱃지 ($N SAVE).</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>8개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Card</b><code>W 282px (PC 리스트)<br>이미지와 본문 gap 12px<br>배경과 패딩 없음</code></div>
+            <div class="spec-card"><b>Image</b><code>4:5 (282x353)<br>border 1px rgba(0,0,0,.05)<br>r 4px</code></div>
+            <div class="spec-card"><b>BEST badge</b><code>top 8px, left 8px<br>H 24px, px 8px<br>bg rgba(0,0,0,.3)<br>13px Medium #FFFFFF<br>r 2px</code></div>
+            <div class="spec-card"><b>Title</b><code>16px SemiBold / 22px<br>#000000</code></div>
+            <div class="spec-card"><b>Subtitle</b><code>14px Regular / 20px<br>#5C5C5C<br>1줄 말줄임</code></div>
+            <div class="spec-card"><b>SAVE badge</b><code>H 20px, px 4px<br>12px Regular #9E9E9E<br>bg #F8F8F8<br>border 1px #E0E0E0<br>r 2px</code></div>
+            <div class="spec-card"><b>Price</b><code>20px Bold / 26px</code></div>
+            <div class="spec-card"><b>Rating</b><code>Star 16px #757575<br>12px Regular #757575</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== PICKPASS CARD ==================== -->
+      <div class="comp-section" id="pickpass-card">
+        <div class="comp-section-head"><h2>PickpassCard</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="pk-variants">
+            <div data-variant="need" class="show"><div class="pk">
+            <div class="pk-top"><span class="pk-status">예약필요</span><span class="pk-more">자세히 보기<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 9.5L8 6L4.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div>
+            <div class="pk-tt"><b>픽패스로 뉴욕여행</b><div class="pk-meta"><span class="pk-tag">성인</span><span>P1000504001 ・만료 D- 127</span></div></div>
+            <div class="pk-use"><div><div class="pk-use-t"><b>픽 사용 현황</b><span><em>0</em> / 2</span></div><div class="pk-dots"><i></i><i></i></div></div><p><span>잔여 :</span> 2</p></div>
+          </div></div>
+            <div data-variant="opt"><div class="pk"><div class="pk-top"><span class="pk-status">2개 상품 옵션 미선택</span><span class="pk-more">자세히 보기<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 9.5L8 6L4.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div><div class="pk-tt"><b>엄마랑 함께 떠나는 2026 뉴욕 여행</b><div class="pk-meta"><span class="pk-tag">어린이</span><span>P1000379001・만료 D-180</span></div></div><div class="pk-use"><div><div class="pk-use-t"><b>픽 사용 현황</b><span><em>4</em> / 6</span></div><div class="pk-dots"><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="hot"></i><i class="hot"></i><i></i><i></i></div></div><p><span>잔여 :</span> 2</p></div></div></div>
+            <div data-variant="ready"><div class="pk pk-ready"><div class="pk-top"><span class="pk-status">준비완료</span><span class="pk-more">자세히 보기<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 9.5L8 6L4.5 2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div><div class="pk-tt"><b>엄마랑 함께 떠나는 2026 뉴욕 여행</b><div class="pk-meta"><span class="pk-tag">어린이</span><span>P1000379001・만료 D-180</span></div></div><div class="pk-use"><div><div class="pk-use-t"><b>픽 사용 현황</b><span><em>6</em> / 6</span></div><div class="pk-dots"><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i><i class="on"><img src="icons/pickpass/dot-check-12.svg" width="12" height="12" alt=""></i></div></div><p><span>잔여 :</span> 0</p></div></div></div>
+            <div data-variant="expired"><div class="pk pk-exp"><div class="pk-top"><span class="pk-status"><i class="pk-dot"></i>기간만료</span></div><div class="pk-tt"><b>엄마랑 함께 떠나는 2026 뉴욕 여행</b><div class="pk-meta"><span class="pk-tag">어린이</span><span>P1000379001・만료 2026-05-06</span></div></div><span class="pk-btn">주문내역에서 확인</span><p class="pk-note">유효기간이 만료된 패스예요. 자세한 이용 내역은 주문내역에서 확인해 주세요.</p></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".pk-status" data-side="left">상태</li><li data-for=".pk-more" data-side="right">자세히 보기</li><li data-for=".pk-tt b" data-side="left">제목</li><li data-for=".pk-meta" data-side="left">메타</li><li data-for=".pk-use" data-side="bottom">픽 사용 현황</li></ol>
+          <div class="cc-var-ctl" role="group" aria-label="픽패스 상태">
+            <button class="variant-btn on" data-target="pk-variants" data-v="need" aria-pressed="true">예약필요</button>
+            <button class="variant-btn" data-target="pk-variants" data-v="opt" aria-pressed="false">옵션 미선택</button>
+            <button class="variant-btn" data-target="pk-variants" data-v="ready" aria-pressed="false">준비완료</button>
+            <button class="variant-btn" data-target="pk-variants" data-v="expired" aria-pressed="false">기간만료</button>
+          </div>
+        </div>
+        <p class="cc-desc">나의 픽패스 목록에 쓰이는 픽패스 한 건. MO 332x174.</p>
+        <dl class="cc-notes">
+          <div><dt>상태</dt><dd><ul><li><b>예약필요</b><span>상태 글자 빨강</span></li><li><b>옵션 미선택</b><span>상태 글자 빨강</span></li><li><b>준비완료</b><span>상태 글자 청록</span></li><li><b>기간만료</b><span>글자 전부 회색, 사용 현황 대신 주문내역 버튼과 안내</span></li></ul></dd></div>
+          <div><dt>픽 점</dt><dd><ul><li><b>선택 완료</b><span>검정 원에 흰 체크</span></li><li><b>옵션 미선택</b><span>빨강 원</span></li><li><b>남은 픽</b><span>점선 원</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>6개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>status</td><td><span class="type"><code>"required"</code> | <code>"ready"</code> | <code>"past"</code></span></td><td>없음</td><td>StatusLabel variant와 동일. 카드 상단 표시.</td></tr>
+              <tr><td>title</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>픽패스 상품명.</td></tr>
+              <tr><td>passId</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>패스 번호 (P10005…).</td></tr>
+              <tr><td>usedCount</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>사용한 픽 수.</td></tr>
+              <tr><td>totalCount</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>전체 픽 수.</td></tr>
+              <tr><td>dDay</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>만료까지 남은 일수.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>9개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Status</b><code>12px Regular / 16px<br>예약필요·옵션 미선택 #E02A28<br>준비완료 #0F766E<br>기간만료 #C2C2C2, 앞에 점 6px, gap 6px</code></div>
+            <div class="spec-card"><b>Pick dots</b><code>12px 원, gap 3px<br>선택 완료 bg #111827 + 흰 체크<br>옵션 미선택 bg #F13B38<br>남은 픽 bg #F3F4F6, border 1px dashed #9CA3AF</code></div>
+            <div class="spec-card"><b>기간만료</b><code>제목·뱃지·메타 글자 #C2C2C2<br>버튼 H 40px, r 4px, bg #F8F8F8, 13px Medium / 20px #5C5C5C<br>안내 11px Regular / 16px #9E9E9E<br>블록 사이 gap 8px</code></div>
+            <div class="spec-card"><b>Card</b><code>MO 332x174px<br>bg #FFFFFF<br>border 1px #F5F3ED<br>r 6px<br>p 17px<br>gap 8px</code></div>
+            <div class="spec-card"><b>Status</b><code>12px Regular / 16px<br>예약필요 #E02A28<br>목록에서는 점 없음</code></div>
+            <div class="spec-card"><b>More</b><code>자세히 보기 12px Medium #5C5C5C<br>chevron 12px</code></div>
+            <div class="spec-card"><b>Title</b><code>20px Bold / 24px<br>#0A0A0A</code></div>
+            <div class="spec-card"><b>Meta</b><code>뱃지 10px #5C5C5C, border 1px #EBEBEB, r 2px, px 6px<br>번호 11px #9E9E9E</code></div>
+            <div class="spec-card"><b>Usage box</b><code>bg #F9FAFB<br>r 4px<br>p 12px<br>라벨 13px Medium<br>원 12px, bg #F3F4F6, dashed 1px #9CA3AF<br>잔여 12px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== REVIEW CARD ==================== -->
+      <div class="comp-section" id="coupon-card" data-sum="쿠폰함과 결제 화면에 쓰이는 쿠폰 한 장.">
+        <div class="comp-section-head"><h2>CouponCard</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="cp-variants">
+            <div data-variant="p-on" class="show"><div class="cp"><div class="cp-l"><i class="cp-tag">상품</i><b>10%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>쿠폰 이름은 여기까지 넘어가면 말줄임 처리</b><img class="ico" src="icons/coupon/radio-off-20.svg" width="20" height="20" alt=""></div><p class="cp-cond">최대 $30 할인 · 최소 주문 $50</p></div><div class="cp-bot"><span>$8.50 할인 예정</span><i class="cp-d">D-90</i></div></div></div></div></div>
+            <div data-variant="p-pre"><div class="cp cp-pre"><div class="cp-l"><i class="cp-tag">상품</i><b>5%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>쿠폰 이름은 여기까지 넘어가면 말줄임 처리</b></div><p class="cp-cond">최대 $30 할인 · 최소 주문 $50</p></div><div class="cp-bot"><span>$8.50 할인 예정</span><i class="cp-d">D-90</i></div></div><span class="cp-get"><img class="ico" src="icons/coupon/download-24.svg" width="24" height="24" alt="">쿠폰받기</span></div></div></div>
+            <div data-variant="p-off"><div class="cp cp-off"><div class="cp-l"><i class="cp-tag">상품</i><b>15%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>회원가입 환영 쿠폰</b></div><p class="cp-cond">최소 주문 금액 $30 이상부터 사용 가능합니다</p></div><div class="cp-bot"><span>2026.08.31 까지</span></div></div></div></div></div>
+            <div data-variant="c-on"><div class="cp cp-cart"><div class="cp-l"><i class="cp-tag">장바구니</i><b>10%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>쿠폰 이름은 여기까지 넘어가면 말줄임 처리</b><img class="ico" src="icons/coupon/radio-off-20.svg" width="20" height="20" alt=""></div><p class="cp-cond">최대 $30 할인 · 최소 주문 $50</p></div><div class="cp-bot"><span>$8.50 할인 예정</span><i class="cp-d">D-90</i></div></div></div></div></div>
+            <div data-variant="c-pre"><div class="cp cp-cart cp-pre"><div class="cp-l"><i class="cp-tag">장바구니</i><b>10%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>쿠폰 이름은 여기까지 넘어가면 말줄임 처리</b></div><p class="cp-cond">최대 $30 할인 · 최소 주문 $50</p></div><div class="cp-bot"><span>$8.50 할인 예정</span><i class="cp-d">D-90</i></div></div><span class="cp-get"><img class="ico" src="icons/coupon/download-24.svg" width="24" height="24" alt="">쿠폰받기</span></div></div></div>
+            <div data-variant="c-off"><div class="cp cp-cart cp-off"><div class="cp-l"><i class="cp-tag">장바구니</i><b>10%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>회원가입 환영 쿠폰</b></div><p class="cp-cond">최소 주문 금액 $30 이상부터 사용 가능합니다</p></div><div class="cp-bot"><span>2026.08.31 까지</span></div></div></div></div></div>
+            <div data-variant="pc"><div class="cp cp-pre cp-pc"><div class="cp-l"><i class="cp-tag">상품</i><b>10%</b><span>할인</span></div><div class="cp-r"><div class="cp-body"><div><div class="cp-top"><b>2026 봄 시즌 신규가입 환영 쿠폰</b></div><p class="cp-cond">최대 $30 할인 · 최소 주문 $50</p></div><div class="cp-bot"><span>$8.50 할인 예정</span><i class="cp-d cp-d-hot">D-1</i></div></div><span class="cp-get"><img class="ico" src="icons/coupon/download-32.svg" width="32" height="32" alt="">쿠폰받기</span></div></div></div>
+          </div>
+          <ol class="cc-anno" hidden>
+            <li data-for=".cp-l" data-side="left">종류, 할인율</li>
+            <li data-for=".cp-top b" data-side="top">쿠폰 이름</li>
+            <li data-for=".cp-cond" data-side="right">조건</li>
+            <li data-for=".cp-bot span" data-side="bottom">할인 예정 금액</li>
+            <li data-for=".cp-d" data-side="right">남은 기간</li>
+          </ol>
+          <div class="cc-var-ctl" role="group" aria-label="쿠폰 종류와 상태">
+            <button class="variant-btn on" data-target="cp-variants" data-v="p-on" aria-pressed="true">상품 (사용 가능)</button>
+            <button class="variant-btn" data-target="cp-variants" data-v="p-pre" aria-pressed="false">상품 (받기 전)</button>
+            <button class="variant-btn" data-target="cp-variants" data-v="p-off" aria-pressed="false">상품 (비활성)</button>
+            <button class="variant-btn" data-target="cp-variants" data-v="c-on" aria-pressed="false">장바구니 (사용 가능)</button>
+            <button class="variant-btn" data-target="cp-variants" data-v="c-pre" aria-pressed="false">장바구니 (받기 전)</button>
+            <button class="variant-btn" data-target="cp-variants" data-v="c-off" aria-pressed="false">장바구니 (비활성)</button>
+            <button class="variant-btn" data-target="cp-variants" data-v="pc" aria-pressed="false">PC</button>
+          </div>
+        </div>
+        <p class="cc-desc">쿠폰함과 결제 화면에 쓰이는 쿠폰 한 장.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>상품</b><span>왼쪽 칸을 색으로 채움</span></li><li><b>장바구니</b><span>왼쪽 끝 6px 띠와 점선으로 구분</span></li></ul></dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>받기 전</b><span>왼쪽 Warm 400, 오른쪽에 쿠폰받기 버튼</span></li><li><b>사용 가능</b><span>왼쪽 검정, 결제 화면에서는 선택 동그라미</span></li><li><b>비활성</b><span>전체 회색, 쓸 수 없는 이유를 코랄색 글로 표시</span></li></ul></dd></div>
+          <div><dt>규칙</dt><dd>남은 기간이 하루면 기간 뱃지를 빨간색으로 바꿈</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>8개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Card</b><code>MO W 343px, PC W 536px<br>bg #FFFFFF<br>border 1px #EBEBEB (PC #E0E0E0)<br>r 6px</code></div>
+            <div class="spec-card"><b>Left (상품)</b><code>MO W 72px, p 16px, gap 4px<br>PC W 100px, p 20px, gap 2px<br>사용 가능 bg #000000<br>받기 전 bg #C9C2B1<br>비활성 bg #C2C2C2, 글자 #EBEBEB</code></div>
+            <div class="spec-card"><b>Left (장바구니)</b><code>bg #FFFFFF<br>왼쪽 띠 6px, 색은 상품 쿠폰 배경색과 같음<br>글자도 같은 색<br>오른쪽과 점선 1px #EBEBEB</code></div>
+            <div class="spec-card"><b>Discount</b><code>종류 뱃지 H 16px, px 6px, r 20px, 10px Medium<br>뱃지 테두리 흰색 50% (장바구니 #EEEBE2)<br>할인율 MO 20px Bold / 24px, PC 24px Bold / 32px<br>"할인" 14px Regular / 20px</code></div>
+            <div class="spec-card"><b>Name</b><code>MO 14px SemiBold / 20px, PC 16px SemiBold / 24px<br>#0A0A0A, 한 줄 말줄임<br>비활성 #C2C2C2</code></div>
+            <div class="spec-card"><b>Condition</b><code>MO 11px Regular / 16px, PC 12px<br>#757575, 이름과 gap 2px<br>비활성 사유 #FC7F7C</code></div>
+            <div class="spec-card"><b>Bottom</b><code>윗선 0.5px #E0E0E0<br>위 간격 MO 8px, PC 12px<br>MO 11px, PC 12px, #757575<br>기간 뱃지 MO H 16px px 4px 10px Medium, PC H 20px px 6px 12px<br>bg #F8F8F8 #757575, 임박 bg #FFF5F5 #F13B38<br>r 2px</code></div>
+            <div class="spec-card"><b>Action</b><code>오른쪽 칸 p 16px (PC 20px), gap 20px (PC 24px)<br>쿠폰받기 아이콘 MO 24px, PC 32px<br>글자 MO 10px, PC 12px / 12px #000000<br>선택 동그라미 MO 20px, PC 24px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="review-card" data-sum="상품 상세 &quot;여행 후기&quot; 목록의 후기 한 건.">
+        <div class="comp-section-head"><h2>ReviewCard</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="rw-variants">
+            <div data-variant="text" class="show"><div class="rw"><div class="rw-head"><div class="rw-top"><span class="rw-stars"><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#E0E0E0"></path></svg><b>4.00</b></span><span class="rw-date">2025.09.23</span></div><span class="rw-name">박*유</span></div><div class="rw-body rw-clamp"><p>사실 뉴욕에 오고 그냥 건물들이 높고 좁이쁘다~정도지 큰 감흥은 없었는데 선셋투어한 날 다리 위에서 최고의 노을을 보고 인생도시가 바뀐것같습니다!!!! 수신기 음질도 좋아서 가이드님 이야기도 잘들렸고 포함된 스냅사진들도 생각보다 엄청 고퀄로 찍어주셨어요. 건축물이나 뉴욕에 대한 여러 역사적 이야기나 흥미로운 이야기 맛집 추천들까지 알차게 들었습니다.</p><u>더보기</u></div></div></div>
+            <div data-variant="photo"><div class="rw"><div class="rw-head"><div class="rw-top"><span class="rw-stars"><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><b>5.00</b></span><span class="rw-date">2026.08.06</span></div><span class="rw-name">임*한</span></div><div class="rw-photos"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""></div><div class="rw-body"><p>가이드분께서 정말 근사하게 사진 찍어주셨어요.</p></div></div></div>
+            <div data-variant="list"><div class="rw"><div class="rw-head"><div class="rw-top"><span class="rw-stars"><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#E0E0E0"></path></svg><b>4.00</b></span><span class="rw-date">2025.09.23</span></div><span class="rw-name">박*유</span></div><div class="rw-body rw-clamp"><p>사실 뉴욕에 오고 그냥 건물들이 높고 좁이쁘다~정도지 큰 감흥은 없었는데 선셋투어한 날 다리 위에서 최고의 노을을 보고 인생도시가 바뀐것같습니다!!!! 수신기 음질도 좋아서 가이드님 이야기도 잘들렸고 포함된 스냅사진들도 생각보다 엄청 고퀄로 찍어주셨어요. 건축물이나 뉴욕에 대한 여러 역사적 이야기나 흥미로운 이야기 맛집 추천들까지 알차게 들었습니다.</p><u>더보기</u></div></div><i class="rw-line"></i><div class="rw"><div class="rw-head"><div class="rw-top"><span class="rw-stars"><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><svg width="16" height="16" aria-hidden="true" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><b>5.00</b></span><span class="rw-date">2025.09.10</span></div><span class="rw-name">김*림</span></div><div class="rw-body"><p>뉴욕 야경 투어와 고민하다가 8/25 브루클린 선셋 스냅+워킹 투어를 신청했는데 잘했습니다.</p></div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="후기 형태">
+            <button class="variant-btn on" data-target="rw-variants" data-v="text" aria-pressed="true">글만</button>
+            <button class="variant-btn" data-target="rw-variants" data-v="photo" aria-pressed="false">사진 후기</button>
+            <button class="variant-btn" data-target="rw-variants" data-v="list" aria-pressed="false">목록</button>
+          </div>
+        </div>
+        <p class="cc-desc">상품 상세 맨 아래 "여행 후기" 목록의 후기 한 건. 카드 배경 없이 구분선으로 나눔.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>5개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>rating</td><td><span class="type"><code>number</code></span></td><td>없음</td><td>별점 (0~5). 정수 단위.</td></tr>
+              <tr><td>content</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>리뷰 본문. 3줄 이상 시 더보기.</td></tr>
+              <tr><td>author</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>작성자명 (마스킹 처리됨).</td></tr>
+              <tr><td>date</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>작성일 (YYYY.MM.DD).</td></tr>
+              <tr><td>image</td><td><span class="type"><code>string</code> | <code>undefined</code></span></td><td><code>undefined</code></td><td>리뷰 사진 URL. 좌측 56x56 썸네일.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>7개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Item</b><code>W 600px (PC 본문)<br>배경 없음<br>gap 12px</code></div>
+            <div class="spec-card"><b>Stars</b><code>16px x 5<br>채움 #8F846B, 빈 별 #E0E0E0<br>점수 13px SemiBold #000000<br>gap 4px</code></div>
+            <div class="spec-card"><b>Date</b><code>12px Regular / 16px<br>#9E9E9E<br>우측 정렬</code></div>
+            <div class="spec-card"><b>Name</b><code>14px Regular / 20px<br>#5C5C5C<br>별점 줄과 gap 4px</code></div>
+            <div class="spec-card"><b>Photos</b><code>117x117px<br>r 4px<br>border 1px rgba(0,0,0,.05)<br>gap 4px</code></div>
+            <div class="spec-card"><b>Body</b><code>13px Regular / 20px<br>#5C5C5C<br>3줄 넘으면 더보기(13px Medium)</code></div>
+            <div class="spec-card"><b>Divider</b><code>H 1px<br>bg #EBEBEB<br>위아래 28px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== BOOKING CARD ==================== -->
+      <div class="comp-section" id="booking-card" data-sum="주문 목록의 주문 한 건.">
+        <div class="comp-section-head"><h2>BookingCard</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview">
+          <div class="od"><div class="od-head"><span>총 2개</span><span>최신순</span></div><div class="od-row"><div class="od-main"><span class="od-date">2026.11.12 14:32</span><span class="od-title"><i class="od-pill">픽패스</i>픽패스로 뉴욕여행</span><span class="od-id">주문 그룹 ID: #AG1214977<svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#9E9E9E" stroke-width="1.2"><rect x="5.5" y="5.5" width="8" height="8"></rect><path d="M3 10.5V2.5H11"></path></svg></span></div><span class="od-r">$0.00<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#9E9E9E" stroke-width="1.2"></path></svg></span></div><div class="od-row"><div class="od-main"><span class="od-date">2026.11.03 09:10</span><span class="od-title">버드랜드 재즈</span><span class="od-id">주문 그룹 ID: #AG1214652<svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#9E9E9E" stroke-width="1.2"><rect x="5.5" y="5.5" width="8" height="8"></rect><path d="M3 10.5V2.5H11"></path></svg></span></div><span class="od-r">$62.00<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#9E9E9E" stroke-width="1.2"></path></svg></span></div></div>
+          <ol class="cc-anno" hidden><li data-for=".od-date" data-side="left">날짜</li><li data-for=".od-title" data-side="left">제목</li><li data-for=".od-id" data-side="left">주문 그룹 ID, 복사</li><li data-for=".od-r" data-side="right">금액, 화살표</li></ol>
+        </div>
+        <p class="cc-desc">주문 목록(/mypage/orders)의 주문 한 건.</p>
+        <dl class="cc-notes">
+          <div><dt>규칙</dt><dd>픽패스 주문은 제목 앞에 알약 뱃지. 행 사이는 구분선</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Row</b><code>MO 332px<br>행 사이 구분선 1px<br>배경 없음</code></div>
+            <div class="spec-card"><b>Left</b><code>날짜·시간(회색 작은 글씨)<br>제목(큰 글씨)<br>주문 그룹 ID + 복사 아이콘</code></div>
+            <div class="spec-card"><b>Right</b><code>금액(굵게) + chevron</code></div>
+            <div class="spec-card"><b>Pickpass order</b><code>제목 앞 "픽패스" 알약 뱃지</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="cart-item">
+        <div class="comp-section-head"><h2>CartItem</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="ci-variants">
+            <div data-variant="mo" class="show"><div class="ci"><div class="ci-all"><span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="2" fill="#000"></rect><path d="M4 8.2L6.8 11L12 5.5" stroke="#fff" stroke-width="1.5"></path></svg>전체 선택<em>|</em>1개 선택됨</span><span>선택 삭제</span></div><div class="ci-head"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="2" fill="#000"></rect><path d="M4 8.2L6.8 11L12 5.5" stroke="#fff" stroke-width="1.5"></path></svg><b>버드랜드 재즈</b><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="#5C5C5C" stroke-width="1.5"></path></svg></div><div class="ci-main"><img class="ci-thumb" src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><div class="ci-info"><p class="ci-name">일반석</p><p class="ci-meta">성인 1명 ・ <span>2026.11.20 (금)</span></p></div><b class="ci-price">$62</b></div><div class="ci-opt"><span>시간</span><b>18:00 - 21:00</b></div></div></div>
+            <div data-variant="co"><div class="ci ci-co"><div class="ci-main"><img class="ci-thumb" src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><div class="ci-info"><i class="bdg-post">후결제 상품</i><p class="ci-name">허드슨 리버점 여성 쉐어</p><p class="ci-meta">성인 1명・<span>2026-09-03 ~ 2026-09-05 (2박 3일)</span></p></div><div class="ci-pr"><b class="ci-price">$160.00</b><span>+$128 후결제</span></div></div><div class="ci-opt ci-opt-rows"><div><span>First Name</span><b>GILDONG</b></div><div><span>Last Name</span><b>HONG</b></div><div><span>Section</span><b>Orchestra</b></div><div><span>Start Time</span><b>19:00</b></div></div><div class="ieb ieb-req"><span>여행자 정보를 입력해주세요.</span><span class="ieb-r"><i class="ieb-pill">필수입력</i><img class="ico" src="icons/checkout/chevron-16.svg" width="16" height="16" alt=""></span></div><div class="sel"><span>쿠폰 사용</span><img class="ico" src="icons/checkout/chevron-16.svg" width="16" height="16" alt=""></div></div></div>
+            <div data-variant="co-done"><div class="ci ci-co"><div class="ci-main"><img class="ci-thumb" src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><div class="ci-info"><p class="ci-name">알라딘</p><p class="ci-meta">성인 1명 ・ <span>2025-11-23</span></p></div><div class="ci-pr ci-pr-row"><s>$142</s><b class="ci-price">$133.5</b></div></div><div class="ci-opt ci-opt-rows"><div><span>First Name</span><b>GILDONG</b></div><div><span>Last Name</span><b>HONG</b></div><div><span>Section</span><b>Orchestra</b></div><div><span>Start Time</span><b>19:00</b></div></div><div class="ieb"><span class="ieb-l"><img class="ico" src="icons/checkout/check-circle-16.svg" width="16" height="16" alt=""><b>여행자 정보 입력 완료</b></span><span class="ieb-edit">수정</span></div><div class="sel sel-on"><span class="sel-l"><img class="ico" src="icons/checkout/check-circle-16.svg" width="16" height="16" alt=""><b>추석 황금연휴 뉴욕 여행 슈퍼위크 할인 추석 황금연휴 뉴욕 여행 슈퍼위크 할인</b><em>-$3.5</em></span><img class="ico" src="icons/checkout/chevron-16.svg" width="16" height="16" alt=""></div></div></div>
+            <div data-variant="pc"><div class="ci ci-pc"><div class="ci-head"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="2" fill="#000"></rect><path d="M4 8.2L6.8 11L12 5.5" stroke="#fff" stroke-width="1.5"></path></svg><b>버드랜드 재즈</b><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M18 6L6 18" stroke="#5C5C5C" stroke-width="1.5"></path></svg></div><div class="ci-main"><img class="ci-thumb" src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><div class="ci-info"><p class="ci-name">일반석</p><p class="ci-meta">성인 1명 ・ <span>2026.11.20 (금)</span></p></div><b class="ci-price">$62</b></div><div class="ci-opt"><span>시간</span><b>18:00 - 21:00</b></div></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".ci-all" data-side="top">전체 선택 행</li><li data-for=".ci-head" data-side="left">체크박스, 제목</li><li data-for=".ci-head svg:last-of-type" data-side="right">삭제</li><li data-for=".ci-thumb" data-side="left">썸네일</li><li data-for=".ci-main" data-side="right">상품 정보, 가격</li><li data-for=".ci-opt" data-side="bottom">옵션 박스</li></ol>
+          <div class="cc-var-ctl" role="group" aria-label="화면 크기">
+            <button class="variant-btn on" data-target="ci-variants" data-v="mo" aria-pressed="true">MO</button>
+            <button class="variant-btn" data-target="ci-variants" data-v="pc" aria-pressed="false">PC</button>
+            <button class="variant-btn" data-target="ci-variants" data-v="co" aria-pressed="false">결제 (입력 전)</button>
+            <button class="variant-btn" data-target="ci-variants" data-v="co-done" aria-pressed="false">결제 (입력 후)</button>
+          </div>
+        </div>
+        <p class="cc-desc">장바구니와 결제 화면의 상품 한 건.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>장바구니</b><span>MO는 목록 위에 전체 선택 행</span></li><li><b>결제</b><span>체크박스 없이 썸네일 64px로 시작, 아래에 여행자 정보 입력 버튼과 쿠폰 선택</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>9개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Head</b><code>체크박스 16px(검정 채움 + 흰 체크)<br>제목 PC 16px SemiBold / 24px #333333<br>MO 14px SemiBold / 18px<br>삭제 PC 24px, MO 16px, #5C5C5C 1.5px<br>gap 8px</code></div>
+            <div class="spec-card"><b>Body</b><code>좌측 24px 들여쓰기<br>블록 사이 gap 12px</code></div>
+            <div class="spec-card"><b>Thumbnail</b><code>PC 104px, 본문과 gap 24px<br>MO 60px, gap 12px, border 1px rgba(0,0,0,.05)<br>r 4px</code></div>
+            <div class="spec-card"><b>Name</b><code>PC 15px SemiBold / 24px #2A2A2A<br>MO 12px Regular / 16px #000000</code></div>
+            <div class="spec-card"><b>Meta</b><code>PC 인원 14px Medium / 20px #757575, 날짜 14px Regular #9E9E9E<br>MO 12px Regular / 16px</code></div>
+            <div class="spec-card"><b>Price</b><code>PC 16px Bold / 24px<br>MO 14px Bold / 16px<br>우측 정렬</code></div>
+            <div class="spec-card"><b>Option box</b><code>bg #F5F3ED<br>r 4px<br>PC p 12px 20px, 13px / 16px<br>MO p 12px, 12px<br>라벨 Regular #9E9E9E, 값 Medium #5C5C5C, 양끝 정렬</code></div>
+            <div class="spec-card"><b>결제 화면</b><code>썸네일 64px, r 4px, gap 12px<br>상품명 13px SemiBold / 16px<br>메타 12px Regular / 16px<br>가격 14px Bold / 16px, 정가 12px #9E9E9E 취소선<br>옵션 박스 행 gap 4px<br>블록 사이 gap 12px</code></div>
+            <div class="spec-card"><b>후결제</b><code>뱃지 H 16px, px 6px, r 2px<br>bg #FFF4E6, 10px Medium #B35504<br>금액 아래 +$N 후결제 11px Regular #B35504</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="unavailable-item" data-sum="픽패스로 담을 수 없는 상품을 알려 주는 목록 행.">
+        <div class="comp-section-head"><h2>UnavailableItem</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview">
+          <div class="ua"><div class="ua-head"><b>구매 불가 상품</b><span>3개</span></div><div class="ua-row"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><b>모마 도슨트 투어</b><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" stroke="#9E9E9E" stroke-width="1.5"></rect><path d="M5.5 7V4.5a2.5 2.5 0 015 0V7" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ua-row"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><b>서밋 원 밴더빌트 전망대</b><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" stroke="#9E9E9E" stroke-width="1.5"></rect><path d="M5.5 7V4.5a2.5 2.5 0 015 0V7" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div><div class="ua-row"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><b>자유의 여신상 크루즈</b><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" stroke="#9E9E9E" stroke-width="1.5"></rect><path d="M5.5 7V4.5a2.5 2.5 0 015 0V7" stroke="#9E9E9E" stroke-width="1.5"></path></svg></div></div>
+          <ol class="cc-anno" hidden><li data-for=".ua-head" data-side="left">제목, 개수</li><li data-for=".ua-row img" data-side="left">썸네일</li><li data-for=".ua-row" data-side="right">상품명, 자물쇠</li></ol>
+        </div>
+        <p class="cc-desc">픽패스 예약의 상품 담기 화면에서 지금 담을 수 없는 상품을 모아 보여 주는 행.</p>
+        <dl class="cc-notes">
+          <div><dt>규칙</dt><dd>목록 위에 제목과 개수를 붙임</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Row</b><code>MO 332x40px<br>bg #F5F3ED<br>r 4px<br>행 사이 8px</code></div>
+            <div class="spec-card"><b>Thumbnail</b><code>40px</code></div>
+            <div class="spec-card"><b>Name</b><code>13px Medium<br>#9E9E9E<br>자물쇠 16px</code></div>
+            <div class="spec-card"><b>List head</b><code>제목 14px Medium #5C5C5C<br>개수 12px #9E9E9E</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="price-summary">
+        <div class="comp-section-head"><h2>PriceSummary</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="ps-variants">
+            <div data-variant="empty" class="show"><div class="ps"><div class="ps-rows"><div class="ps-total"><span>총 결제 금액</span><b>$0</b></div><div class="ps-row"><span>총 상품 금액</span><span>$0</span></div></div><span class="ps-btn">상품을 담아주세요</span></div></div>
+            <div data-variant="filled"><div class="ps"><div class="ps-rows"><div class="ps-total"><span>총 결제 금액</span><b>$427</b></div><div class="ps-row"><span>총 상품 금액</span><span>$427</span></div></div><div class="ps-btns"><span class="ps-btn ps-btn-on">결제 진행</span><span class="ps-btn ps-btn-line">계속 쇼핑하기</span></div></div></div>
+            <div data-variant="coupon"><div class="psc"><div class="psc-row"><span>전체 상품 금액</span><span>$179</span></div><div class="psc-row"><span>상품 쿠폰 할인</span><span class="psc-minus">-$3.5</span></div><div class="psc-box"><span>적용 쿠폰</span><i>2026 봄 시즌 신규가입 환영 쿠폰</i></div><div class="psc-total"><span>총 결제 금액</span><span><s>$179</s><b>$175.5</b></span></div><p class="psc-saved">쿠폰으로 $3.5 아꼈어요</p><p class="psc-note">후결제 금액이 포함되지 않은 금액입니다.</p></div></div>
+            <div data-variant="mo"><div class="psb"><div><small>총 결제 금액</small><b>$427</b></div><span>결제 진행</span></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="결제 금액 상태">
+            <button class="variant-btn on" data-target="ps-variants" data-v="empty" aria-pressed="true">빈 상태</button>
+            <button class="variant-btn" data-target="ps-variants" data-v="filled" aria-pressed="false">담긴 상태</button>
+            <button class="variant-btn" data-target="ps-variants" data-v="coupon" aria-pressed="false">쿠폰 적용 (결제)</button>
+            <button class="variant-btn" data-target="ps-variants" data-v="mo" aria-pressed="false">MO 하단바</button>
+          </div>
+        </div>
+        <p class="cc-desc">장바구니와 결제 화면의 결제 금액 영역.</p>
+        <dl class="cc-notes">
+          <div><dt>크기</dt><dd><ul><li><b>PC</b><span>우측 패널</span></li><li><b>MO</b><span>하단 바. 누르면 "결제 정보" 바텀시트</span></li></ul></dd></div>
+          <div><dt>상태</dt><dd><ul><li><b>쿠폰 적용</b><span>할인 행, 적용 쿠폰, 정가 취소선과 아낀 금액 표시</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>9개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Panel</b><code>W 365px<br>p 0 24px 24px<br>gap 24px</code></div>
+            <div class="spec-card"><b>Total</b><code>라벨 20px SemiBold / 28px<br>금액 20px Bold<br>pb 12px<br>border-bottom 1px #000000</code></div>
+            <div class="spec-card"><b>Row</b><code>14px Regular / 20px<br>#757575<br>합계와 gap 12px</code></div>
+            <div class="spec-card"><b>Button</b><code>317x48px<br>r 4px<br>15px Medium #FFFFFF<br>빈 상태 bg #E0E0E0<br>담긴 상태 bg #000000</code></div>
+            <div class="spec-card"><b>Secondary</b><code>계속 쇼핑하기 317x50px<br>border 1px #E0E0E0<br>결제 진행과 gap 8px</code></div>
+            <div class="spec-card"><b>MO 하단바</b><code>364x80px, bg #FFFFFF, p 16px<br>라벨 11px Regular / 16px #9E9E9E<br>금액 20px Bold / 26px<br>버튼 160x48px, r 4px, 14px Medium</code></div>
+            <div class="spec-card"><b>쿠폰 적용: 행</b><code>13px Regular / 16px<br>라벨 #757575, 금액 #000000<br>할인 금액 #F13B38<br>행 gap 8px</code></div>
+            <div class="spec-card"><b>적용 쿠폰</b><code>bg #F5F3ED, r 4px, p 8px 12px<br>라벨 12px Regular / 20px #757575<br>칩 H 20px, px 6px, r 2px, bg #FFFFFF, border 0.5px #E0E0E0, 10px #757575</code></div>
+            <div class="spec-card"><b>쿠폰 적용: 합계</b><code>라벨 14px Medium / 20px<br>정가 16px Regular #9E9E9E 취소선<br>금액 20px Bold / 24px, gap 8px<br>아낀 금액 12px Regular / 16px #8F846B<br>후결제 안내 H 24px, r 4px, bg #FFF4E6, 11px #B35504</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+      <div class="comp-section" id="accordion">
+        <div class="comp-section-head"><h2>Accordion</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="acc-variants">
+            <div data-variant="closed" class="show"><div class="ac"><div class="ac-q"><span><b>Q.</b>패스는 어떻게 이용하나요?</span><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M9.98779 2.5V17.5M17.4939 9.9939L2.4939 9.9939" stroke="black" stroke-width="1.5"></path></svg></div></div></div>
+            <div data-variant="open"><div class="ac"><div class="ac-q ac-open"><span><b>Q.</b>패스는 어떻게 이용하나요?</span><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.4939 9.9939L2.4939 9.9939" stroke="black" stroke-width="1.5"></path></svg></div><div class="ac-a">패스는 먼저 이용할 상품 개수만 선택하여 구매합니다.<br>구매 후 마이페이지에서 원하는 상품과 일정을 선택할 수 있으며, 모든 상품을 한 번에 예약할 필요는 없습니다.<br>여행 일정에 맞춰 필요한 상품만 순차적으로 선택하여 이용하실 수 있습니다.</div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="아코디언 상태">
+            <button class="variant-btn on" data-target="acc-variants" data-v="closed" aria-pressed="true">Closed</button>
+            <button class="variant-btn" data-target="acc-variants" data-v="open" aria-pressed="false">Open</button>
+          </div>
+        </div>
+        <p class="cc-desc">FAQ의 질문 행. 누르면 + 아이콘이 -로 바뀌고 답변 박스가 열림.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>5개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Row</b><code>H 67px<br>p 20px 16px 20px 0<br>border-bottom 1px #EBEBEB<br>gap 12px</code></div>
+            <div class="spec-card"><b>Q. 표기</b><code>24px ExtraBold / 26px<br>#000000</code></div>
+            <div class="spec-card"><b>Question</b><code>16px Regular / 24px<br>#5C5C5C</code></div>
+            <div class="spec-card"><b>Icon</b><code>20px<br>stroke #000000 1.5px<br>닫힘 +, 열림 -</code></div>
+            <div class="spec-card"><b>Answer</b><code>bg #F5F3ED<br>r 4px<br>p 24px<br>16px Regular / 24px<br>#5C5C5C</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="rating-summary" data-sum="&quot;여행 후기&quot; 섹션 머리의 평균 평점과 사진 모아보기.">
+        <div class="comp-section-head"><h2>RatingSummary</h2><span class="cc-cat">Display</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="rs-variants">
+            <div data-variant="section" class="show"><div class="rss"><div class="rss-head"><b>여행 후기 ( 190 )</b><span>운영 정책<svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5L10.5 8L6 12.5" stroke="#9E9E9E" stroke-width="1.2"></path></svg></span></div><div class="rss-cols"><div><span class="rss-lb">평균 평점</span><div class="rss-score"><svg width="40" height="40" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><b>4.7</b></div></div><div><span class="rss-lb">사진 후기 모아보기</span><div class="rss-thumbs"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""></div></div></div><div class="rss-filter"><span><i></i>사진 후기만 보기</span><span>최신순<svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#000" stroke-width="1.5"></path></svg></span></div></div></div>
+            <div data-variant="top"><div class="rsm"><div class="rsm-top"><b>평균 평점</b><span><u>리뷰 전체보기</u><em>( 190 )</em></span></div><div class="rsm-body"><div class="rsm-score"><svg width="40" height="40" aria-hidden="true" viewBox="0 0 16 16" fill="none"><path d="M7.74155 11.6692C7.90045 11.5733 8.09939 11.5733 8.25829 11.6692L11.1054 13.3876C11.4841 13.6162 11.9512 13.2767 11.8507 12.8459L11.0951 9.60715C11.053 9.42641 11.1144 9.23717 11.2547 9.11565L13.7709 6.93586C14.1052 6.64626 13.9265 6.09713 13.4858 6.05974L10.1737 5.77874C9.9889 5.76306 9.82796 5.64639 9.75559 5.47565L8.46028 2.41944C8.28798 2.01292 7.71185 2.01292 7.53956 2.41944L6.24424 5.47564C6.17188 5.64639 6.01094 5.76306 5.82615 5.77874L2.51407 6.05974C2.07336 6.09713 1.89465 6.64626 2.22895 6.93586L4.74515 9.11565C4.88543 9.23717 4.94686 9.42641 4.90469 9.60715L4.14913 12.8459C4.04865 13.2767 4.51576 13.6162 4.89442 13.3876L7.74155 11.6692Z" fill="#8F846B"></path></svg><b>4.7</b></div><div class="rsm-rev"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><p>사실 뉴욕에 오고 그냥 건물들이 높고 좁이쁘다~정도지 큰 감흥은 없었는데 선셋투어한 날 다리 위에서 최고의 노을을 보고 인생도시가 바뀐것같습니다!!!! 수신기 음질도 좋아서 가이드님 이야기도 잘들렸고 포함된 스냅사진들도 생각보다 엄청 고퀄로 찍어주셨어요. 건축물이나 뉴욕에 대한 여러 역사적 이야기나 흥미로운 이야기 맛집 추천들까지 알차게 들었습니다.</p></div></div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="평점 요약 형태">
+            <button class="variant-btn on" data-target="rs-variants" data-v="section" aria-pressed="true">후기 섹션</button>
+            <button class="variant-btn" data-target="rs-variants" data-v="top" aria-pressed="false">상단 요약</button>
+          </div>
+        </div>
+        <p class="cc-desc">상품 상세 맨 아래 "여행 후기" 섹션의 머리 부분.</p>
+        <dl class="cc-notes">
+          <div><dt>구성</dt><dd>평균 평점, 사진 후기 모아보기, 필터 행</dd></div>
+          <div><dt>종류</dt><dd><ul><li><b>상단 요약</b><span>평점 박스. 후기 글은 3줄까지</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>6개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Title row</b><code>여행 후기 ( N ) 20px SemiBold / 24px<br>운영 정책 14px Regular #9E9E9E + 화살표 16px</code></div>
+            <div class="spec-card"><b>Columns</b><code>2단, 각 294px<br>gap 12px<br>제목과 12px<br>pb 24px<br>border-bottom 1px #EBEBEB</code></div>
+            <div class="spec-card"><b>Score</b><code>라벨 14px SemiBold / 20px<br>Star 40px #8F846B<br>32px SemiBold / 40px<br>gap 8px</code></div>
+            <div class="spec-card"><b>Photos</b><code>라벨 14px SemiBold / 20px<br>썸네일 64x64px<br>gap 2px<br>묶음 r 4px</code></div>
+            <div class="spec-card"><b>Filter row</b><code>H 56px, p 16px 0<br>체크박스 20px, border 1px #E0E0E0, r 2px<br>사진 후기만 보기 16px Regular / 24px<br>최신순 16px Regular + chevron 20px</code></div>
+            <div class="spec-card"><b>상단 요약</b><code>W 600px, bg #F5F3ED, r 6px, p 20px<br>썸네일 64px, r 4px<br>후기 13px Regular / 20px #5C5C5C, 3줄</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+
+
+      <!-- ==================== TOAST ==================== -->
+      <div class="comp-section" id="toast" data-sum="화면 아래에 잠깐 떴다 사라지는 알림.">
+        <div class="comp-section-head"><h2>Toast</h2><span class="cc-cat">Feedback</span></div>
+        <div class="cc-preview" style="flex-direction:column;gap:8px;align-items:center">
+          <div style="background:#000;color:#fff;padding:8px 14px;border-radius:6px;font-size:12px;width:100%;max-width:260px">장바구니에 담겼어요</div>
+          <div style="background:#000;color:#fff;padding:8px 14px;border-radius:6px;font-size:12px;width:100%;max-width:260px;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#4DCD6D"/><path d="M4 7l2 2 4-4" stroke="#fff" stroke-width="1.5"/></svg>저장 완료</div>
+          <div style="background:#000;color:#fff;padding:8px 14px;border-radius:6px;font-size:12px;width:100%;max-width:260px;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="#E02A28"/><path d="M7 4v3.5M7 9.5h.01" stroke="#fff" stroke-width="1.5"/></svg>오류 발생</div>
+        </div>
+        <p class="cc-desc">Default, Success, Error. 하단 중앙 노출 2초.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>3개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>variant</td>
+                <td><span class="type"><code>"default"</code> | <code>"success"</code> | <code>"error"</code></span></td>
+                <td><code>"default"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>default:</b> 일반 안내 (장바구니 담김, 복사됨)</li>
+                    <li><b>success:</b> 완료 피드백 (저장, 예약 확정)</li>
+                    <li><b>error:</b> 실패 알림 (네트워크, 유효성)</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr><td>message</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>토스트 메시지 텍스트.</td></tr>
+              <tr><td>duration</td><td><span class="type"><code>number</code></span></td><td><code>2000</code></td><td>표시 시간(ms). 2000~4000 권장.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Container</b><code>bg rgba(0,0,0,0.7)<br>blur 1px<br>r 6px<br>px 12px</code></div>
+            <div class="spec-card"><b>Text</b><code>Regular 12px #EBEBEB</code></div>
+            <div class="spec-card"><b>Success Icon</b><code>#4DCD6D filled circle 12px + white check</code></div>
+            <div class="spec-card"><b>Error Icon</b><code>#E02A28 filled circle 12px + white warn</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+      <div class="comp-section" id="dialog">
+        <div class="comp-section-head"><h2>Dialog</h2><span class="cc-cat">Feedback</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="dg-variants">
+            <div data-variant="cart" class="show"><div class="dg-stage"><div class="dg"><b>장바구니에<br>추가되었습니다.</b><p>장바구니로 이동하시겠습니까?</p><div class="dg-btns"><span class="dg-line">계속 쇼핑</span><span class="dg-fill">장바구니 이동</span></div></div></div></div>
+            <div data-variant="mo"><div class="pu"><div class="pu-txt"><b>결제를 중단하시겠어요?</b><p>지금 나가셔도 담아둔 상품과 선택한 일정은 그대로 유지돼요</p></div><div class="pu-btns"><span class="pu-line">나가기</span><span class="pu-fill">계속 결제</span></div></div></div>
+            <div data-variant="mo-icon"><div class="pu"><div class="pu-txt"><img class="ico" src="icons/pickpass/alert-32.svg" width="32" height="32" alt=""><b>환불을 신청할까요?</b><p>환불 시 해당 상품에 적용된 픽패스 할인 혜택이 제외되며, 차액 기준으로 환불 금액이 산정돼요.</p></div><div class="pu-btns"><span class="pu-line">취소</span><span class="pu-fill">환불 신청</span></div></div></div>
+            <div data-variant="pc"><div class="pu pu-pc"><div class="pu-txt"><b>어린이는 무료로 입장할 수 있어요</b><p>어린이 패스를 제외하고<br>성인 패스만 구매하시겠어요?</p></div><div class="pu-btns"><span class="pu-line">취소</span><span class="pu-fill">성인 패스만 결제</span></div></div></div>
+            <div data-variant="pc-select"><div class="pm"><div class="pm-body"><div class="pm-head"><b>패스 선택</b><img class="ico" src="icons/pickpass/close-32.svg" width="32" height="32" alt=""></div><div class="pm-rows"><div class="pm-row"><img class="ico" src="icons/pickpass/radio-off-24.svg" width="24" height="24" alt=""><div class="pm-info"><b>우리가 함께 만드는 나만의 뉴욕 픽패스</b><p><i>성인</i>P1000379001 · 만료 D-180</p></div><span class="pm-left">잔여 : <em>2</em></span></div><div class="pm-row"><img class="ico" src="icons/pickpass/radio-off-24.svg" width="24" height="24" alt=""><div class="pm-info"><b>우리가 함께 만드는 나만의 뉴욕 픽패스</b><p><i>성인</i>P1000379001 · 만료 D-180</p></div><span class="pm-left">잔여 : <em>2</em></span></div><div class="pm-row"><img class="ico" src="icons/pickpass/radio-off-24.svg" width="24" height="24" alt=""><div class="pm-info"><b>우리가 함께 만드는 나만의 뉴욕 픽패스</b><p><i>성인</i>P1000379001 · 만료 D-180</p></div><span class="pm-left">잔여 : <em>2</em></span></div></div></div><div class="pm-foot"><span class="pm-off">선택 완료</span></div></div></div>
+            <div data-variant="pc-input"><div class="pm"><div class="pm-body"><div class="pm-head"><b>픽패스 별칭 수정</b><img class="ico" src="icons/pickpass/close-32.svg" width="32" height="32" alt=""></div><div class="pm-field"><span>픽패스 별칭</span><div class="pm-input"><b>PICK7</b><img class="ico" src="icons/pickpass/delete-16.svg" width="16" height="16" alt=""></div><p><span>공백 포함 최대 25자까지 입력할 수 있어요.</span><em>5/25</em></p></div></div><div class="pm-foot"><span class="pm-cancel">취소</span><span class="pm-off">저장하기</span></div></div></div>
+          </div>
+          <ol class="cc-anno" hidden><li data-for=".dg b, .pu-txt b, .pm-head b" data-side="left">제목</li><li data-for=".dg p, .pu-txt p" data-side="right">본문</li><li data-for=".dg-line, .pu-line, .pm-cancel" data-side="bottom">보조 버튼</li><li data-for=".dg-fill, .pu-fill, .pm-off" data-side="bottom">주요 버튼</li></ol>
+          <div class="cc-var-ctl" role="group" aria-label="팝업 종류">
+            <button class="variant-btn on" data-target="dg-variants" data-v="cart" aria-pressed="true">장바구니 담기</button>
+            <button class="variant-btn" data-target="dg-variants" data-v="mo" aria-pressed="false">확인 (MO)</button>
+            <button class="variant-btn" data-target="dg-variants" data-v="mo-icon" aria-pressed="false">아이콘 포함 (MO)</button>
+            <button class="variant-btn" data-target="dg-variants" data-v="pc" aria-pressed="false">확인 (PC)</button>
+            <button class="variant-btn" data-target="dg-variants" data-v="pc-select" aria-pressed="false">선택 (PC)</button>
+            <button class="variant-btn" data-target="dg-variants" data-v="pc-input" aria-pressed="false">입력 (PC)</button>
+          </div>
+        </div>
+        <p class="cc-desc">확인이 필요한 순간에 화면 가운데 뜨는 창.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>장바구니 담기</b><span>상품을 담은 직후에 뜸</span></li><li><b>확인</b><span>나가기, 환불처럼 되돌리기 어려운 동작 앞에서 다시 묻기</span></li><li><b>아이콘 포함</b><span>주의가 필요한 내용, 제목 위에 아이콘</span></li><li><b>선택·입력</b><span>PC 전용. 제목과 닫기 버튼이 있는 500px 창에서 항목을 고르거나 값을 입력</span></li></ul></dd></div>
+          <div><dt>규칙</dt><dd>선택·입력 창의 아래 버튼은 고르거나 입력하기 전까지 비활성 색</dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>11개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>확인 (MO): Box</b><code>W 343px<br>bg #FFFFFF<br>r 8px<br>p 24px 16px 20px<br>글과 버튼 gap 24px<br>shadow 0 8px 24px rgba(0,0,0,.15)</code></div>
+            <div class="spec-card"><b>확인 (MO): Text</b><code>제목 20px Bold / 26px #1F1F1F<br>본문 14px Regular / 20px #5C5C5C<br>제목과 본문 gap 8px<br>아이콘 32px, 제목과 gap 8px<br>가운데 정렬</code></div>
+            <div class="spec-card"><b>확인 (MO): Buttons</b><code>H 52px, r 4px, gap 8px, 균등 분할<br>15px Medium / 24px<br>보조: border 1px #E0E0E0, #5C5C5C<br>주요: bg #000000, #FFFFFF</code></div>
+            <div class="spec-card"><b>확인 (PC)</b><code>W 500px, r 8px<br>shadow 0 1px 6px rgba(0,0,0,.25)<br>글 영역 p 32px 32px 12px<br>제목 24px Bold / 32px<br>본문 16px Regular / 24px<br>버튼 영역 p 20px 32px 32px, gap 12px, H 56px</code></div>
+            <div class="spec-card"><b>선택·입력 (PC): Box</b><code>W 500px, r 8px<br>shadow 0 1px 6px rgba(0,0,0,.25)<br>pt 32px, 내용 폭 436px<br>제목 20px Bold / 32px #2A2A2A<br>닫기 32px<br>제목과 내용 gap 16px</code></div>
+            <div class="spec-card"><b>선택·입력 (PC): Content</b><code>선택 행 H 72px, border 1.5px #EBEBEB, r 4px, 행 사이 12px<br>이름 16px Bold / 24px #0A0A0A<br>보조 13px / 18px #9E9E9E<br>입력 라벨 14px Medium #5C5C5C<br>입력 값 16px / 24px, 밑줄 1px #000000<br>안내 12px / 16px #757575</code></div>
+            <div class="spec-card"><b>선택·입력 (PC): Footer</b><code>p 20px 32px 32px, gap 12px<br>버튼 H 56px, r 4px, 15px Medium<br>비활성 bg #E0E0E0, #FFFFFF<br>취소: border 1px #E0E0E0, #5C5C5C</code></div>
+            <div class="spec-card"><b>Overlay</b><code>bg rgba(0,0,0,.5)</code></div>
+            <div class="spec-card"><b>Box</b><code>328x220px<br>bg #FFFFFF<br>r 16px<br>p 24px 20px<br>가운데 정렬</code></div>
+            <div class="spec-card"><b>Title</b><code>24px Bold / 32px<br>#000000</code></div>
+            <div class="spec-card"><b>Body</b><code>16px Regular / 24px<br>#868686<br>제목과 gap 8px, 버튼과 24px</code></div>
+            <div class="spec-card"><b>Buttons</b><code>H 52px, r 8px, gap 8px<br>16px Medium / 24px<br>보조: border 1px #DEDEDE, #999999<br>주요: bg #1F1F1F, #FFFFFF</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="callout" data-sum="확인이 필요한 내용을 알리는 주황색 안내 박스.">
+        <div class="comp-section-head"><h2>Callout</h2><span class="cc-cat">Feedback</span></div>
+        <div class="cc-preview">
+          <div class="co"><p class="co-t"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#7A3A03" stroke-width="1.3"><circle cx="8" cy="8" r="6.2"></circle><path d="M8 4.8V8.6M8 10.6V11.2"></path></svg>어린이 단독 구매 불가 상품을 확인해 주세요</p><p class="co-d">결제 상품은 추후 선택하는 옵션에 따라 가격이 변경될 수 있습니다.</p></div>
+        </div>
+        <p class="cc-desc">확인이 필요한 내용을 알리는 주황색 안내 박스. 아이콘과 제목 한 줄, 그 아래 설명 한 줄.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Box</b><code>MO 332x60px<br>bg #FFF4E6<br>r 4px<br>p 12px<br>제목과 설명 gap 4px</code></div>
+            <div class="spec-card"><b>Title</b><code>아이콘 16px #7A3A03 + 제목, gap 6px<br>12px Medium / 16px<br>#7A3A03</code></div>
+            <div class="spec-card"><b>Description</b><code>11px Regular / 16px<br>#D96705<br>왼쪽 22px 들여쓰기(제목 글자에 맞춤)</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="notice-bar">
+        <div class="comp-section-head"><h2>NoticeBar</h2><span class="cc-cat">Feedback</span></div>
+        <div class="cc-preview">
+          <div class="nb"><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.776 2.31867L5.33333 5.33333V10L5.832 10.178L5.08067 11.6807C4.99509 11.8515 4.94725 12.0387 4.94039 12.2297C4.93353 12.4206 4.96781 12.6108 5.0409 12.7873C5.11399 12.9639 5.22419 13.1226 5.36402 13.2528C5.50385 13.383 5.67005 13.4817 5.85133 13.542L8.574 14.4493C8.87857 14.5486 9.20859 14.5358 9.50454 14.4132C9.8005 14.2906 10.0429 14.0663 10.188 13.7807L11.0567 12.0433L13.776 13.0147C13.8766 13.0505 13.9843 13.0617 14.09 13.0473C14.1958 13.0329 14.2966 12.9933 14.3839 12.9318C14.4712 12.8703 14.5424 12.7888 14.5916 12.694C14.6408 12.5993 14.6666 12.4941 14.6667 12.3873V2.946C14.6666 2.83924 14.6408 2.73405 14.5916 2.63931C14.5424 2.54456 14.4712 2.46301 14.3839 2.40153C14.2966 2.34005 14.1958 2.30044 14.09 2.28602C13.9843 2.2716 13.8766 2.28279 13.776 2.31867ZM8.99533 13.1847L6.27333 12.2773L7.09667 10.63L9.79133 11.5927L8.99533 13.1847ZM2.66667 10H4V5.33333H2.66667C1.93133 5.33333 1.33333 5.93133 1.33333 6.66667V8.66667C1.33333 9.402 1.93133 10 2.66667 10Z" fill="currentColor"></path></svg>기존 픽패스 구매자 안내</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 12.6663L10.6667 7.99967L6 3.33301" stroke="white" stroke-width="1.5" stroke-linecap="square"></path></svg></div>
+        </div>
+        <p class="cc-desc">하단 바 위에 붙는 안내 띠. 아이콘, 문구, 우측 화살표. MO 364x36.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Bar</b><code>MO 364x36px<br>p 8px 16px<br>bg rgba(0,0,0,.8)</code></div>
+            <div class="spec-card"><b>Text</b><code>13px Medium / 20px<br>#FFFFFF<br>아이콘 16px, gap 4px</code></div>
+            <div class="spec-card"><b>Arrow</b><code>16px<br>stroke #FFFFFF 1.5px<br>우측 정렬</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="comp-section" id="empty-state">
+        <div class="comp-section-head"><h2>EmptyState</h2><span class="cc-cat">Feedback</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="es-variants">
+            <div data-variant="cart" class="show"><div class="es"><div><b>장바구니가 비어있어요</b><p>필요한 상품을 장바구니에 담아보세요</p></div><span class="es-btn">쇼핑 계속하기</span></div></div>
+            <div data-variant="coupon"><div class="es es-s"><div><b>사용할 수 있는 쿠폰이 아직 없어요</b><p>이벤트 및 혜택 참여 후 쿠폰을 받아보세요</p></div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="빈 상태 종류">
+            <button class="variant-btn on" data-target="es-variants" data-v="cart" aria-pressed="true">버튼 있음</button>
+            <button class="variant-btn" data-target="es-variants" data-v="coupon" aria-pressed="false">문구만</button>
+          </div>
+        </div>
+        <p class="cc-desc">목록이 비었을 때의 안내. 이동할 곳이 있으면 버튼을 붙이고, 없으면 문구만 보여 줌.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Specs</h3><span>4개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Layout</b><code>가운데 정렬<br>py 80px<br>문구와 버튼 gap 24px<br>문구만: p 40px 16px</code></div>
+            <div class="spec-card"><b>Title</b><code>15px SemiBold / 24px<br>#757575</code></div>
+            <div class="spec-card"><b>Description</b><code>12px Regular / 16px<br>#9E9E9E<br>제목과 gap 2px</code></div>
+            <div class="spec-card"><b>Button</b><code>H 48px<br>p 12px 32px<br>bg #000000<br>r 4px<br>14px Medium #FFFFFF</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+
+      <!-- ==================== BOTTOM SHEET ==================== -->
+      <div class="comp-section" id="bottom-sheet">
+        <div class="comp-section-head"><h2>BottomSheet</h2><span class="cc-cat">Feedback</span></div>
+        <div class="cc-preview cc-var">
+          <div class="cc-stage" id="bs-variants">
+            <div data-variant="option" class="show">
+          <div class="bs-stage">
+            <div class="bs">
+              <div class="bs-head"><b>상품 선택하기</b><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+              <div class="op-rows">
+                <div class="op-row"><span>날짜</span><span class="op-val">선택<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12.6667 6L8 10.6667L3.33333 6" stroke="#C2C2C2" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div>
+                <div class="op-row"><span>시간을 선택해 주세요</span><span class="op-val">선택<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12.6667 6L8 10.6667L3.33333 6" stroke="#C2C2C2" stroke-width="1.2" stroke-linecap="square"></path></svg></span></div>
+              </div>
+              <div class="op-qty"><span>수량</span><div class="op-step"><span class="op-btn"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.78 8H14.22" stroke="#E0E0E0" stroke-width="1.5" stroke-linejoin="round"></path></svg></span><b>1</b><span class="op-btn"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.33V14.67M14.67 8H1.33" stroke="#E0E0E0" stroke-width="1.5" stroke-linejoin="round"></path></svg></span></div></div>
+              <div class="op-pp"><span class="op-pp-l"><svg width="24" height="24" aria-hidden="true" preserveAspectRatio="none" overflow="visible" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M21.7638 5.9916C21.8916 5.9916 21.9866 6.11 21.9591 6.23477L21.047 10.3412C21.0265 10.4325 20.9453 10.4975 20.8517 10.4975H19.3156C19.2221 10.4977 19.1405 10.5634 19.1202 10.6547L18.9327 11.4994L18.5421 13.2582C18.5144 13.383 18.6097 13.5012 18.7374 13.5014H20.0958C20.2237 13.5014 20.3187 13.6197 20.2911 13.7445L19.3781 17.852C19.3576 17.9432 19.2763 18.0081 19.1827 18.0082H2.6095C2.28983 18.008 2.05195 17.7119 2.12122 17.3998L4.56946 6.3832C4.62033 6.15462 4.82358 5.99175 5.05774 5.9916H21.7638ZM9.43469 7.94473C9.34105 7.94473 9.25981 8.00961 9.23938 8.10098L7.52551 15.8119C7.49776 15.9368 7.59288 16.0551 7.72083 16.0551H9.1134C9.20703 16.055 9.2884 15.9903 9.30872 15.8988L9.83997 13.5082C9.86044 13.4169 9.94167 13.352 10.0353 13.352H13.3195C13.413 13.3517 13.4945 13.2861 13.5148 13.1947L14.6271 8.18789C14.6547 8.06312 14.5595 7.94489 14.4318 7.94473H9.43469ZM12.3546 9.74648C12.4183 9.74679 12.466 9.80634 12.4523 9.86855L12.0958 11.4711C12.0856 11.5167 12.0449 11.5491 11.9982 11.5492H10.4005C10.3366 11.5491 10.289 11.4895 10.3029 11.4271L10.6593 9.82559C10.6695 9.7799 10.7101 9.74648 10.757 9.74648H12.3546Z" fill="white"></path><path d="M14.4318 7.94482C14.5597 7.94482 14.6549 8.06309 14.6271 8.18799L13.5148 13.1958C13.4943 13.2871 13.4131 13.352 13.3195 13.3521H10.0353C9.94167 13.3521 9.8604 13.4169 9.84 13.5083L9.30875 15.8989C9.28841 15.9904 9.20717 16.0552 9.11343 16.0552H7.72086C7.59297 16.0551 7.4978 15.9369 7.52554 15.812L9.23941 8.10107C9.25978 8.00961 9.34101 7.94482 9.43472 7.94482H14.4318ZM10.757 9.74658C10.7101 9.74661 10.6695 9.77995 10.6593 9.82568L10.3029 11.4282C10.2894 11.4903 10.337 11.5491 10.4005 11.5493H11.9982C12.045 11.5493 12.0856 11.5169 12.0959 11.4712L12.4523 9.86865C12.4662 9.80621 12.4186 9.74659 12.3546 9.74658H10.757Z" fill="#F36B7C"></path></g></svg>픽패스 할인가로 구매</span><span class="op-pp-r"><span class="op-pp-save">$21 SAVE</span><b>$41~</b><svg width="12" height="12" aria-hidden="true" preserveAspectRatio="none" overflow="visible" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M4 10L8 6L4 2" stroke-width="1.2" stroke-linecap="square" stroke="white"></path></g></svg></span></div>
+              <div class="op-foot">
+                <div><div class="op-foot-top"><span>택스 포함 최종금액</span><span class="op-save">$ 10 SAVE</span></div><div class="op-price"><b>$62</b><s>$ 72</s></div></div>
+                <span class="op-cta">장바구니 담기</span>
+              </div>
+            </div>
+          </div>
+            </div>
+            <div data-variant="traveler"><div class="bs-stage bs-stage-s"><div class="bs ts"><div class="ts-handle"><i></i></div><div class="ts-head"><b>여행자 정보 입력</b><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 18L18 6M6 6l12 12" stroke="black" stroke-width="1.5"></path></svg></div><div class="ts-body"><div class="ts-prod"><img class="ci-thumb" src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt=""><b>센트럴파크 감성을 담은 라이트 스냅</b></div><b class="ts-step">성인 1번째 정보 입력</b><div class="tf"><span class="tf-l">생년월일</span><div class="tf-in tf-ph"><span>YYYY-MM-DD</span></div><span class="tf-help">YYYY-MM-DD 형식으로 입력해주세요</span></div><div class="tf"><span class="tf-l">성별</span><div class="rd"><span><img class="ico" src="icons/checkout/radio-on-20.svg" width="20" height="20" alt="">남성</span><span><img class="ico" src="icons/checkout/radio-off-20.svg" width="20" height="20" alt="">여성</span></div></div><div class="tf"><span class="tf-l">예약자명 (한글)</span><div class="tf-in tf-ph"><span>예 : 홍길동</span></div></div></div><div class="ts-foot"><span class="ts-prev">이전</span><span class="ts-next">저장 후 다음 (1/3)</span></div></div></div></div>
+            <div data-variant="notice"><div class="bs-stage bs-stage-s bs-stage-f"><div class="bs ns"><div class="ns-grab"><i></i></div><b class="ns-title">날짜가 미지정 된 상품이 있어요</b><div class="ns-body"><span class="ns-label">일정 나중에 선택 상품</span><div class="ns-chips"><span class="ns-chip"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt="">나이아가라 올인원 당일 버스투어: 스카이론타워·스냅 포함</span><span class="ns-chip"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt="">서밋 전망대</span><span class="ns-chip"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt="">브루클린 감성을 담은 라이트 스냅</span><span class="ns-chip"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt="">뉴욕 랜드마크 스냅 차량투어: 포토가이드 동행</span><span class="ns-chip"><img src="samples/product-card.jpg" width="564" height="705" loading="lazy" decoding="async" alt="">센트럴파크 감성을 담은 라이트 스냅</span></div><div class="ns-warn"><img class="ico" src="icons/pickpass/warn-16.svg" width="16" height="16" alt=""><p>'일정 나중에 선택' 상품은 미확정 상태예요. 실제 이용 시간을 선택해야 하며, 일정에 따라 추가 비용이 발생할 수 있어요.</p></div></div><div class="ns-foot"><span class="ns-prev">이전</span><span class="ns-ok">확인했어요</span></div></div></div></div>
+          </div>
+          <div class="cc-var-ctl" role="group" aria-label="시트 종류">
+            <button class="variant-btn on" data-target="bs-variants" data-v="option" aria-pressed="true">옵션 선택</button>
+            <button class="variant-btn" data-target="bs-variants" data-v="traveler" aria-pressed="false">여행자 정보 입력</button>
+            <button class="variant-btn" data-target="bs-variants" data-v="notice" aria-pressed="false">안내</button>
+          </div>
+        </div>
+        <p class="cc-desc">화면 아래에서 올라오는 시트.</p>
+        <dl class="cc-notes">
+          <div><dt>종류</dt><dd><ul><li><b>옵션 선택</b><span>상단 r 16px, 타이틀과 닫기 버튼</span></li><li><b>여행자 정보 입력</b><span>상단 r 20px, 핸들. 상품 요약, 입력 필드, "이전 / 저장 후 다음" 버튼</span></li><li><b>안내</b><span>핸들만 있고 제목 줄과 닫기 버튼 없음. 상품 칩 목록, 주황색 안내, "이전 / 확인했어요" 버튼</span></li></ul></dd></div>
+        </dl>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>4개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>title</td><td><span class="type"><code>string</code></span></td><td>없음</td><td>시트 상단 타이틀.</td></tr>
+              <tr><td>showHandle</td><td><span class="type"><code>boolean</code></span></td><td><code>true</code></td><td>상단 드래그 핸들 표시.</td></tr>
+              <tr><td>showClose</td><td><span class="type"><code>boolean</code></span></td><td><code>true</code></td><td>X 닫기 버튼 표시.</td></tr>
+              <tr><td>overlay</td><td><span class="type"><code>boolean</code></span></td><td><code>true</code></td><td>배경 딤 오버레이.</td></tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>11개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Container</b><code>bg #FFFFFF<br>top r 16px<br>fullWidth, 하단 고정</code></div>
+            <div class="spec-card"><b>Header</b><code>p 16px<br>H 60px<br>title 18px SemiBold / 28px<br>close 24px, stroke 1.5px</code></div>
+            <div class="spec-card"><b>Overlay</b><code>bg rgba(0,0,0,.5)</code></div>
+            <div class="spec-card"><b>Content</b><code>px 16px<br>row H 48px, border-bottom 1px #EBEBEB</code></div>
+            <div class="spec-card"><b>Footer</b><code>p 12px 16px 16px<br>CTA 160x48, r 4px, 14px Medium</code></div>
+            <div class="spec-card"><b>여행자 정보: Container</b><code>top r 20px<br>shadow 0 -1px 6px rgba(0,0,0,.25)<br>핸들 40x4px, r 2px, #E0E0E0, pt 12px pb 8px</code></div>
+            <div class="spec-card"><b>여행자 정보: Body</b><code>타이틀 18px Bold, p 8px 16px 16px<br>상품 요약 bg #F9FAFB, p 12px 16px, 썸네일 64px, 14px SemiBold / 18px #333333<br>단계 제목 14px SemiBold / 20px<br>필드 사이 gap 12px</code></div>
+            <div class="spec-card"><b>여행자 정보: Footer</b><code>p 16px, gap 8px<br>이전 112x48, border 1px #E0E0E0, 14px Medium #5C5C5C<br>저장 후 다음 H 48, 나머지 폭, 14px Medium #FFFFFF<br>입력 전 bg #E0E0E0<br>r 4px</code></div>
+            <div class="spec-card"><b>안내: Container</b><code>top r 20px<br>shadow 0 0 20px rgba(0,0,0,.1)<br>핸들 36x4px, r 100px, #CCCCCC, pt 10px pb 16px<br>제목 20px Bold / 28px, 자간 -0.4px<br>제목과 내용 gap 12px, px 16px</code></div>
+            <div class="spec-card"><b>안내: Chip</b><code>bg #F8F8F8, r 53px<br>p 6px 12px 6px 6px, gap 4px<br>썸네일 24px 원<br>12px Medium / 18px #5C5C5C<br>칩 사이 6px<br>라벨 12px Medium / 16px #9E9E9E</code></div>
+            <div class="spec-card"><b>안내: Footer</b><code>pt 12px, px 16px, gap 10px<br>이전 112x48, border 1px #E0E0E0, 15px Medium #5C5C5C<br>확인했어요 H 48, 나머지 폭, bg #000000, 15px Medium #FFFFFF<br>r 4px</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- ==================== DIVIDER ==================== -->
+      <div class="comp-section" id="divider" data-sum="콘텐츠 사이를 나누는 선.">
+        <div class="comp-section-head"><h2>Divider</h2><span class="cc-cat">Layout</span></div>
+        <div class="cc-preview">
+          <div class="dv-demo">
+            <p>Full: 섹션 구분 (PC 본문)</p><div class="dv-full"></div>
+            <p>Inset: 좌우 16px 여백 (MO)</p><div class="dv-inset"></div>
+            <p>Thick: 섹션 간 구분 (MO)</p><div class="dv-thick"></div>
+          </div>
+        </div>
+        <p class="cc-desc">Full, Inset, Thick.</p>
+        <div class="cc-detail-inner">
+          <details class="props-fold"><summary><h3>Props</h3><span>1개</span></summary>
+          <table class="props-table">
+            <thead><tr><th>Prop</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>variant</td>
+                <td><span class="type"><code>"full"</code> | <code>"inset"</code> | <code>"thick"</code></span></td>
+                <td><code>"full"</code></td>
+                <td>
+                  <ul class="props-desc">
+                    <li><b>full:</b> 전체 너비 1px. 리스트 아이템 구분.</li>
+                    <li><b>inset:</b> 좌측 16px 여백. 이미지 있는 리스트.</li>
+                    <li><b>thick:</b> 8px 배경. 섹션 간 구분.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </details>
+          <details class="props-fold"><summary><h3>Specs</h3><span>3개</span></summary>
+          <div class="spec-grid">
+            <div class="spec-card"><b>Full</b><code>H 1px<br>bg #EBEBEB<br>width 100%</code></div>
+            <div class="spec-card"><b>Inset</b><code>H 1px<br>bg #EBEBEB<br>mx 16px (MO)</code></div>
+            <div class="spec-card"><b>Thick</b><code>H 8px<br>bg #F5F3ED<br>width 100% (MO)</code></div>
+          </div>
+          </details>
+        </div>
+      </div>
+
+    </div><!-- /comp-list -->
+  </div><!-- /comp-layout -->
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+// 1차: 전체 카드 목록, 2차: 컴포넌트 하나만 표시 (#id)
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=[...document.querySelectorAll('.comp-section')];
+const overview=document.getElementById('comp-overview');
+(function buildOverview(){
+  const fits=[];overview.hidden=false;
+  const groups=new Map();
+  sections.forEach(sec=>{
+    const cat=sec.querySelector('.cc-cat')?.textContent.trim()||'';
+    if(!groups.has(cat))groups.set(cat,[]);
+    groups.get(cat).push(sec);
+  });
+  groups.forEach((list,cat)=>{
+    const h=document.createElement('h2');h.className='ov-group';h.textContent=cat;
+    const n=document.createElement('span');n.textContent=list.length;h.appendChild(n);overview.appendChild(h);
+    const grid=document.createElement('div');grid.className='ov-grid';
+    list.forEach(sec=>{
+      const card=document.createElement('a');card.className='ov-card';card.href='#'+sec.id;
+      // 썸네일: 실제 미리보기의 가운데를 가까이 잘라 보여 줌
+      const thumb=document.createElement('div');thumb.className='ov-thumb';thumb.setAttribute('aria-hidden','true');
+      const zoom=document.createElement('div');zoom.className='ov-zoom';zoom.inert=true;
+      const src=sec.querySelector('.cc-stage')||sec.querySelector('.cc-preview');
+      if(src){const c=src.cloneNode(true);c.removeAttribute('id');c.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));zoom.appendChild(c)}
+      thumb.appendChild(zoom);card.appendChild(thumb);fits.push(zoom);
+      const text=document.createElement('div');text.className='ov-text';
+      const b=document.createElement('b');b.textContent=sec.querySelector('h2').textContent;text.appendChild(b);
+      const d=sec.querySelector('.cc-desc')?.textContent.trim()||'';
+      const p=document.createElement('p');p.textContent=sec.dataset.sum||d.split(/(?<=\.)\s/)[0];text.appendChild(p);
+      card.appendChild(text);grid.appendChild(card);
+    });
+    overview.appendChild(grid);
+  });
+  // 썸네일마다 내용 크기를 재서 칸(148x92)에 맞게 축소
+  fits.forEach(zoom=>{
+    const stage=zoom.firstElementChild;if(!stage)return;
+    const items=[...stage.querySelectorAll(stage.matches('.cc-stage')?':scope > .show > *, :scope > .op-wrap':':scope > *')].filter(e=>e.offsetWidth&&e.offsetHeight);
+    if(!items.length)return;
+    let l=Infinity,t=Infinity,r=-Infinity,b=-Infinity;
+    items.forEach(e=>{const q=e.getBoundingClientRect();l=Math.min(l,q.left);t=Math.min(t,q.top);r=Math.max(r,q.right);b=Math.max(b,q.bottom)});
+    const w=r-l,h=b-t;
+    // 세로로 긴 것은 전체를 줄이지 않고 윗부분만 크게 보여 줌
+    if(h/w>.8){zoom.style.zoom=Math.min(1,124/w,92/(h*.55)).toFixed(3);zoom.parentElement.classList.add('ov-crop')}
+    else zoom.style.zoom=Math.min(1,124/w,72/h).toFixed(3);
+  });
+})();
+function route(){
+  const id=decodeURIComponent(location.hash.slice(1));
+  const cur=sections.find(s=>s.id===id);
+  overview.hidden=!!cur;
+  sections.forEach(s=>{s.hidden=s!==cur});
+  sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')===(cur?'#'+id:'#')));
+  window.scrollTo(0,0);
+  if(cur)annotate(cur);
+}
+// 구성 표시: 미리보기 위에 이름표를 붙이고 해당 부분까지 선을 그음
+function annotate(sec){
+  const list=sec.querySelector('.cc-anno');if(!list)return;
+  const stage=sec.querySelector('.cc-stage')||sec.querySelector('.cc-preview');
+  stage.querySelector('.anno-layer')?.remove();
+  const scope=stage.querySelector(':scope > .show')||stage;
+  const comp=scope.firstElementChild;if(!comp)return;
+  const S=stage.getBoundingClientRect(),C=comp.getBoundingClientRect();
+  const layer=document.createElement('div');layer.className='anno-layer';layer.setAttribute('aria-hidden','true');
+  stage.style.position='relative';stage.appendChild(layer);
+  const GAP=28;let ok=true;
+  [...list.children].forEach(li=>{
+    const t=scope.querySelector(li.dataset.for);if(!t||!t.getBoundingClientRect().width)return;
+    let r=t.getBoundingClientRect();const side=li.dataset.side;if(!t.matches('img,svg')){const g=document.createRange();g.selectNodeContents(t);const q=g.getBoundingClientRect();if(q.width&&q.height)r=q}
+    const tag=document.createElement('span');tag.className='anno-tag';tag.textContent=li.textContent;layer.appendChild(tag);
+    const line=document.createElement('i');line.className='anno-line anno-'+li.dataset.side;layer.appendChild(line);
+    const w=tag.offsetWidth,h=tag.offsetHeight;let x,y;
+    const cx=r.left+Math.min(r.width/2,24)-S.left,cy=r.top+r.height/2-S.top;
+    if(side==='left'){x=C.left-S.left-GAP-w;y=cy-h/2;Object.assign(line.style,{left:x+w+'px',top:cy+'px',width:r.left-S.left-x-w+'px',height:'1px'})}
+    else if(side==='right'){x=C.right-S.left+GAP;y=cy-h/2;Object.assign(line.style,{left:r.right-S.left+'px',top:cy+'px',width:x-(r.right-S.left)+'px',height:'1px'})}
+    else if(side==='top'){x=cx-w/2;y=C.top-S.top-18-h;Object.assign(line.style,{left:cx+'px',top:y+h+'px',width:'1px',height:r.top-S.top-y-h+'px'})}
+    else{x=cx-w/2;y=C.bottom-S.top+18;Object.assign(line.style,{left:cx+'px',top:r.bottom-S.top+'px',width:'1px',height:y-(r.bottom-S.top)+'px'})}
+    tag.style.left=x+'px';tag.style.top=y+'px';
+    if(x<4||x+w>S.width-4||y<4||y+h>S.height-4)ok=false;
+  });
+  if(!ok)layer.remove(); // 자리가 모자라면 표시하지 않음
+}
+window.addEventListener('resize',()=>{const c=sections.find(x=>!x.hidden);if(c)annotate(c)});
+window.addEventListener('hashchange',route);
+route();
+
+// variant accordion toggle
+document.querySelectorAll('.variant-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const target=document.getElementById(btn.dataset.target);
+    if(!target) return;
+    // toggle controls
+    btn.parentElement.querySelectorAll('.variant-btn').forEach(b=>{b.classList.remove('on');b.setAttribute('aria-pressed','false')});
+    btn.classList.add('on');btn.setAttribute('aria-pressed','true');
+    // toggle stage
+    target.querySelectorAll('[data-variant]').forEach(v=>v.classList.remove('show'));
+    const match=target.querySelector('[data-variant="'+btn.dataset.v+'"]');
+    if(match) match.classList.add('show');
+    annotate(btn.closest('.comp-section'));
+  });
+});
+
+</script>
+</body>
+</html>

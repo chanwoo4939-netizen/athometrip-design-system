@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography | athometrip Design System</title>
+<meta name="description" content="앳홈트립 타이포그래피. 글꼴, 크기와 행간 토큰, 역할별 스타일과 사용 규칙.">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html" class="on">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<section><div class="w">
+  <div class="sh" data-r><h1>Typography</h1><p>글꼴, 크기와 행간 토큰, 역할별 스타일, 사용 규칙.</p></div>
+  <div class="comp-layout">
+    <aside class="comp-sidebar">
+      <div class="comp-sidebar-label">Typography</div>
+      <a href="#overview">개요</a>
+      <a href="#fonts">글꼴</a>
+      <a href="#tokens">토큰</a>
+      <a href="#line-height">행간 규칙</a>
+      <a href="#styles">역할별 스타일</a>
+      <a href="#weight">굵기</a>
+      <a href="#guide">사용 가이드라인</a>
+      <a href="#cleanup">정리가 필요한 부분</a>
+      <a href="#legacy">기존 9단계 스케일</a>
+    </aside>
+    <div class="comp-list doc">
+
+      <div class="comp-section" id="overview">
+        <h2>개요</h2>
+        <p>앳홈트립의 글자는 <b>크기, 행간, 굵기</b> 세 가지 토큰의 조합으로 정해집니다. 같은 크기라도 어디에 쓰이는지에 따라 행간이 달라지기 때문에, 이 문서는 크기별 표와 함께 <b>역할별 스타일</b>을 따로 정리합니다.</p>
+      </div>
+
+      <div class="comp-section" id="fonts">
+        <h2>글꼴</h2>
+        <p><b>Pretendard</b> 하나로 한글, 영문, 숫자를 모두 씁니다. 조사한 텍스트의 99%가 Pretendard였습니다.</p>
+        <p><b>Filson Pro</b>는 로고 워드마크에만 씁니다. 본문이나 제목에는 쓰지 않습니다.</p>
+        <p>지도 같은 외부 위젯 안의 글자(Roboto 등)는 디자인 시스템 범위 밖입니다.</p>
+      </div>
+
+      <div class="comp-section" id="tokens">
+        <h2>토큰</h2>
+        <h3>글자 크기</h3>
+        <p>실제 화면은 10px부터 20px까지 열 단계에 거의 모든 글자가 모여 있습니다. 14px가 가장 많고, 12px와 13px가 그다음입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>크기</th><th>주 용도</th></tr></thead>
+          <tbody>
+            <tr><td>10px</td><td>뱃지, 푸터 고지문</td></tr>
+            <tr><td>11px</td><td>메타 정보, 주석</td></tr>
+            <tr><td>12px</td><td>캡션, 상태, 작은 버튼</td></tr>
+            <tr><td>13px</td><td>보조 본문, 푸터 링크, MO 카드 제목</td></tr>
+            <tr><td>14px</td><td>기본 본문, 라벨, 버튼</td></tr>
+            <tr><td>15px</td><td>탭, 큰 버튼</td></tr>
+            <tr><td>16px</td><td>카드 제목, 큰 본문, PC 헤더 메뉴</td></tr>
+            <tr><td>18px</td><td>서브섹션 제목, 리드 문단</td></tr>
+            <tr><td>20px</td><td>섹션 제목, 페이지 제목, 가격</td></tr>
+            <tr><td>24px</td><td>배너 제목</td></tr>
+            <tr><td>32px 이상</td><td>랜딩의 큰 문구(32, 36, 40, 48)</td></tr>
+            <tr><td>그 외</td><td>8, 17.3, 21.3, 22, 26, 28, 64px. 대부분 에디터 본문</td></tr>
+          </tbody>
+        </table></div>
+        <h3>굵기</h3>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>토큰</th><th>값</th><th>용도</th></tr></thead>
+          <tbody>
+            <tr><td>Regular</td><td>400</td><td>본문, 설명, 비활성 탭</td></tr>
+            <tr><td>Medium</td><td>500</td><td>버튼, 라벨, 칩, 이미지 뱃지</td></tr>
+            <tr><td>SemiBold</td><td>600</td><td>제목, 카드 타이틀, 활성 탭</td></tr>
+            <tr><td>Bold</td><td>700</td><td>가격, 강조 소제목</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="line-height">
+        <h2>행간 규칙</h2>
+        <p>같은 크기에 행간이 여러 개인 이유는 글자가 놓이는 상황이 세 가지이기 때문입니다. 12px를 예로 들면 상태 라벨은 16, 캡션 문단은 18, 해시태그 칩은 20입니다.</p>
+        <ul>
+          <li><b>한 줄 UI 텍스트</b>: 상태, 별점, 날짜, 뱃지처럼 줄바꿈이 없는 글자입니다. 행간을 좁게 잡습니다. 10~13px는 16, 14~15px는 20입니다.</li>
+          <li><b>읽는 글</b>: 설명, 캡션, 후기처럼 두 줄 이상 이어질 수 있는 글자입니다. 크기의 약 1.5배를 씁니다. 12px는 18, 13px는 20, 14px는 22, 16px는 24입니다.</li>
+          <li><b>박스에 맞춘 행간</b>: 높이가 정해진 뱃지나 헤더 안에서 글자를 세로 가운데에 두려고 행간을 박스 높이와 같게 준 경우입니다. 이미지 뱃지는 13px에 24, PC 헤더 메뉴는 16px에 32입니다.</li>
+        </ul>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>크기</th><th>한 줄 UI</th><th>읽는 글</th><th>박스에 맞춘 경우</th></tr></thead>
+          <tbody>
+            <tr><td>10px</td><td>16</td><td>15</td><td>20 (즉시전송 뱃지)</td></tr>
+            <tr><td>11px</td><td>16</td><td>16</td><td>20 (EVENT 뱃지)</td></tr>
+            <tr><td>12px</td><td>16</td><td>18</td><td>20 (해시태그 칩, 작은 버튼, 굵은 쿠폰명)</td></tr>
+            <tr><td>13px</td><td>16</td><td>20</td><td>24 (이미지 뱃지), 18 (MO 카드 제목)</td></tr>
+            <tr><td>14px</td><td>20</td><td>22</td><td>없음</td></tr>
+            <tr><td>15px</td><td>20</td><td>24</td><td>없음</td></tr>
+            <tr><td>16px</td><td>22 (카드 제목)</td><td>24</td><td>32 (PC 헤더 메뉴)</td></tr>
+            <tr><td>18px</td><td>22 (섹션 제목)</td><td>26</td><td>32 (PC 헤더 타이틀)</td></tr>
+            <tr><td>20px</td><td>24</td><td>26</td><td>없음</td></tr>
+            <tr><td>24px</td><td>28</td><td>32</td><td>없음</td></tr>
+          </tbody>
+        </table></div>
+        <p>새 화면을 만들 때는 먼저 "한 줄인가, 읽는 글인가"를 정하고 위 표의 해당 칸을 씁니다. 박스에 맞춘 행간은 새로 만들지 말고, 박스에 높이와 가운데 정렬을 주는 쪽을 권장합니다.</p>
+      </div>
+
+      <div class="comp-section" id="styles">
+        <h2>역할별 스타일</h2>
+        <p>자주 쓰이는 크기, 굵기, 행간 조합에 이름을 붙였습니다. 이름은 쓰임새(Display, Title, Body, Label, Caption, Badge)와 크기 순서 번호로 이루어집니다. 행을 누르면 "크기 / 굵기 / 행간"이 복사됩니다.</p>
+        <table class="tt tt-role">
+          <thead><tr><th>Name</th><th>Sample</th><th>Spec</th><th>Usage</th></tr></thead>
+          <tbody>
+      <tr><td class="nm"><b>Display 1</b><span>디스플레이</span></td><td style="font-size:48px;font-weight:600;line-height:54px">앳홈트립 Aa 123</td><td class="spec">48 / SemiBold / 54</td><td class="spec">PC 랜딩의 큰 수치와 문구</td></tr>
+      <tr><td class="nm"><b>Display 2</b><span>디스플레이 MO</span></td><td style="font-size:32px;font-weight:700;line-height:38px">앳홈트립 Aa 123</td><td class="spec">32 / Bold / 38</td><td class="spec">MO 랜딩의 큰 문구</td></tr>
+      <tr><td class="nm"><b>Title 1</b><span>배너 타이틀</span></td><td style="font-size:24px;font-weight:600;line-height:28px">앳홈트립 Aa 123</td><td class="spec">24 / SemiBold / 28</td><td class="spec">메인 배너 제목</td></tr>
+      <tr><td class="nm"><b>Title 2</b><span>페이지 타이틀</span></td><td style="font-size:20px;font-weight:600;line-height:24px">앳홈트립 Aa 123</td><td class="spec">20 / SemiBold / 24</td><td class="spec">페이지 제목(h1), 섹션 제목(h2)</td></tr>
+      <tr><td class="nm"><b>Title 3</b><span>섹션 타이틀</span></td><td style="font-size:20px;font-weight:600;line-height:26px">앳홈트립 Aa 123</td><td class="spec">20 / SemiBold / 26</td><td class="spec">본문 섹션 제목, 큰 카드 제목</td></tr>
+      <tr><td class="nm"><b>Title 4</b><span>서브섹션 타이틀</span></td><td style="font-size:18px;font-weight:600;line-height:22px">앳홈트립 Aa 123</td><td class="spec">18 / SemiBold / 22</td><td class="spec">상품 상세의 섹션 제목, 옵션 선택</td></tr>
+      <tr><td class="nm"><b>Title 5</b><span>카드 타이틀</span></td><td style="font-size:16px;font-weight:600;line-height:22px">앳홈트립 Aa 123</td><td class="spec">16 / SemiBold / 22</td><td class="spec">상품 카드 제목(PC)</td></tr>
+      <tr><td class="nm"><b>Title 5 Strong</b><span>강조 소제목</span></td><td style="font-size:16px;font-weight:700;line-height:24px">앳홈트립 Aa 123</td><td class="spec">16 / Bold / 24</td><td class="spec">단계 제목, 강조 문구</td></tr>
+      <tr><td class="nm"><b>Title 6</b><span>작은 타이틀</span></td><td style="font-size:14px;font-weight:600;line-height:20px">앳홈트립 Aa 123</td><td class="spec">14 / SemiBold / 20</td><td class="spec">목록 항목 제목, 푸터 제목, MO 카드 제목</td></tr>
+      <tr><td class="nm"><b>Title 7</b><span>카드 타이틀 MO</span></td><td style="font-size:13px;font-weight:600;line-height:18px">앳홈트립 Aa 123</td><td class="spec">13 / SemiBold / 18</td><td class="spec">MO 가로 스크롤 카드 제목</td></tr>
+      <tr><td class="nm"><b>Price</b><span>가격</span></td><td style="font-size:20px;font-weight:700;line-height:26px">앳홈트립 Aa 123</td><td class="spec">20 / Bold / 26</td><td class="spec">판매가</td></tr>
+      <tr><td class="nm"><b>Body 1</b><span>리드 문단</span></td><td style="font-size:18px;font-weight:400;line-height:26px">앳홈트립 Aa 123</td><td class="spec">18 / Regular / 26</td><td class="spec">섹션을 여는 설명 한두 줄</td></tr>
+      <tr><td class="nm"><b>Body 2</b><span>본문 L</span></td><td style="font-size:16px;font-weight:400;line-height:24px">앳홈트립 Aa 123</td><td class="spec">16 / Regular / 24</td><td class="spec">FAQ 질문, 큰 본문</td></tr>
+      <tr><td class="nm"><b>Body 3</b><span>본문</span></td><td style="font-size:14px;font-weight:400;line-height:20px">앳홈트립 Aa 123</td><td class="spec">14 / Regular / 20</td><td class="spec">기본 본문, 링크, 부제</td></tr>
+      <tr><td class="nm"><b>Body 3 Long</b><span>본문 (긴 글)</span></td><td style="font-size:14px;font-weight:400;line-height:22px">앳홈트립 Aa 123</td><td class="spec">14 / Regular / 22</td><td class="spec">세 줄 이상 이어지는 설명문</td></tr>
+      <tr><td class="nm"><b>Body 4</b><span>본문 S</span></td><td style="font-size:13px;font-weight:400;line-height:20px">앳홈트립 Aa 123</td><td class="spec">13 / Regular / 20</td><td class="spec">보조 설명, 후기 본문</td></tr>
+      <tr><td class="nm"><b>Tab</b><span>탭</span></td><td style="font-size:15px;font-weight:600;line-height:24px">앳홈트립 Aa 123</td><td class="spec">15 / SemiBold(활성)·Regular / 24</td><td class="spec">ContentTab, LocationTab, 텍스트 링크</td></tr>
+      <tr><td class="nm"><b>Label 1</b><span>버튼 L</span></td><td style="font-size:15px;font-weight:500;line-height:20px">앳홈트립 Aa 123</td><td class="spec">15 / Medium / 20</td><td class="spec">높이 48px 버튼</td></tr>
+      <tr><td class="nm"><b>Label 2</b><span>라벨</span></td><td style="font-size:14px;font-weight:500;line-height:20px">앳홈트립 Aa 123</td><td class="spec">14 / Medium / 20</td><td class="spec">옵션 라벨, 칩, 높이 40px 버튼</td></tr>
+      <tr><td class="nm"><b>Label 3</b><span>버튼 S</span></td><td style="font-size:12px;font-weight:500;line-height:16px">앳홈트립 Aa 123</td><td class="spec">12 / Medium / 16</td><td class="spec">자세히 보기, 바로 담기</td></tr>
+      <tr><td class="nm"><b>Caption 1</b><span>캡션</span></td><td style="font-size:12px;font-weight:400;line-height:18px">앳홈트립 Aa 123</td><td class="spec">12 / Regular / 18</td><td class="spec">읽는 캡션, 푸터, SAVE 뱃지</td></tr>
+      <tr><td class="nm"><b>Caption 2</b><span>라벨 S</span></td><td style="font-size:12px;font-weight:400;line-height:16px">앳홈트립 Aa 123</td><td class="spec">12 / Regular / 16</td><td class="spec">상태, 별점, 날짜 같은 한 줄 정보</td></tr>
+      <tr><td class="nm"><b>Caption 3</b><span>메타</span></td><td style="font-size:11px;font-weight:400;line-height:16px">앳홈트립 Aa 123</td><td class="spec">11 / Regular / 16</td><td class="spec">패스 번호, 후기 수, 주석</td></tr>
+      <tr><td class="nm"><b>Badge 1</b><span>이미지 뱃지</span></td><td style="font-size:13px;font-weight:500;line-height:24px">앳홈트립 Aa 123</td><td class="spec">13 / Medium / 24</td><td class="spec">BEST, HOT 등 높이 24px 뱃지</td></tr>
+      <tr><td class="nm"><b>Badge 2</b><span>뱃지</span></td><td style="font-size:10px;font-weight:400;line-height:16px">앳홈트립 Aa 123</td><td class="spec">10 / Regular / 16</td><td class="spec">카테고리, 성인 등 작은 뱃지</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="comp-section" id="weight">
+        <h2>굵기</h2>
+        <ul>
+          <li><b>제목은 SemiBold(600)</b>가 기본입니다. 페이지 제목, 섹션 제목, 카드 제목이 모두 600입니다.</li>
+          <li><b>Bold(700)는 가격과 강조</b>에 씁니다. 20px Bold는 실서버에서 대부분 가격입니다.</li>
+          <li><b>누를 수 있는 글자는 Medium(500)</b>입니다. 버튼, 칩, 옵션 라벨이 여기에 해당합니다.</li>
+          <li><b>탭은 굵기로 상태를 구분</b>합니다. 활성은 SemiBold, 비활성은 Regular입니다.</li>
+          <li>ExtraBold(800)는 FAQ의 "Q." 표기와 일부 랜딩 문구에만 있습니다. 새로 쓰지 않습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="guide">
+        <h2>사용 가이드라인</h2>
+        <ul>
+          <li><b>역할별 스타일을 먼저 찾습니다.</b> 맞는 역할이 있으면 크기와 행간을 따로 고르지 않습니다.</li>
+          <li><b>한 화면의 제목 단계는 세 개 이하</b>로 둡니다. 상품 상세는 20(상품명), 18(섹션), 16(소제목)을 씁니다.</li>
+          <li><b>본문은 14px</b>가 기준입니다. 보조 설명은 13px, 캡션은 12px로 한 단계씩 내립니다.</li>
+          <li><b>10px와 11px는 뱃지와 메타 정보에만</b> 씁니다. 문장에는 12px 이상을 씁니다.</li>
+          <li><b>PC와 MO는 같은 역할에 다른 크기</b>를 쓸 수 있습니다. 카드 제목은 PC 16/22, MO 13/18입니다.</li>
+          <li><b>보조 색</b>은 본문 #5C5C5C, 메타와 비활성 #9E9E9E, 라벨 #757575를 씁니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="cleanup">
+        <details class="doc-fold"><summary><h2>정리가 필요한 부분</h2></summary>
+        <p>조사하면서 발견한 불일치입니다. 화면에는 큰 문제가 없지만 토큰으로 묶으려면 정리가 필요합니다.</p>
+        <ul>
+          <li><b>행간 종류가 많습니다.</b> 12px에 9가지, 13px에 9가지, 14px에 9가지 이상의 조합이 있습니다. 위 "행간 규칙"의 두세 가지로 줄일 수 있습니다.</li>
+          <li><b>소수점 행간</b>이 있습니다. 14px에 22.8과 25.2, 13px에 19.5, 11px에 16.5입니다. 배수(1.5, 1.63, 1.8)로 지정된 값이며 주로 상품 설명 에디터 본문입니다.</li>
+          <li><b>행간이 지정되지 않은 글자</b>가 있습니다. 로컬쿠폰의 매장명(13px SemiBold) 16곳이 브라우저 기본 행간을 씁니다.</li>
+          <li><b>행간이 글자 크기와 같은 경우</b>가 있습니다. 12/12, 11/11, 10/10, 14/14는 두 줄이 되면 글자가 겹칩니다.</li>
+          <li><b>15px의 자리가 모호합니다.</b> 탭과 큰 버튼에만 쓰이고, 버튼은 같은 높이 48px에서 15px와 16px가 섞여 있습니다.</li>
+          <li><b>스케일 밖 크기</b>가 있습니다. 17.3px, 21.3px, 22px, 26px는 에디터 본문이나 한두 곳에만 있습니다.</li>
+        </ul>
+        </details>
+      </div>
+
+      <div class="comp-section" id="legacy">
+        <details class="doc-fold"><summary><h2>기존 9단계 스케일</h2></summary>
+        <p>이전에 정의했던 스케일입니다. 실서버에서 같은 조합이 쓰인 횟수를 함께 적었습니다. Headline 01과 Title 01은 실서버에서 거의 쓰이지 않고, Headline 02는 제목보다 가격에 쓰입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>이름</th><th>Spec</th><th>정의된 용도</th><th class="num">실사용 수</th></tr></thead>
+          <tbody>
+            <tr><td>Headline 01</td><td>24 / Bold / 32</td><td>배너 대제목</td><td class="num">4</td></tr>
+            <tr><td>Headline 02</td><td>20 / Bold / 26</td><td>섹션 타이틀</td><td class="num">41 (대부분 가격)</td></tr>
+            <tr><td>Title 01</td><td>20 / Bold / 32</td><td>카드 제목</td><td class="num">1</td></tr>
+            <tr><td>Title 02</td><td>16 / Bold / 24</td><td>서브섹션</td><td class="num">37</td></tr>
+            <tr><td>Title 03</td><td>15 / SemiBold / 24</td><td>리스트 항목</td><td class="num">11</td></tr>
+            <tr><td>Body 01</td><td>15 / Regular / 24</td><td>본문</td><td class="num">37 (탭과 링크)</td></tr>
+            <tr><td>Body 02</td><td>14 / Medium / 20</td><td>옵션 라벨</td><td class="num">86</td></tr>
+            <tr><td>Body 03</td><td>13 / Regular / 20</td><td>보조 설명</td><td class="num">187</td></tr>
+            <tr><td>Body 04</td><td>12 / Medium / 16</td><td>캡션, 뱃지</td><td class="num">28</td></tr>
+          </tbody>
+        </table></div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+document.querySelectorAll('.tt tbody tr').forEach(tr=>{tr.addEventListener('click',()=>{const spec=tr.querySelector('.spec')?.textContent?.trim();if(spec){navigator.clipboard.writeText(spec).then(()=>showCopyToast(spec))}})});
+</script>
+<script>
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=document.querySelectorAll('.comp-section');
+function updateSidebar(){let current='';sections.forEach(s=>{if(s.getBoundingClientRect().top<=100)current=s.id});sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateSidebar,{passive:true});updateSidebar();
+</script>
+</body>
+</html>

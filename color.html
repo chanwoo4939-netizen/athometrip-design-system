@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color | athometrip Design System</title>
+<meta name="description" content="앳홈트립 컬러. 팔레트와 역할별 색, 글자·배경·테두리 사용 규칙.">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html" class="on">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<section><div class="w">
+  <div class="sh" data-r><h1>Color</h1><p>팔레트, 역할별 색, 사용 규칙.</p></div>
+  <div class="comp-layout">
+    <aside class="comp-sidebar">
+      <div class="comp-sidebar-label">Color</div>
+      <a href="#overview">개요</a>
+      <a href="#primitive">Primitive</a>
+      <a href="#semantic">Semantic</a>
+      <a href="#text">글자색</a>
+      <a href="#surface">배경</a>
+      <a href="#border">테두리</a>
+      <a href="#accent">강조색</a>
+      <a href="#contrast">대비</a>
+      <a href="#cleanup">정리가 필요한 부분</a>
+    </aside>
+    <div class="comp-list doc">
+
+      <div class="comp-section" id="overview">
+        <h2>개요</h2>
+        <p>색은 두 층으로 나뉩니다. <b>Primitive</b>는 Gray, Warm, Cool과 브랜드 색의 단계별 팔레트이고, <b>Semantic</b>은 그 색에 "본문", "카드 배경" 같은 역할을 붙인 이름입니다. 화면을 만들 때는 Semantic을 먼저 찾고, 없을 때만 Primitive를 씁니다.</p>
+        <p>앳홈트립 화면은 따뜻한 미색 배경 위에 검정과 회색 글자가 대부분이고, 유채색은 픽패스(Coral)와 상태 표시에만 좁게 쓰입니다.</p>
+      </div>
+
+      <div class="comp-section" id="primitive">
+        <h2>Primitive</h2>
+        <p>색을 누르면 HEX가 복사됩니다.</p>
+        <h3>Neutral</h3>
+  <div class="swatch-row">
+    <div class="sw lt" style="background:#F2F2F2" data-hex="#F2F2F2"><i><b>Gray 50</b><span>#F2F2F2</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#EBEBEB" data-hex="#EBEBEB"><i><b>100</b><span>#EBEBEB</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#E0E0E0" data-hex="#E0E0E0"><i><b>200</b><span>#E0E0E0</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#C2C2C2" data-hex="#C2C2C2"><i><b>300</b><span>#C2C2C2</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#9E9E9E" data-hex="#9E9E9E"><i><b>400</b><span>#9E9E9E</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#757575" data-hex="#757575"><i><b>500</b><span>#757575</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#5C5C5C" data-hex="#5C5C5C"><i><b>600</b><span>#5C5C5C</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#424242" data-hex="#424242"><i><b>700</b><span>#424242</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#212121" data-hex="#212121"><i><b>800</b><span>#212121</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#000" data-hex="#000000"><i><b>900</b><span>#000000</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+  </div>
+  <div class="swatch-row">
+    <div class="sw lt" style="background:#FAF9F4" data-hex="#FAF9F4"><i><b>Warm 50</b><span>#FAF9F4</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#F5F3ED" data-hex="#F5F3ED"><i><b>100</b><span>#F5F3ED</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#EEEBE2" data-hex="#EEEBE2"><i><b>200</b><span>#EEEBE2</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#E2DDD1" data-hex="#E2DDD1"><i><b>300</b><span>#E2DDD1</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#C9C2B1" data-hex="#C9C2B1"><i><b>400</b><span>#C9C2B1</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#AFA58D" data-hex="#AFA58D"><i><b>500</b><span>#AFA58D</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#8F846B" data-hex="#8F846B"><i><b>600</b><span>#8F846B</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#6F6551" data-hex="#6F6551"><i><b>700</b><span>#6F6551</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#4F4839" data-hex="#4F4839"><i><b>800</b><span>#4F4839</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#2F2B22" data-hex="#2F2B22"><i><b>900</b><span>#2F2B22</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+  </div>
+  <div class="swatch-row">
+    <div class="sw lt" style="background:#F9FAFB" data-hex="#F9FAFB"><i><b>Cool 50</b><span>#F9FAFB</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#F3F4F6" data-hex="#F3F4F6"><i><b>100</b><span>#F3F4F6</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#E5E7EB" data-hex="#E5E7EB"><i><b>200</b><span>#E5E7EB</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#D1D5DB" data-hex="#D1D5DB"><i><b>300</b><span>#D1D5DB</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#9CA3AF" data-hex="#9CA3AF"><i><b>400</b><span>#9CA3AF</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#6B7280" data-hex="#6B7280"><i><b>500</b><span>#6B7280</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#4B5563" data-hex="#4B5563"><i><b>600</b><span>#4B5563</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#374151" data-hex="#374151"><i><b>700</b><span>#374151</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#1F2937" data-hex="#1F2937"><i><b>800</b><span>#1F2937</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw dk" style="background:#111827" data-hex="#111827"><i><b>900</b><span>#111827</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+  </div>
+  </div>
+
+  <div style="margin-top:24px" data-r>
+  <h3>Brand &amp; Status</h3>
+  <div class="swatch-row">
+    <div class="sw lt" style="background:#FFF5F5" data-hex="#FFF5F5"><i><b>Coral 50</b><span>#FFF5F5</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw lt" style="background:#FFC5CB" data-hex="#FFC5CB"><i><b>200</b><span>#FFC5CB</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw lt" style="background:#FB6764" data-hex="#FB6764"><i><b>400</b><span>#FB6764</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw lt" style="background:#E04440" data-hex="#E04440"><i><b>600</b><span>#E04440</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw dk" style="background:#701410" data-hex="#701410"><i><b>900</b><span>#701410</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#F0FDFA" data-hex="#F0FDFA"><i><b>Teal 50</b><span>#F0FDFA</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw lt" style="background:#0D9488" data-hex="#0D9488"><i><b>600</b><span>#0D9488</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw dk" style="background:#134E4A" data-hex="#134E4A"><i><b>900</b><span>#134E4A</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+    <div class="sw lt" style="background:#EBF2FF" data-hex="#EBF2FF"><i><b>Blue 50</b><span>#EBF2FF</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div><div class="sw dk" style="background:#155DFC" data-hex="#155DFC"><i><b>600</b><span>#155DFC</span><svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg></i></div>
+  </div>
+  
+      </div>
+
+      <div class="comp-section" id="semantic">
+        <h2>Semantic</h2>
+        <p>역할 이름이 붙은 색입니다. 카드를 누르면 HEX가 복사됩니다.</p>
+        <div class="sem-grid">
+    <div class="sem" data-hex="#FAF9F4"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#FAF9F4"></div><b>bg/primary</b><code>#FAF9F4</code><small>메인 배경</small></div>
+    <div class="sem" data-hex="#F5F3ED"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#F5F3ED"></div><b>bg/secondary</b><code>#F5F3ED</code><small>카드 배경</small></div>
+    <div class="sem" data-hex="#FFFFFF"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#fff;border-color:var(--border)"></div><b>bg/surface</b><code>#FFFFFF</code><small>카드 표면</small></div>
+    <div class="sem" data-hex="#000000"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#000"></div><b>bg/inverse</b><code>#000000</code><small>CTA 배경</small></div>
+    <div class="sem" data-hex="#000000"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#000"></div><b>text/primary</b><code>#000000</code><small>타이틀</small></div>
+    <div class="sem" data-hex="#5C5C5C"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#5C5C5C"></div><b>text/secondary</b><code>#5C5C5C</code><small>본문</small></div>
+    <div class="sem" data-hex="#757575"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#757575"></div><b>text/tertiary</b><code>#757575</code><small>보조 텍스트</small></div>
+    <div class="sem" data-hex="#E02A28"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#E02A28"></div><b>status/error</b><code>#E02A28</code><small>에러, 마감</small></div>
+    <div class="sem" data-hex="#0D9488"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#0D9488"></div><b>status/success</b><code>#0D9488</code><small>준비완료, 할인</small></div>
+    <div class="sem" data-hex="#FB6764"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#FB6764"></div><b>brand/pickpass</b><code>#FB6764</code><small>픽패스</small></div>
+    <div class="sem" data-hex="#0D9488"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#0D9488"></div><b>brand/discount</b><code>#0D9488</code><small>할인, 혜택</small></div>
+    <div class="sem" data-hex="#E0E0E0"><svg aria-hidden="true" class="copy-icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3h8"/></svg><div class="sem-bar" style="background:#E0E0E0"></div><b>border/default</b><code>#E0E0E0</code><small>기본 경계선</small></div>
+  </div>
+      </div>
+
+      <div class="comp-section" id="text">
+        <h2>글자색</h2>
+        <p>글자색은 진한 순서대로 다섯 단계입니다. 한 화면에서 세 단계를 넘기지 않는 것을 권장합니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>색</th><th>용도</th></tr></thead>
+          <tbody>
+            <tr><td><i class="cdot" style="background:#000000"></i>#000000</td><td>제목, 강조, 활성 메뉴</td></tr>
+            <tr><td><i class="cdot" style="background:#5C5C5C"></i>#5C5C5C</td><td>본문, 설명</td></tr>
+            <tr><td><i class="cdot" style="background:#FFFFFF"></i>#FFFFFF</td><td>검정 버튼과 이미지 위의 글자</td></tr>
+            <tr><td><i class="cdot" style="background:#9E9E9E"></i>#9E9E9E</td><td>메타 정보, 비활성 탭, 취소선 가격</td></tr>
+            <tr><td><i class="cdot" style="background:#757575"></i>#757575</td><td>옵션 라벨, 별점 수</td></tr>
+            <tr><td><i class="cdot" style="background:#424242"></i>#424242</td><td>푸터 링크</td></tr>
+            <tr><td><i class="cdot" style="background:#C2C2C2"></i>#C2C2C2</td><td>비활성 헤더 메뉴, placeholder</td></tr>
+            <tr><td><i class="cdot" style="background:#8F846B"></i>#8F846B</td><td>해시태그, 위치 같은 Warm 강조</td></tr>
+            <tr><td><i class="cdot" style="background:#4F4839"></i>#4F4839</td><td>라운지 안내 문구</td></tr>
+            <tr><td><i class="cdot" style="background:#AFA58D"></i>#AFA58D</td><td>영문 부제</td></tr>
+            <tr><td><i class="cdot" style="background:#4B5563"></i>#4B5563</td><td>로컬쿠폰 혜택명</td></tr>
+            <tr><td><i class="cdot" style="background:#FB6764"></i>#FB6764</td><td>픽패스 뱃지, SAVE</td></tr>
+            <tr><td><i class="cdot" style="background:#FF8E0D"></i>#FF8E0D</td><td>"추천" 표시</td></tr>
+          </tbody>
+        </table></div>
+        <ul style="margin-top:16px">
+          <li><b>#000000</b>은 제목과 지금 선택된 것에 씁니다.</li>
+          <li><b>#5C5C5C</b>가 본문의 기본입니다. 긴 글을 검정으로 쓰지 않습니다.</li>
+          <li><b>#757575</b>는 옵션 이름처럼 값 옆에 붙는 라벨에 씁니다.</li>
+          <li><b>#9E9E9E</b>는 읽지 않아도 되는 정보에만 씁니다. 날짜, 번호, 취소선 가격, 비활성 탭입니다.</li>
+          <li><b>#C2C2C2</b>는 placeholder와 비활성 헤더 메뉴에만 씁니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="surface">
+        <h2>배경</h2>
+        <p>배경은 미색 페이지 위에 박스와 카드가 올라가는 세 겹 구조입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>색</th><th>용도</th></tr></thead>
+          <tbody>
+            <tr><td><i class="cdot" style="background:#FFFFFF"></i>#FFFFFF</td><td>카드, 패널, 흰 버튼</td></tr>
+            <tr><td><i class="cdot" style="background:#F5F3ED"></i>#F5F3ED</td><td>정보 박스, 후기 카드, 원형 버튼</td></tr>
+            <tr><td><i class="cdot" style="background:#FAF9F4"></i>#FAF9F4</td><td>페이지 배경, 헤더</td></tr>
+            <tr><td><i class="cdot" style="background:#F8F8F8"></i>#F8F8F8</td><td>SAVE 뱃지, 수량 버튼</td></tr>
+            <tr><td><i class="cdot" style="background:#D9D9D9"></i>#D9D9D9</td><td>이미지가 뜨기 전 자리</td></tr>
+            <tr><td><i class="cdot" style="background:#EBEBEB"></i>#EBEBEB</td><td>1px 구분선</td></tr>
+            <tr><td><i class="cdot" style="background:#000000"></i>#000000</td><td>기본 버튼, 활성 칩</td></tr>
+            <tr><td><i class="cdot" style="background:rgba(0,0,0,.3)"></i>rgba(0,0,0,.3)</td><td>이미지 위 뱃지(BEST 등)</td></tr>
+            <tr><td><i class="cdot" style="background:#F3F4F6"></i>#F3F4F6</td><td>픽 상태 영역, 미사용 원</td></tr>
+            <tr><td><i class="cdot" style="background:rgba(0,0,0,.2)"></i>rgba(0,0,0,.2)</td><td>로컬쿠폰 카테고리 태그</td></tr>
+            <tr><td><i class="cdot" style="background:#EEEBE2"></i>#EEEBE2</td><td>썸네일 자리, 고객센터 버튼</td></tr>
+            <tr><td><i class="cdot" style="background:rgba(0,0,0,.5)"></i>rgba(0,0,0,.5)</td><td>바텀시트 뒤 오버레이</td></tr>
+            <tr><td><i class="cdot" style="background:#F9FAFB"></i>#F9FAFB</td><td>픽 사용 현황 박스</td></tr>
+            <tr><td><i class="cdot" style="background:#E2DDD1"></i>#E2DDD1</td><td>헤더 세로 구분선</td></tr>
+          </tbody>
+        </table></div>
+        <ul style="margin-top:16px">
+          <li><b>#FAF9F4</b> 페이지 배경 위에 <b>#F5F3ED</b> 박스나 <b>#FFFFFF</b> 카드를 올립니다.</li>
+          <li>흰 카드는 테두리 <b>#F5F3ED</b> 1px로 경계를 줍니다. 그림자는 떠 있는 요소에만 씁니다.</li>
+          <li>사진 위에 올리는 뱃지는 검정 30%, 시트 뒤 오버레이는 검정 50%입니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="border">
+        <h2>테두리</h2>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>색</th><th>용도</th></tr></thead>
+          <tbody>
+            <tr><td><i class="cdot" style="background:rgba(0,0,0,.05)"></i>rgba(0,0,0,.05)</td><td>이미지와 썸네일 테두리</td></tr>
+            <tr><td><i class="cdot" style="background:#E0E0E0"></i>#E0E0E0</td><td>버튼, 칩, 탭 밑줄, 입력창</td></tr>
+            <tr><td><i class="cdot" style="background:#F5F3ED"></i>#F5F3ED</td><td>카드, 옵션 패널</td></tr>
+            <tr><td><i class="cdot" style="background:#EBEBEB"></i>#EBEBEB</td><td>목록 행 구분</td></tr>
+            <tr><td><i class="cdot" style="background:#FFFFFF"></i>#FFFFFF</td><td>배너 위 뱃지</td></tr>
+            <tr><td><i class="cdot" style="background:#EEEBE2"></i>#EEEBE2</td><td>라운지 요금 박스</td></tr>
+            <tr><td><i class="cdot" style="background:#9E9E9E"></i>#9E9E9E</td><td>푸터 구분</td></tr>
+            <tr><td><i class="cdot" style="background:#000000"></i>#000000</td><td>강조 구분선(1px), 활성 탭 밑줄(2px)</td></tr>
+            <tr><td><i class="cdot" style="background:#D1D5DB"></i>#D1D5DB</td><td>작은 버튼</td></tr>
+            <tr><td><i class="cdot" style="background:#9CA3AF"></i>#9CA3AF</td><td>미사용 원(점선)</td></tr>
+          </tbody>
+        </table></div>
+        <ul style="margin-top:16px">
+          <li><b>누를 수 있는 것의 테두리는 #E0E0E0</b>입니다. 버튼, 칩, 입력창이 해당합니다.</li>
+          <li><b>목록 행 사이 구분선은 #EBEBEB</b>, 카드 테두리는 #F5F3ED입니다.</li>
+          <li>사진에는 검정 5% 테두리를 둘러 밝은 사진이 배경에 묻히지 않게 합니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="accent">
+        <h2>강조색</h2>
+        <ul>
+          <li><b>Coral #FB6764</b>은 픽패스 전용입니다. 픽패스 뱃지, SAVE 금액, 픽패스 버튼의 아이콘에 씁니다.</li>
+          <li><b>Red #E02A28</b>은 "예약필요" 같은 상태와 오류에 씁니다.</li>
+          <li><b>Warm #8F846B</b>은 별점 아이콘과 해시태그에 씁니다. 유채색 대신 쓰는 브랜드 강조색입니다.</li>
+          <li>픽패스 할인 띠의 그라데이션(#FD8959에서 #EA4B88)은 그 띠에만 씁니다.</li>
+          <li>Teal과 Blue는 조사한 화면에서 글자나 배경으로 거의 쓰이지 않았습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="contrast">
+        <h2>대비</h2>
+        <p>미색 배경(#FAF9F4) 위에서 잰 글자 대비입니다. 본문 기준은 4.5:1입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>글자색</th><th class="num">대비</th><th>판정</th></tr></thead>
+          <tbody>
+            <tr><td><i class="cdot" style="background:#5C5C5C"></i>#5C5C5C</td><td class="num">6.3:1</td><td>본문에 쓸 수 있음</td></tr>
+            <tr><td><i class="cdot" style="background:#757575"></i>#757575</td><td class="num">4.4:1</td><td>기준에 약간 못 미침. 14px Medium 이상 라벨에 사용</td></tr>
+            <tr><td><i class="cdot" style="background:#E02A28"></i>#E02A28</td><td class="num">4.4:1</td><td>기준에 약간 못 미침. 상태 표시에는 점이나 아이콘을 함께</td></tr>
+            <tr><td><i class="cdot" style="background:#8F846B"></i>#8F846B</td><td class="num">3.5:1</td><td>큰 글자와 아이콘에만</td></tr>
+            <tr><td><i class="cdot" style="background:#FB6764"></i>#FB6764</td><td class="num">2.8:1</td><td>뱃지 안의 짧은 글자에만</td></tr>
+            <tr><td><i class="cdot" style="background:#9E9E9E"></i>#9E9E9E</td><td class="num">2.5:1</td><td>꼭 읽어야 하는 정보에는 쓰지 않음</td></tr>
+            <tr><td><i class="cdot" style="background:#C2C2C2"></i>#C2C2C2</td><td class="num">1.7:1</td><td>placeholder와 비활성 표시 전용</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="cleanup">
+        <details class="doc-fold"><summary><h2>정리가 필요한 부분</h2></summary>
+        <ul>
+          <li><b>역할 이름이 없는 색</b>: #9E9E9E, #C2C2C2, #F8F8F8, #EBEBEB, 카드 테두리 #F5F3ED, 사진 테두리 검정 5%가 Semantic 목록에 없습니다.</li>
+          <li><b>text/tertiary(#757575)보다 #9E9E9E가 더 많이 쓰입니다</b>(213곳 대 395곳). 보조 글자의 기준을 다시 정할 필요가 있습니다.</li>
+          <li><b>팔레트에 없는 회색</b>: #D9D9D9(72곳), #D1D1D1, #F5F5F5, #EDEDED, #2A2A2A가 있습니다. 가까운 Gray 단계로 맞출 수 있습니다.</li>
+          <li><b>팔레트에 없는 유채색</b>: "추천" 표시의 #FF8E0D입니다.</li>
+          <li><b>Warm과 Cool이 섞여 있습니다.</b> 나의 픽패스와 로컬쿠폰은 Cool 계열(#F3F4F6, #F9FAFB, #4B5563)을, 나머지 화면은 Warm 계열을 씁니다.</li>
+          <li><b>status/success와 brand/discount가 같은 값</b>(#0D9488)이고, 조사한 화면에서는 쓰인 곳을 찾지 못했습니다.</li>
+        </ul>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+document.querySelectorAll('.sw[data-hex]').forEach(sw=>{sw.addEventListener('click',()=>{navigator.clipboard.writeText(sw.dataset.hex).then(()=>showCopyToast(sw.dataset.hex))})});
+document.querySelectorAll('.sem[data-hex]').forEach(sem=>{sem.addEventListener('click',()=>{navigator.clipboard.writeText(sem.dataset.hex).then(()=>showCopyToast(sem.dataset.hex))})});
+</script>
+<script>
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=document.querySelectorAll('.comp-section');
+function updateSidebar(){let current='';sections.forEach(s=>{if(s.getBoundingClientRect().top<=100)current=s.id});sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateSidebar,{passive:true});updateSidebar();
+</script>
+</body>
+</html>
