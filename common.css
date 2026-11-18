@@ -1144,3 +1144,8 @@ footer{padding:64px 0 40px}
   .comp-sidebar.has-jump .comp-all{margin-right:16px}
   .comp-jump{height:44px;padding:0 28px 0 16px;border:0;border-left:1px solid var(--line);border-radius:0;background-color:transparent;background-position:right 4px center;font-size:13px;font-weight:500;color:var(--ink)}
 }
+.sf-in span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* 모바일: 상태 전환 박스를 PC처럼 미리보기 좌우·아래 끝까지 채움 */
+@media(max-width:768px){
+  .cc-preview.cc-var{padding:0;overflow:hidden}
+}

@@ -17,8 +17,9 @@
 .pt .pt-tall{padding:24px 0 16px;border-radius:var(--r);background:var(--warm-light);text-align:center}
 .pt figcaption{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.6}
 .pt h2{font-size:28px;font-weight:700;letter-spacing:-.02em;margin-bottom:16px}
-.flow{list-style:none;counter-reset:step;border-top:1px solid var(--line)}
+.flow{list-style:none;counter-reset:step}
 .flow li{counter-increment:step;display:grid;grid-template-columns:32px minmax(0,1fr);padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.flow li:last-child{border-bottom:0}
 .flow li::before{content:counter(step);color:var(--muted);font-variant-numeric:tabular-nums}
 .pt h3{margin-top:24px;margin-bottom:8px;font-size:13px;font-weight:600;color:var(--sub)}
 .uses{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
