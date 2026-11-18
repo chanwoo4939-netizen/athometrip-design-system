@@ -34,9 +34,12 @@
 @media(max-width:768px){
   .hero-card{min-height:0}
   .hero{padding:48px 32px}
-  .idx a{grid-template-columns:minmax(0,1fr);gap:8px;padding:24px 20px}
+  .idx a{grid-template-columns:minmax(0,1fr);gap:8px;padding:12px 12px 24px}
+  .idx a>h3,.idx a>p{padding:0 8px}
+  .idx a>h3{margin-top:8px}
   .idx h3{font-size:24px}
-  .idx-spec{justify-content:flex-start;margin-top:8px}
+  .idx-spec{order:-1;justify-content:stretch;margin-top:0}
+  .idx-g{width:100%;height:auto;aspect-ratio:320/176;border-radius:8px}
   .idx-spec svg{margin-left:0;margin-right:8px}
 }
 </style>

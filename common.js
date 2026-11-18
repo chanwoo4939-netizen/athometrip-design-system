@@ -98,3 +98,22 @@ document.querySelectorAll('.ic[data-icon]').forEach(ic=>{
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{
   const d=document.querySelector(a.getAttribute('href')+' details.doc-fold');if(d)d.open=true;
 }));
+
+// 문서 글 줄바꿈: 문장이 여럿인 글은 문장 단위로 묶어, 줄이 넘칠 때 문장 중간이 아니라 문장 사이에서 끊기게 함
+(function sentenceWrap(){
+  const skip='.cc-preview,.cc-stage,.cd-fig,.ov-thumb,.ov-text,.anno-layer,pre,code,table,nav,footer,.hero-card';
+  document.querySelectorAll('p,li,dd').forEach(el=>{
+    if(el.closest(skip)||el.querySelector('p,li,ul,ol,div,br,table,.sn'))return;
+    if(!/[.?!]\s+\S/.test(el.textContent.trim()))return;
+    const parts=[[]];
+    [...el.childNodes].forEach(n=>{
+      if(n.nodeType!==3){parts[parts.length-1].push(n);return}
+      const segs=n.textContent.split(/(?<=[.?!])\s+/); // 글자 노드가 '. '로 끝나도 다음 노드부터 새 문장
+      segs.forEach((s,i)=>{if(i>0)parts.push([]);if(s)parts[parts.length-1].push(document.createTextNode(s))});
+    });
+    while(parts.length&&!parts[parts.length-1].length)parts.pop();
+    if(parts.length<2)return;
+    el.textContent='';
+    parts.forEach((nodes,i)=>{if(!nodes.length)return;const sp=document.createElement('span');sp.className='sn';nodes.forEach(n=>sp.appendChild(n));if(i>0)el.appendChild(document.createTextNode(' '));el.appendChild(sp)});
+  });
+})();

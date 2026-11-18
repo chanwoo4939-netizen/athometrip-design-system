@@ -513,7 +513,7 @@ footer{padding:64px 0 40px}
   .nav-logo span{display:none}
   .nav-links{flex:1;overflow-x:auto;scrollbar-width:none;padding-right:20px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 28px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 28px),transparent 100%);padding-left:8px}
   .nav-links::-webkit-scrollbar{display:none}
-  .nav-links a{padding:12px}
+  .nav-links a{padding:7px 12px}
   .sh p{white-space:normal}
   .swatch-row{grid-template-columns:repeat(5,1fr)}
   .sw{height:64px}
@@ -1090,3 +1090,57 @@ footer{padding:64px 0 40px}
 .pv-crop .cc-preview:not(.cc-var)>.od{box-sizing:content-box;padding:48px 16px;background:#FAF9F4}
 .pv-crop .rw-body u{background:linear-gradient(90deg,transparent,#FAF9F4 36px)}
 .pv-crop .cc-stage [data-variant].pv-white.show,.pv-crop .cd-fig .cd-in.pv-white{background:#FFFFFF}
+/* 문서 글: 단어 중간에서 끊지 않고, 마지막 줄에 한두 글자만 남지 않게 */
+:where(p,li,td,th,dd,summary,small):not(.cc-preview *,.cd-fig *,.ov-thumb *){word-break:keep-all;text-wrap:balance}
+.cd-lead,.cd-txt p,.idx p{text-wrap:balance}
+.ov-text p,:where(td,th):not(.cc-preview *,.cd-fig *,.ov-thumb *){text-wrap:balance}
+.tt .nm,.tt td.spec:nth-child(3){white-space:nowrap}
+.tt .nm{padding-right:16px}
+@media(max-width:768px){
+  .tt{display:block;overflow:visible}
+  .tt thead{display:none}
+  .tt tbody,.tt tr{display:block}
+  .tt tr{padding:16px 0;border-bottom:1px solid var(--line)}
+  .tt tr:last-child{border-bottom:0}
+  .tt td,.tt td:first-child{display:block;width:auto;padding:0;border:0}
+  .tt td.nm{display:flex;align-items:baseline;gap:8px;margin-bottom:8px;padding-right:0}
+  .tt .nm b,.tt .nm span{display:inline}
+  .tt td:nth-child(2){margin-bottom:8px;overflow-wrap:anywhere}
+  .tt td.spec{display:inline;white-space:normal}
+  .tt td.spec:nth-child(3){margin-right:10px;color:var(--sub)}
+}
+/* 설명 글 바로 아래에 표·목록·카드가 붙지 않게 */
+.comp-section>p+:is(.sem-grid,.ft-wrap,.sp-item,.tt,table,.swatch-row,.icon-grid),.comp-section>ul+:is(.ft-wrap,table,.sem-grid){margin-top:24px}
+.comp-section>p+ul{margin-top:12px}
+.sn{display:inline-block;max-width:100%;vertical-align:top;text-wrap:balance}
+/* 모바일: 페이지 안 메뉴(칩, 컴포넌트 선택)를 헤더 아래에 붙여 둠 */
+@media(max-width:900px){
+  .comp-layout{display:block}
+  .comp-sidebar,.comp-sidebar.has-jump{position:sticky;top:53px;z-index:50;flex-wrap:nowrap;overflow-x:auto;max-height:none;margin:0 -40px 24px;padding:10px 40px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .comp-sidebar a{flex-shrink:0;white-space:nowrap}
+  html{scroll-padding-top:120px}
+}
+@media(max-width:768px){
+  .comp-sidebar,.comp-sidebar.has-jump{margin:0 -20px 24px;padding:10px 20px}
+}
+/* 모바일: 제목과 바로 아래 글 사이를 좁힘 */
+@media(max-width:768px){
+  h1,h2,h3,h4{line-height:1.25}
+  .sh{gap:6px;margin-bottom:32px}
+  .comp-section>h2{margin-bottom:10px}
+  .comp-section>h3{margin-bottom:8px}
+  .comp-section-head{margin-bottom:14px}
+}
+/* 모바일 페이지 안 메뉴: 헤더(알약)와 구분되게 밑줄 탭으로 */
+@media(max-width:900px){
+  .comp-sidebar,.comp-sidebar.has-jump{gap:0;align-items:stretch;padding-top:0;padding-bottom:0;scrollbar-width:none}
+  .comp-sidebar a,.comp-sidebar.has-jump .comp-all{position:relative;display:flex;align-items:center;height:44px;margin:0 20px 0 0;padding:0;border:0;border-radius:0;background:none;font-size:13px;font-weight:500;color:var(--sub)}
+  .comp-sidebar a:hover{background:none;color:var(--ink)}
+  .comp-sidebar a.on,.comp-sidebar.has-jump .comp-all.on{border:0;background:none;color:var(--ink);font-weight:600}
+  .comp-sidebar a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ink)}
+  .comp-sidebar:not(.has-jump){-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent)}
+}
+@media(max-width:768px){
+  .comp-sidebar.has-jump .comp-all{margin-right:16px}
+  .comp-jump{height:44px;padding:0 28px 0 16px;border:0;border-left:1px solid var(--line);border-radius:0;background-color:transparent;background-position:right 4px center;font-size:13px;font-weight:500;color:var(--ink)}
+}
