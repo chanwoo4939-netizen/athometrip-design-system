@@ -11,6 +11,8 @@
   --font-body:'Pretendard Variable',Pretendard,-apple-system,sans-serif;--font-display:'Filson Pro',Pretendard,sans-serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--stage:#F8F8F8;--code-type:#155DFC;
   --glass:rgba(250,249,244,.72);--glass-border:rgba(226,221,209,.5);
 }
+/* iOS: 축소해 그린 미리보기 안의 글자를 브라우저가 다시 키우지 않게 */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body{overflow-x:clip}
 body{font-family:var(--font-body);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5;font-size:15px}
 a{color:inherit;text-decoration:none}
@@ -1149,3 +1151,4 @@ footer{padding:64px 0 40px}
 @media(max-width:768px){
   .cc-preview.cc-var{padding:0;overflow:hidden}
 }
+.ov-thumb>img{display:block;width:100%;height:100%;object-fit:cover}

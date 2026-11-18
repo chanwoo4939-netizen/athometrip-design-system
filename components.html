@@ -1955,6 +1955,7 @@ const jump=document.createElement('select');jump.className='comp-jump';jump.setA
 })();
 (function buildOverview(){
   const fits=[];overview.hidden=false;
+  const useImg=matchMedia('(max-width:768px)').matches&&!location.search.includes('thumbs=live');
   const groups=new Map();
   sections.forEach(sec=>{
     const cat=sec.querySelector('.cc-cat')?.textContent.trim()||'';
@@ -1971,8 +1972,13 @@ const jump=document.createElement('select');jump.className='comp-jump';jump.setA
       const thumb=document.createElement('div');thumb.className='ov-thumb';thumb.setAttribute('aria-hidden','true');
       const zoom=document.createElement('div');zoom.className='ov-zoom';zoom.inert=true;
       const src=sec.querySelector('.cc-stage')||sec.querySelector('.cc-preview');
-      if(src){const c=src.cloneNode(true);c.removeAttribute('id');c.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));zoom.appendChild(c)}
-      thumb.appendChild(zoom);card.appendChild(thumb);fits.push(zoom);
+      if(useImg){
+        // 모바일: 브라우저마다 축소 결과가 달라 미리 만들어 둔 이미지를 씀 (thumbs/<id>.png)
+        const im=document.createElement('img');im.src='thumbs/'+sec.id+'.png';im.alt='';im.loading='lazy';im.decoding='async';thumb.appendChild(im);card.appendChild(thumb);
+      }else{
+        if(src){const c=src.cloneNode(true);c.removeAttribute('id');c.querySelectorAll('[id]').forEach(e=>e.removeAttribute('id'));zoom.appendChild(c)}
+        thumb.appendChild(zoom);card.appendChild(thumb);fits.push(zoom);
+      }
       const text=document.createElement('div');text.className='ov-text';
       const b=document.createElement('b');b.textContent=sec.querySelector('h2').textContent;text.appendChild(b);
       const d=sec.querySelector('.cd-lead, .cc-desc')?.textContent.trim()||'';
