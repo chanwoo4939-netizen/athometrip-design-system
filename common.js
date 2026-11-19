@@ -118,22 +118,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   });
 })();
 
-// 문서 끝: 이전·다음 문서. 마지막 수정 날짜는 푸터에 표시. set(prev,next,date)로 내용을 바꿈
+// 문서 끝: 이전·다음 컴포넌트(컴포넌트 하나를 열었을 때만). 마지막 수정 날짜는 푸터에 표시. set(prev,next,date)로 내용을 바꿈
 window.dsDocEnd=(function(){
-  const host=document.querySelector('.comp-list')||document.querySelector('main .comp-layout')?.parentElement;
+  const host=document.querySelector('.comp-list'); // 컴포넌트 문서 안에서만 씀
   if(!host)return null;
   const ARROW='<svg aria-hidden="true" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 4.5 6 9l4.5 4.5"/></svg>';
   const el=document.createElement('div');el.className='doc-end';el.setAttribute('role','navigation');el.setAttribute('aria-label','문서 이동');host.appendChild(el);
   const link=(o,cls,label)=>o?'<a class="'+cls+'" href="'+o.href+'">'+(cls==='de-next'?ARROW.replace('M10.5 4.5 6 9l4.5 4.5','M7.5 4.5 12 9l-4.5 4.5'):ARROW)+'<span><small>'+label+'</small><b>'+o.name+'</b></span></a>':'';
   function set(prev,next,date){
-    el.innerHTML=link(prev,'de-prev','이전')+link(next,'de-next','다음');
+    el.innerHTML=link(prev,'de-prev','이전')+link(next,'de-next','다음');el.hidden=!prev&&!next;
     const by=document.querySelector('.ft-by');if(by&&date)by.innerHTML='Last updated <time datetime="'+date.replace(/\./g,'-')+'">'+date+'</time>';
   }
   const links=[...document.querySelectorAll('.nav-links a')],i=links.findIndex(a=>a.classList.contains('on'));
   const at=k=>links[k]?{href:links[k].getAttribute('href'),name:links[k].textContent.trim()}:null;
   const page={prev:i>0?at(i-1):null,next:i>=0?at(i+1):null,date:document.querySelector('meta[name="ds-updated"]')?.content||''};
-  if(i<0){el.remove();return null}
-  set(page.prev,page.next,page.date);
+  set(null,null,page.date);
   return {set,page};
 })();
 

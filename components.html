@@ -16,7 +16,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
-<link rel="icon" type="image/svg+xml" href="logo-nav.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script>document.documentElement.classList.add("js")</script>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
 <style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
@@ -25,7 +25,7 @@
 <body>
 
 <nav><div class="nav-in">
-  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <a href="index.html" class="nav-logo"><img src="favicon.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
   <div class="nav-links">
     <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html">Layout</a><a href="state.html">State</a><a href="writing.html">Writing</a><i class="nav-sep"></i><a href="components.html" class="on">Components</a><a href="patterns.html">Patterns</a>
   </div>
@@ -3330,8 +3330,8 @@ function route(){
   if(window.dsSidebarReveal)window.dsSidebarReveal();
   if(window.dsDocEnd){
     const D=window.dsDocEnd,i=sections.indexOf(cur),nm=x=>({href:'#'+x.id,name:x.querySelector('h2').textContent});
-    if(!cur)D.set(D.page.prev,{href:'#'+sections[0].id,name:sections[0].querySelector('h2').textContent},D.page.date);
-    else D.set(i>0?nm(sections[i-1]):{href:'#',name:'전체 보기'},i<sections.length-1?nm(sections[i+1]):D.page.next,cur.dataset.updated||'');
+    if(!cur)D.set(null,null,D.page.date);
+    else D.set(i>0?nm(sections[i-1]):null,i<sections.length-1?nm(sections[i+1]):null,cur.dataset.updated||'');
   }
 }
 // 구성 표시: 미리보기 위에 이름표를 붙이고 해당 부분까지 선을 그음

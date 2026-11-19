@@ -1563,6 +1563,7 @@ footer{padding:64px 0 40px}
 /* 문서 끝: 이전·다음 문서, 마지막 수정 */
 .doc-end{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:24px;margin-top:96px;padding-top:28px;border-top:1px solid var(--line)}
 .comp-list>.doc-end{margin-top:72px}
+.doc-end[hidden]{display:none}
 .doc-end a{display:inline-flex;align-items:center;gap:10px;min-height:48px;color:var(--ink);text-decoration:none}
 .doc-end .de-next{grid-column:2;justify-self:end;flex-direction:row-reverse;text-align:right}
 .doc-end .de-prev{grid-column:1;justify-self:start}
