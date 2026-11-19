@@ -38,20 +38,20 @@
   <div class="comp-layout">
     <aside class="comp-sidebar">
       <div class="comp-sidebar-label">Color</div>
-      <a href="#overview">개요</a>
+      <a href="#overview">Overview</a>
       <a href="#primitive">Primitive</a>
       <a href="#semantic">Semantic</a>
-      <a href="#text">글자색</a>
-      <a href="#surface">배경</a>
-      <a href="#border">테두리</a>
-      <a href="#accent">강조색</a>
-      <a href="#contrast">대비</a>
-      <a href="#cleanup">정리가 필요한 부분</a>
+      <a href="#text">Text</a>
+      <a href="#surface">Background</a>
+      <a href="#border">Border</a>
+      <a href="#accent">Accent</a>
+      <a href="#contrast">Contrast</a>
+      <a href="#cleanup">Needs cleanup</a>
     </aside>
     <div class="comp-list doc">
 
       <div class="comp-section" id="overview">
-        <h2>개요</h2>
+        <h2>Overview</h2>
         <p>색은 두 층으로 나뉩니다. <b>Primitive</b>는 Gray, Warm, Cool과 브랜드 색의 단계별 팔레트이고, <b>Semantic</b>은 그 색에 "본문", "카드 배경" 같은 역할을 붙인 이름입니다. 화면을 만들 때는 Semantic을 먼저 찾고, 없을 때만 Primitive를 씁니다.</p>
         <p>앳홈트립 화면은 따뜻한 미색 배경 위에 검정과 회색 글자가 대부분이고, 유채색은 픽패스(Coral)와 상태 표시에만 좁게 쓰입니다.</p>
       </div>
@@ -131,7 +131,7 @@
       </div>
 
       <div class="comp-section" id="text">
-        <h2>글자색</h2>
+        <h2>Text</h2>
         <p>글자색은 진한 순서대로 다섯 단계입니다. 한 화면에서 세 단계를 넘기지 않는 것을 권장합니다.</p>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>색</th><th>용도</th></tr></thead>
@@ -161,7 +161,7 @@
       </div>
 
       <div class="comp-section" id="surface">
-        <h2>배경</h2>
+        <h2>Background</h2>
         <p>배경은 미색 페이지 위에 박스와 카드가 올라가는 세 겹 구조입니다.</p>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>색</th><th>용도</th></tr></thead>
@@ -190,7 +190,7 @@
       </div>
 
       <div class="comp-section" id="border">
-        <h2>테두리</h2>
+        <h2>Border</h2>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>색</th><th>용도</th></tr></thead>
           <tbody>
@@ -214,7 +214,7 @@
       </div>
 
       <div class="comp-section" id="accent">
-        <h2>강조색</h2>
+        <h2>Accent</h2>
         <ul>
           <li><b>Coral #FB6764</b>은 픽패스 전용입니다. 픽패스 뱃지, SAVE 금액, 픽패스 버튼의 아이콘에 씁니다.</li>
           <li><b>Red #E02A28</b>은 "예약필요" 같은 상태와 오류에 씁니다.</li>
@@ -226,7 +226,7 @@
       </div>
 
       <div class="comp-section" id="contrast">
-        <h2>대비</h2>
+        <h2>Contrast</h2>
         <p>미색 배경(#FAF9F4) 위에서 잰 글자 대비입니다. 본문 기준은 4.5:1입니다.</p>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>글자색</th><th class="num">대비</th><th>판정</th></tr></thead>
@@ -243,7 +243,7 @@
       </div>
 
       <div class="comp-section" id="cleanup">
-        <details class="doc-fold"><summary><h2>정리가 필요한 부분</h2></summary>
+        <details class="doc-fold"><summary><h2>Needs cleanup</h2></summary>
         <ul>
           <li><b>역할 이름이 없는 색</b>: #9E9E9E, #C2C2C2, #F8F8F8, #EBEBEB, 카드 테두리 #F5F3ED, 사진 테두리 검정 5%가 Semantic 목록에 없습니다.</li>
           <li><b>text/tertiary(#757575)보다 #9E9E9E가 더 많이 쓰입니다</b>(213곳 대 395곳). 보조 글자의 기준을 다시 정할 필요가 있습니다.</li>

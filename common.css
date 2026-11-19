@@ -1518,8 +1518,8 @@ footer{padding:64px 0 40px}
 .srt-open{width:160px}
 /* OptionPanel: MO(시트 안) 상태 */
 .op-mo{display:none;flex-shrink:0}
-.cc-stage:has(.s-mo.show) .op-wrap,.cc-stage:has(.s-mo-date.show) .op-wrap{display:none}
-.cc-stage:has(.s-mo.show) .op-mo-a,.cc-stage:has(.s-mo-date.show) .op-mo-b{display:block}
+.cc-stage:has(.s-mo.show) .op-wrap,.cc-stage:has(.s-mo-people.show) .op-wrap{display:none}
+.cc-stage:has(.s-mo.show) .op-mo-a,.cc-stage:has(.s-mo-people.show) .op-mo-b{display:block}
 .op-row-open{border-bottom-color:#5C5C5C}
 .op-mo-cal{padding:8px 0 4px}
 .op-mo-cal .dp{width:100%}
@@ -1539,3 +1539,12 @@ footer{padding:64px 0 40px}
 .dvx-sec p{font-size:14px;line-height:22px;color:#5C5C5C;word-break:keep-all}
 .dvx-sec p+p{margin-top:-4px}
 .cd-fig .sg span{white-space:nowrap}
+/* 옵션 시트 (MO): 제목 아래 픽패스 배너 */
+.bs-ppb{display:flex;justify-content:space-between;align-items:center;height:40px;padding:0 16px;margin-bottom:12px;background:linear-gradient(98.77deg,#FFDFE6,#FFEDD8);font-size:12px;font-weight:500;line-height:20px;color:#1F1F1F}
+.bs-ppb b{font-weight:700}
+.bs-ppb em{font-style:normal;color:#FF6F61}
+/* 여행자 정보 입력: 버튼 영역만 */
+.ts-only{width:364px;max-width:100%;border-radius:0}
+.ts-only .ts-foot{margin-top:0}
+/* OptionPanel MO: 행 아래에 펼친 인원 선택 */
+.po-inline{width:100%;border:1px solid #757575;box-shadow:none}

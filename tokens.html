@@ -38,21 +38,21 @@
   <div class="comp-layout">
     <aside class="comp-sidebar">
       <div class="comp-sidebar-label">Spacing &amp; Tokens</div>
-      <a href="#overview">개요</a>
-      <a href="#spacing">간격</a>
-      <a href="#radius">모서리 반경</a>
-      <a href="#shadow">그림자</a>
-      <a href="#cleanup">정리가 필요한 부분</a>
+      <a href="#overview">Overview</a>
+      <a href="#spacing">Spacing</a>
+      <a href="#radius">Radius</a>
+      <a href="#shadow">Shadow</a>
+      <a href="#cleanup">Needs cleanup</a>
     </aside>
     <div class="comp-list doc">
 
       <div class="comp-section" id="overview">
-        <h2>개요</h2>
+        <h2>Overview</h2>
         <p>간격, 모서리 반경, 그림자 세 가지 토큰입니다. 값을 새로 만들기보다 아래 단계 중에서 고릅니다.</p>
       </div>
 
       <div class="comp-section" id="spacing">
-        <h2>간격</h2>
+        <h2>Spacing</h2>
         <p>간격은 4의 배수가 기본이고, 2px와 6px가 작은 요소에 더해집니다.</p>
         <div class="sp-item"><span class="sp-label">4</span><div><div class="sp-bar" style="width:8px"></div></div><span class="sp-desc">인라인 아이콘</span></div>
     <div class="sp-item"><span class="sp-label">8</span><div><div class="sp-bar" style="width:16px"></div></div><span class="sp-desc">컴포넌트 내부 (S)</span></div>
@@ -63,7 +63,7 @@
     <div class="sp-item"><span class="sp-label">32</span><div><div class="sp-bar" style="width:64px"></div></div><span class="sp-desc">섹션 간격 (M)</span></div>
     <div class="sp-item"><span class="sp-label">48</span><div><div class="sp-bar" style="width:96px"></div></div><span class="sp-desc">섹션 간격 (L)</span></div>
     <div class="sp-item"><span class="sp-label">80</span><div><div class="sp-bar" style="width:160px"></div></div><span class="sp-desc">페이지 좌우 (PC)</span></div>
-        <details class="doc-fold doc-fold-sub"><summary><h3>실서버 사용 현황</h3></summary>
+        <details class="doc-fold doc-fold-sub"><summary><h3>Usage</h3></summary>
         <p>요소 사이 간격(gap)과 안쪽 여백(padding)을 따로 셌습니다.</p>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>값</th><th class="num">gap</th><th class="num">padding</th><th>주 용도</th></tr></thead>
@@ -90,7 +90,7 @@
       </div>
 
       <div class="comp-section" id="radius">
-        <h2>모서리 반경</h2>
+        <h2>Radius</h2>
         <div class="tok-grid" style="margin-top:16px">
     <div class="r-card"><div class="r-box" style="border-radius:0"></div><span>none</span><code>0</code></div>
     <div class="r-card"><div class="r-box" style="border-radius:4px"></div><span>xs</span><code>4px</code></div>
@@ -100,7 +100,7 @@
     <div class="r-card"><div class="r-box" style="border-radius:22px"></div><span>xl</span><code>22px</code></div>
     <div class="r-card"><div class="r-box" style="border-radius:50%"></div><span>full</span><code>9999</code></div>
   </div>
-        <details class="doc-fold doc-fold-sub"><summary><h3>실서버 사용 현황</h3></summary>
+        <details class="doc-fold doc-fold-sub"><summary><h3>Usage</h3></summary>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>값</th><th class="num">사용 수</th><th>용도</th></tr></thead>
           <tbody>
@@ -121,7 +121,7 @@
       </div>
 
       <div class="comp-section" id="shadow">
-        <h2>그림자</h2>
+        <h2>Shadow</h2>
         <div class="sh-grid" style="margin-top:16px">
     <div><div class="sh-card" style="box-shadow:0 2px 8px rgba(0,0,0,.12)"></div><div class="sh-meta"><b>chip</b><span>y:2 blur:8 12%</span></div></div>
     <div><div class="sh-card" style="box-shadow:0 4px 16px rgba(0,0,0,.06)"></div><div class="sh-meta"><b>card</b><span>y:4 blur:16 6%</span></div></div>
@@ -129,7 +129,7 @@
     <div><div class="sh-card" style="box-shadow:0 0 20px rgba(0,0,0,.10)"></div><div class="sh-meta"><b>bottom-bar</b><span>y:0 blur:20 10%</span></div></div>
     <div><div class="sh-card" style="box-shadow:0 8px 24px -4px rgba(0,0,0,.12)"></div><div class="sh-meta"><b>modal</b><span>y:8 blur:24 12%</span></div></div>
   </div>
-        <details class="doc-fold doc-fold-sub"><summary><h3>실서버 사용 현황</h3></summary>
+        <details class="doc-fold doc-fold-sub"><summary><h3>Usage</h3></summary>
         <p>그림자는 조사한 화면 전체에서 95곳뿐입니다. 대부분의 카드는 그림자 없이 테두리로 구분합니다.</p>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>값</th><th class="num">사용 수</th><th>쓰인 곳</th></tr></thead>
@@ -152,7 +152,7 @@
       </div>
 
       <div class="comp-section" id="cleanup">
-        <details class="doc-fold"><summary><h2>정리가 필요한 부분</h2></summary>
+        <details class="doc-fold"><summary><h2>Needs cleanup</h2></summary>
         <ul>
           <li><b>간격 스케일에 없는 값</b>: 2px, 6px, 40px는 많이 쓰이는데 위 목록에 없고, 48px는 목록에 있지만 4곳에만 쓰입니다.</li>
           <li><b>4의 배수가 아닌 값</b>: 10px(103곳), 5px(30곳), 15px(22곳), 13px, 17px, 22px가 있습니다.</li>
