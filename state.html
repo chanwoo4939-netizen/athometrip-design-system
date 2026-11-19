@@ -36,7 +36,7 @@
 .st-row{align-items:stretch}
 .st-box{flex:1;display:flex;align-items:center;justify-content:center;min-height:56px}
 .st-btn{display:flex;align-items:center;justify-content:center;width:136px;height:48px;border-radius:4px;background:#000;color:#fff;font-size:15px;line-height:24px;font-weight:500}
-.st-btn.p{opacity:.9}.st-btn.d{background:#E0E0E0}.st-btn.d4{opacity:.4}
+.st-btn.p{opacity:.9}.st-btn.d{background:#E0E0E0}
 .st-btn.f{outline:2px solid #000;outline-offset:2px}
 .st-step{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1.2px solid #E0E0E0;background:#fff}
 .st-step.d{border-color:transparent;background:#F8F8F8}
@@ -108,7 +108,7 @@
             <tr><td>Hover</td><td>PC에서 마우스를 올렸을 때</td><td>글자색 또는 불투명도</td></tr>
             <tr><td>Pressed</td><td>누르고 있는 동안</td><td>불투명도 90%</td></tr>
             <tr><td>Focus</td><td>입력 중이거나 키보드로 옮겨 왔을 때</td><td>테두리 또는 바깥 선</td></tr>
-            <tr><td>Disabled</td><td>지금은 누를 수 없을 때</td><td>회색 배경 또는 불투명도 40%</td></tr>
+            <tr><td>Disabled</td><td>지금은 누를 수 없을 때</td><td>배경 Gray 200</td></tr>
             <tr><td>Selected</td><td>여러 개 중 고른 것</td><td>검정 글자, 밑줄, 검정 채움</td></tr>
           </tbody>
         </table></div>
@@ -173,21 +173,20 @@
         <h2>Disabled</h2>
         <p>누를 수 없다는 것만 알립니다. 요소를 숨기지 않고 자리에 둡니다.</p>
         <div class="fg"><div class="st-row">
-          <div class="st-it"><div class="st-box"><div class="st-btn d">장바구니 담기</div></div><span class="fg-cap">채워진 버튼<small>배경 #E0E0E0</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-btn d">장바구니 담기</div></div><span class="fg-cap">채워진 버튼<small>배경 Gray 200 #E0E0E0</small></span></div>
           <div class="st-it"><div class="st-box"><div class="st-step d"></div></div><span class="fg-cap">수량 버튼<small>배경 #F8F8F8, 테두리 없음</small></span></div>
-          <div class="st-it"><div class="st-box"><div class="st-btn d4" style="width:120px">다음</div></div><span class="fg-cap">하단 바 버튼<small>불투명도 40%</small></span></div>
         </div></div>
         <div class="ft-wrap"><table class="ft">
           <thead><tr><th>요소</th><th>기본</th><th>Disabled</th></tr></thead>
           <tbody>
-            <tr><td>채워진 버튼</td><td>배경 #000000, 글자 #FFFFFF</td><td>배경 #E0E0E0, 글자 #FFFFFF</td></tr>
+            <tr><td>채워진 버튼</td><td>배경 #000000, 글자 #FFFFFF</td><td>배경 Gray 200 #E0E0E0, 글자 #FFFFFF</td></tr>
             <tr><td>원형 수량 버튼</td><td>테두리 1.2px #E0E0E0</td><td>배경 #F8F8F8, 테두리 없음</td></tr>
-            <tr><td>하단 바의 다음 버튼</td><td>불투명도 100%</td><td>불투명도 40%</td></tr>
             <tr><td>달력의 지난 날</td><td>글자 #000000</td><td>글자 #C2C2C2</td></tr>
             <tr><td>달력 이전·다음 버튼</td><td>테두리 1px #E0E0E0, 화살표 #000000</td><td>배경 #F8F8F8, 화살표 #E0E0E0</td></tr>
           </tbody>
         </table></div>
         <ul>
+          <li><b>비활성 버튼은 항상 Gray 200 배경입니다.</b> 불투명도를 낮추는 방식은 쓰지 않습니다.</li>
           <li><b>필요한 선택이 끝나면 바로 풀립니다.</b> 장바구니 담기는 옵션을 모두 고르면 검정으로 바뀝니다.</li>
           <li>Disabled 요소는 Hover와 Pressed에서 모양이 바뀌지 않습니다.</li>
         </ul>

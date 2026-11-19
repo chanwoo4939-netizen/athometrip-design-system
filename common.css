@@ -730,7 +730,7 @@ footer{padding:64px 0 40px}
 /* 픽패스 예약: 하단 초기화/다음, 구매 불가 상품 행 */
 .bc-step{width:364px;max-width:100%;padding:12px 16px;justify-content:space-between}
 .bc-reset{font-size:14px;font-weight:500;line-height:20px;color:#757575}
-.bc-120{width:120px}.bc-off{opacity:.4}
+.bc-120{width:120px}.bc-btn.bc-off{background:#E0E0E0;color:#FFFFFF}
 .ua{width:332px;max-width:100%;flex-shrink:0;display:flex;flex-direction:column;gap:8px;text-align:left}
 .ua-head{display:flex;align-items:baseline;gap:4px;font-size:14px;font-weight:500;line-height:20px;color:#5C5C5C}
 .ua-head span{font-size:12px;font-weight:400;line-height:16px;color:#9E9E9E}
@@ -1539,10 +1539,6 @@ footer{padding:64px 0 40px}
 .dvx-sec p{font-size:14px;line-height:22px;color:#5C5C5C;word-break:keep-all}
 .dvx-sec p+p{margin-top:-4px}
 .cd-fig .sg span{white-space:nowrap}
-/* 옵션 시트 (MO): 제목 아래 픽패스 배너 */
-.bs-ppb{display:flex;justify-content:space-between;align-items:center;height:40px;padding:0 16px;margin-bottom:12px;background:linear-gradient(98.77deg,#FFDFE6,#FFEDD8);font-size:12px;font-weight:500;line-height:20px;color:#1F1F1F}
-.bs-ppb b{font-weight:700}
-.bs-ppb em{font-style:normal;color:#FF6F61}
 /* 여행자 정보 입력: 버튼 영역만 */
 .ts-only{width:364px;max-width:100%;border-radius:0}
 .ts-only .ts-foot{margin-top:0}
