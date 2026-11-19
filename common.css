@@ -474,7 +474,7 @@ section+section{border-top:1px solid var(--line)}
 .btn:hover{transform:translateY(-1px)}.btn:active{transform:scale(.97)}
 .btn-f{background:var(--ink);color:var(--on-ink)}.btn-o{background:transparent;border:1px solid var(--ink);color:var(--ink)}.btn-og{background:transparent;border:1px solid var(--border);color:#5C5C5C}.btn-d{background:var(--border);color:var(--on-ink)}
 .btn-ok{background:transparent;border:1px solid #2F2B22;color:#212121}.btn-os{background:#FFFFFF;border:1px solid #D1D5DB;color:#5C5C5C}
-.btn-l{height:48px;padding:0 24px;font-size:15px;border-radius:4px}.btn-c{height:42px;padding:8px 16px;font-size:15px;border-radius:4px}.btn-m{height:40px;padding:0 20px;font-size:14px;border-radius:4px}.btn-s{height:30px;padding:4px 8px;font-size:12px;border-radius:4px}
+.btn-xl{height:56px;padding:0 24px;font-size:15px;border-radius:4px}.btn-l{height:48px;padding:0 24px;font-size:15px;border-radius:4px}.btn-c{height:42px;padding:8px 16px;font-size:15px;border-radius:4px}.btn-m{height:40px;padding:0 20px;font-size:14px;border-radius:4px}.btn-s{height:30px;padding:4px 8px;font-size:12px;border-radius:4px}
 .chip-a{display:inline-flex;align-items:center;height:32px;background:var(--ink);color:var(--on-ink);padding:0 12px;border-radius:22px;font-size:14px;font-weight:500}
 .chip-i{display:inline-flex;align-items:center;height:32px;color:#9E9E9E;padding:0 12px;border-radius:41px;font-size:14px;border:1px solid var(--border)}
 .dot{width:6px;height:6px;border-radius:50%;display:inline-block}
