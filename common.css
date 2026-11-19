@@ -277,7 +277,7 @@ section+section{border-top:1px solid var(--line)}
 .pk-use p{font-size:12px;line-height:20px}.pk-use p span{color:#9E9E9E}
 .st{display:inline-flex;align-items:center;gap:6px;font-size:12px;line-height:16px}
 .st i{width:6px;height:6px;border-radius:50%;background:currentColor}
-.st-r{color:#E02A28}.st-g{color:#0D9488}.st-p{color:#757575}.st-c{color:#FB6764}
+.st-r{color:#E02A28}.st-g{color:#0D9488}.st-p{color:#757575}
 .bc{display:flex;align-items:center;background:#FFFFFF;text-align:left;color:#000}
 .bc-detail{width:364px;height:80px;padding:16px;gap:12px;justify-content:space-between}
 .bc-my{width:364px;max-width:100%;padding:12px 16px;gap:8px}
@@ -1513,3 +1513,29 @@ footer{padding:64px 0 40px}
 .cd-props .props-table .type code{background:#E5E7EB}
 .cd-props .props-table th:nth-child(3),.cd-props .props-table td:nth-child(3){padding-right:20px;white-space:nowrap}
 .cd-dd .sg span{white-space:nowrap}
+/* SortMenu: 빈 폭 없이 내용 크기로 잡아 미리보기 가운데에 오게 */
+.srt{width:auto}
+.srt-open{width:160px}
+/* OptionPanel: MO(시트 안) 상태 */
+.op-mo{display:none;flex-shrink:0}
+.cc-stage:has(.s-mo.show) .op-wrap,.cc-stage:has(.s-mo-date.show) .op-wrap{display:none}
+.cc-stage:has(.s-mo.show) .op-mo-a,.cc-stage:has(.s-mo-date.show) .op-mo-b{display:block}
+.op-row-open{border-bottom-color:#5C5C5C}
+.op-mo-cal{padding:8px 0 4px}
+.op-mo-cal .dp{width:100%}
+.op-mo{max-width:100%}
+.op-mo .bs-stage{width:364px;max-width:100%}
+.cd-lead a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)}
+@media(max-width:430px){#op-variants .op-wrap{zoom:.88}}
+/* Divider: 실제 화면 구간 예시 */
+.dvx{--pv:#FAF9F4;flex-shrink:0;max-width:100%;padding:24px 16px;border-radius:8px;background:#FAF9F4;text-align:left;color:#000;overflow:hidden}
+.dvx-mo{width:364px}
+.dvx-pc{width:664px;padding:32px}
+.dvx-pc .rsm{width:100%}
+.dvx .dvx-bleed{display:block;margin:24px -16px}
+.dvx .dvx-gap{display:block;margin:32px 0}
+.dvx-sec{display:flex;flex-direction:column;gap:12px}
+.dvx-sec b{font-size:18px;font-weight:600;line-height:22px}
+.dvx-sec p{font-size:14px;line-height:22px;color:#5C5C5C;word-break:keep-all}
+.dvx-sec p+p{margin-top:-4px}
+.cd-fig .sg span{white-space:nowrap}
