@@ -117,3 +117,51 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
     parts.forEach((nodes,i)=>{if(!nodes.length)return;const sp=document.createElement('span');sp.className='sn';nodes.forEach(n=>sp.appendChild(n));if(i>0)el.appendChild(document.createTextNode(' '));el.appendChild(sp)});
   });
 })();
+
+// 문서 끝: 이전·다음 문서. 마지막 수정 날짜는 푸터에 표시. set(prev,next,date)로 내용을 바꿈
+window.dsDocEnd=(function(){
+  const host=document.querySelector('.comp-list')||document.querySelector('main .comp-layout')?.parentElement;
+  if(!host)return null;
+  const ARROW='<svg aria-hidden="true" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 4.5 6 9l4.5 4.5"/></svg>';
+  const el=document.createElement('div');el.className='doc-end';el.setAttribute('role','navigation');el.setAttribute('aria-label','문서 이동');host.appendChild(el);
+  const link=(o,cls,label)=>o?'<a class="'+cls+'" href="'+o.href+'">'+(cls==='de-next'?ARROW.replace('M10.5 4.5 6 9l4.5 4.5','M7.5 4.5 12 9l-4.5 4.5'):ARROW)+'<span><small>'+label+'</small><b>'+o.name+'</b></span></a>':'';
+  function set(prev,next,date){
+    el.innerHTML=link(prev,'de-prev','이전')+link(next,'de-next','다음');
+    const by=document.querySelector('.ft-by');if(by&&date)by.innerHTML='Last updated <time datetime="'+date.replace(/\./g,'-')+'">'+date+'</time>';
+  }
+  const links=[...document.querySelectorAll('.nav-links a')],i=links.findIndex(a=>a.classList.contains('on'));
+  const at=k=>links[k]?{href:links[k].getAttribute('href'),name:links[k].textContent.trim()}:null;
+  const page={prev:i>0?at(i-1):null,next:i>=0?at(i+1):null,date:document.querySelector('meta[name="ds-updated"]')?.content||''};
+  if(i<0){el.remove();return null}
+  set(page.prev,page.next,page.date);
+  return {set,page};
+})();
+
+// 왼쪽 목록(PC): 더 내려갈 내용이 있는 쪽을 흐리게 표시하고, 지금 문서가 목록 안에 보이게 맞춤
+(function(){
+  const sb=document.querySelector('.comp-sidebar');if(!sb)return;
+  const wide=matchMedia('(min-width:901px)');
+  // 페이지 맨 위에서는 목록이 화면 아래로 넘어가 끝까지 못 내리던 것을 막음: 보이는 높이에 맞춤
+  function fit(){
+    if(!wide.matches){sb.style.maxHeight='';return}
+    sb.style.maxHeight=Math.max(200,innerHeight-Math.max(sb.getBoundingClientRect().top,68)-16)+'px';
+  }
+  function edges(){
+    fit();
+    sb.classList.toggle('more-up',wide.matches&&sb.scrollTop>4);
+    sb.classList.toggle('more-down',wide.matches&&sb.scrollTop+sb.clientHeight<sb.scrollHeight-4);
+  }
+  function reveal(){
+    const a=sb.querySelector('a.on');if(!a||!wide.matches){edges();return}
+    const top=a.getBoundingClientRect().top-sb.getBoundingClientRect().top+sb.scrollTop,pad=72;
+    if(top<sb.scrollTop+pad)sb.scrollTop=Math.max(0,top-pad);
+    else if(top+a.offsetHeight>sb.scrollTop+sb.clientHeight-pad)sb.scrollTop=top+a.offsetHeight-sb.clientHeight+pad;
+    edges();
+  }
+  sb.addEventListener('scroll',edges,{passive:true});
+  addEventListener('resize',edges);
+  addEventListener('scroll',edges,{passive:true});
+  addEventListener('hashchange',()=>requestAnimationFrame(reveal));
+  requestAnimationFrame(reveal);addEventListener('load',reveal);
+  window.dsSidebarReveal=reveal;
+})();
