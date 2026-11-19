@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="ds-updated" content="2026.11.19">
+<title>Motion | athometrip Design System</title>
+<meta name="description" content="앳홈트립 화면의 움직임 기준. 시간, 가속, 쓰는 곳.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="athometrip Design System">
+<meta property="og:title" content="Motion | athometrip Design System">
+<meta property="og:description" content="앳홈트립 화면의 움직임 기준. 시간, 가속, 쓰는 곳.">
+<meta property="og:url" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/motion.html">
+<meta property="og:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+<style>
+.doc .comp-section a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)}
+.doc .comp-section a:hover{text-decoration-color:var(--ink)}
+.fg{margin-top:24px;padding:32px;border-radius:var(--r);background:var(--pv);overflow:hidden}
+.fg+p,.fg+ul,.fg+.ft-wrap{margin-top:24px}
+.doc .ft-wrap+ul{margin-top:24px}
+.fg-cap{display:block;margin-top:12px;font-size:13px;line-height:20px;font-weight:600;color:var(--ink);text-align:center}
+.fg-cap small{display:block;font-size:12px;line-height:18px;font-weight:400;color:var(--muted)}
+.mo-row{display:flex;flex-wrap:wrap;justify-content:center;gap:32px 24px}
+.mo-it{display:flex;flex-direction:column;align-items:center;min-width:0}
+.mo-stage{position:relative;display:flex;align-items:center;justify-content:center;width:168px;height:112px;border-radius:6px;background:#fff;overflow:hidden}
+.mo-play{margin-top:8px;padding:4px 12px;border:1px solid var(--border);border-radius:99px;background:none;font:inherit;font-size:12px;line-height:18px;color:var(--ink);cursor:pointer;transition:background .15s cubic-bezier(.4,0,.2,1)}
+.mo-play:hover{background:var(--warm-light)}
+.mo-play:focus-visible{outline:2px solid #000;outline-offset:2px}
+.mo-fade{width:104px;height:52px;border-radius:4px;background:#000}
+.mo-fade.go{animation:mo-fade .3s ease-in-out both}
+@keyframes mo-fade{from{opacity:0;transform:translateY(10px)}}
+.mo-side{position:absolute;top:0;right:0;width:58%;height:100%;background:#000}
+.mo-side.go{animation:mo-side .3s cubic-bezier(0,0,.2,1) both}
+@keyframes mo-side{from{transform:translateX(100%)}}
+.mo-ban{position:absolute;inset:0;display:flex}
+.mo-ban i{flex:0 0 100%;background:#8F846B}.mo-ban i+i{background:#FB6764}
+.mo-ban.go{animation:mo-ban .8s cubic-bezier(.16,1,.3,1) both}
+@keyframes mo-ban{to{transform:translateX(-100%)}}
+.mo-sk{display:flex;flex-direction:column;gap:8px;width:120px}
+.mo-sk i{display:block;height:12px;border-radius:4px;background:#EBEBEB;animation:mo-pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+.mo-sk i:first-child{height:40px}.mo-sk i:last-child{width:60%}
+@keyframes mo-pulse{50%{opacity:.5}}
+.mo-sp{width:48px;height:48px;border:3px solid #EEEBE2;border-top-color:#000;border-radius:50%;animation:mo-spin 1s linear infinite}
+@keyframes mo-spin{to{transform:rotate(1turn)}}
+.mo-mq{position:absolute;left:0;top:50%;display:flex;gap:16px;margin-top:-12px;animation:mo-mq 12s linear infinite}
+.mo-mq i{flex:0 0 56px;height:24px;border-radius:4px;background:#EEEBE2}
+@keyframes mo-mq{to{transform:translateX(-288px)}}
+@media(max-width:768px){.fg{padding:20px 16px}.mo-row{gap:24px 12px}.mo-stage{width:148px;height:96px}.mo-fade{width:92px;height:44px}.mo-sk{width:96px}}
+@media(prefers-reduced-motion:reduce){.mo-sk i,.mo-sp,.mo-mq{animation:none}.mo-fade.go,.mo-side.go{animation-name:mo-op}.mo-ban.go{animation:none}}
+@keyframes mo-op{from{opacity:0}}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="favicon.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html">Layout</a><a href="state.html">State</a><a href="motion.html" class="on">Motion</a><a href="writing.html">Writing</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<section><div class="w">
+  <div class="sh" data-r><h1>Motion</h1><p>움직임의 시간과 가속, 쓰는 곳.</p></div>
+  <div class="comp-layout">
+    <aside class="comp-sidebar">
+      <div class="comp-sidebar-label">Motion</div>
+      <a href="#overview">Overview</a>
+      <a href="#duration">Duration</a>
+      <a href="#easing">Easing</a>
+      <a href="#usage">Usage</a>
+      <a href="#loading">Loading</a>
+      <a href="#reduced">Reduced motion</a>
+    </aside>
+    <div class="comp-list doc">
+
+      <div class="comp-section" id="overview">
+        <h2>Overview</h2>
+        <p>움직임은 <b>무엇이 바뀌었는지 알리는 데</b> 씁니다. 상태가 바뀔 때, 새 내용이 나타날 때, 내용을 기다릴 때 세 가지입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>쓰임</th><th>예</th><th>시간</th></tr></thead>
+          <tbody>
+            <tr><td>상태가 바뀔 때</td><td>Hover, Pressed, Focus, Selected</td><td>0.15초</td></tr>
+            <tr><td>새 내용이 나타날 때</td><td>나타나기, 옆에서 들어오는 패널, 배너 넘김</td><td>0.3초 ~ 0.8초</td></tr>
+            <tr><td>내용을 기다릴 때</td><td>Skeleton, Spinner</td><td>1초 ~ 2초 반복</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>누른 것에 대한 반응은 0.3초를 넘기지 않습니다.</b></li>
+          <li>Hover에서는 색과 불투명도만 바뀝니다. 크기와 위치는 움직이지 않습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="duration">
+        <h2>Duration</h2>
+        <p>움직이는 거리가 길수록 시간을 길게 씁니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>시간</th><th>쓰는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>0.15초</td><td>색, 불투명도, 테두리, 그림자가 바뀔 때. 기본값</td></tr>
+            <tr><td>0.2초</td><td>제휴사 배너 아래 점</td></tr>
+            <tr><td>0.3초</td><td>나타나기, 옆에서 들어오는 패널, 진행 막대, 메인 배너 아래 점</td></tr>
+            <tr><td>0.8초</td><td>메인 배너 넘김</td></tr>
+            <tr><td>1초</td><td>Spinner 한 바퀴</td></tr>
+            <tr><td>2초</td><td>Skeleton 한 번 깜빡임</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="easing">
+        <h2>Easing</h2>
+        <p>가속은 네 가지입니다. 따로 정하지 않으면 기본을 씁니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>이름</th><th>값</th><th>쓰는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>기본</td><td><code>cubic-bezier(.4, 0, .2, 1)</code></td><td>상태 변화, 진행 막대</td></tr>
+            <tr><td>들어올 때</td><td><code>cubic-bezier(0, 0, .2, 1)</code></td><td>옆에서 들어오는 패널</td></tr>
+            <tr><td>배너 넘김</td><td><code>cubic-bezier(.16, 1, .3, 1)</code></td><td>메인 배너</td></tr>
+            <tr><td>일정한 속도</td><td><code>linear</code></td><td>Spinner, 흐르는 띠</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="usage">
+        <h2>Usage</h2>
+        <p>새 내용은 들어오는 방향에서 짧게 움직이며 나타납니다.</p>
+        <div class="fg"><div class="mo-row">
+          <div class="mo-it"><div class="mo-stage"><div class="mo-t mo-fade"></div></div><span class="fg-cap">나타나기<small>0.3초, 아래 10px에서</small></span><button type="button" class="mo-play">재생</button></div>
+          <div class="mo-it"><div class="mo-stage"><div class="mo-t mo-side"></div></div><span class="fg-cap">옆에서 들어오는 패널<small>0.3초, 오른쪽에서</small></span><button type="button" class="mo-play">재생</button></div>
+          <div class="mo-it"><div class="mo-stage"><div class="mo-t mo-ban"><i></i><i></i></div></div><span class="fg-cap">메인 배너 넘김<small>0.8초</small></span><button type="button" class="mo-play">재생</button></div>
+          <div class="mo-it"><div class="mo-stage"><div class="mo-mq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><span class="fg-cap">흐르는 띠<small>일정한 속도로 반복</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>움직임</th><th>시간과 가속</th><th>모양</th></tr></thead>
+          <tbody>
+            <tr><td>상태 변화</td><td>0.15초, 기본</td><td>색, 불투명도, 테두리, 그림자만 바뀜</td></tr>
+            <tr><td>나타나기</td><td>0.3초, <code>ease-in-out</code></td><td>아래 10px에서 올라오며 불투명도 0에서 100%</td></tr>
+            <tr><td>옆에서 들어오는 패널</td><td>0.3초, 들어올 때</td><td>화면 오른쪽 밖에서 제자리로</td></tr>
+            <tr><td>메인 배너 넘김</td><td>0.8초, 배너 넘김</td><td>3초마다 다음 장으로 넘어감</td></tr>
+            <tr><td>진행 막대</td><td>0.3초, 기본</td><td>막대 길이가 늘어남</td></tr>
+            <tr><td>흐르는 띠</td><td>일정한 속도</td><td>제휴사 로고는 50초에 한 바퀴, 글자 띠는 18초 ~ 20초에 한 바퀴</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>사라질 때는 나타난 길을 되돌아갑니다.</b></li>
+          <li>여러 요소를 한꺼번에 움직이지 않습니다. 한 번에 한 가지만 움직입니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="loading">
+        <h2>Loading</h2>
+        <p>기다리는 동안에는 같은 움직임을 일정하게 되풀이합니다. 모양은 <a href="state.html#loading">State</a>의 Loading에 있습니다.</p>
+        <div class="fg"><div class="mo-row">
+          <div class="mo-it"><div class="mo-stage"><div class="mo-sk"><i></i><i></i><i></i></div></div><span class="fg-cap">Skeleton<small>2초에 한 번</small></span></div>
+          <div class="mo-it"><div class="mo-stage"><div class="mo-sp"></div></div><span class="fg-cap">Spinner<small>1초에 한 바퀴</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>시간과 가속</th><th>움직임</th></tr></thead>
+          <tbody>
+            <tr><td>Skeleton</td><td>2초, <code>cubic-bezier(.4, 0, .6, 1)</code>, 반복</td><td>불투명도 100%에서 50%로 갔다가 돌아옴</td></tr>
+            <tr><td>Spinner</td><td>1초, 일정한 속도, 반복</td><td>시계 방향으로 한 바퀴</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="reduced">
+        <h2>Reduced motion</h2>
+        <p>기기에서 움직임 줄이기를 켠 사람에게는 움직임을 줄여서 보여 줍니다.</p>
+        <ul>
+          <li><b>되풀이되는 움직임은 멈춥니다.</b> 흐르는 띠와 자동으로 넘어가는 배너가 해당합니다.</li>
+          <li>위치가 움직이는 것은 불투명도만 바뀌게 합니다.</li>
+          <li>상태 변화처럼 색만 바뀌는 것은 그대로 둡니다.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Last updated <time datetime="2026-11-19">2026.11.19</time></span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=document.querySelectorAll('.comp-section');
+function updateSidebar(){let current='';sections.forEach(s=>{if(s.getBoundingClientRect().top<=200)current=s.id});sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateSidebar,{passive:true});updateSidebar();
+document.querySelectorAll('.mo-play').forEach(b=>b.addEventListener('click',()=>{const t=b.closest('.mo-it').querySelector('.mo-t');t.classList.remove('go');void t.offsetWidth;t.classList.add('go')}));
+</script>
+</body>
+</html>

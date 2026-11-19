@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="ds-updated" content="2026.11.19">
 <title>State | athometrip Design System</title>
-<meta name="description" content="앳홈트립 요소의 Hover, Pressed, Focus, Disabled, Selected 상태 규칙.">
+<meta name="description" content="앳홈트립 요소의 Hover, Pressed, Focus, Disabled, Selected 상태와 Loading, Error 규칙.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="athometrip Design System">
 <meta property="og:title" content="State | athometrip Design System">
-<meta property="og:description" content="앳홈트립 요소의 Hover, Pressed, Focus, Disabled, Selected 상태 규칙.">
+<meta property="og:description" content="앳홈트립 요소의 Hover, Pressed, Focus, Disabled, Selected 상태와 Loading, Error 규칙.">
 <meta property="og:url" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/state.html">
 <meta property="og:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
 <meta property="og:image:width" content="1200">
@@ -71,6 +71,27 @@
 .st-day-w{padding:8px;border-radius:4px;background:#fff}
 .st-in{white-space:nowrap}
 @media(max-width:768px){.st-row{gap:24px 20px}}
+.sk{display:block;border-radius:4px;background:#EBEBEB;animation:sk-pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes sk-pulse{50%{opacity:.5}}
+.sk-grid{display:flex;gap:8px}.sk-card{display:flex;flex-direction:column;gap:8px;width:96px}
+.sk.ph{aspect-ratio:4/5;background:#E5E7EB}.sk.l1{height:12px}.sk.l2{width:60%;height:12px}
+.sp{position:relative;display:flex;align-items:center;justify-content:center;width:80px;height:80px}
+.sp i{position:absolute;inset:0;border:3px solid #fff;border-top-color:#000;border-radius:50%;animation:sp-spin 1s linear infinite}
+@keyframes sp-spin{to{transform:rotate(1turn)}}
+.er-f{width:240px}.er-in{display:flex;align-items:center;height:48px;padding:0 12px;border:1px solid #E5E7EB;border-radius:4px;background:#fff;font-size:14px;color:#000}
+.er-m{display:flex;align-items:center;gap:5px;padding:4px 4px 0;font-size:12px;line-height:16px;color:#DF1D1D}
+.er-b{display:flex;align-items:center;gap:10px;height:48px;padding:0 16px;border-radius:4px;background:#FFE2DF;font-size:14px;line-height:20px;color:#E7301D;white-space:nowrap}
+.er-b svg,.er-m svg{flex-shrink:0}
+.er-p{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:440px;margin:0 auto;padding:40px 24px;border-radius:6px;background:#fff;text-align:center}
+.er-p strong{font-size:20px;line-height:1.4;font-weight:600;color:#1F1F1F}
+.doc .er-p p{font-size:15px;line-height:1.5;color:#5C5C5C;max-width:none}
+.er-p-b{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px}
+.er-p-b span{display:flex;align-items:center;height:48px;padding:0 20px;border:1px solid #E0E0E0;border-radius:8px;font-size:15px;font-weight:600;color:#1F1F1F}
+.er-p-b .k{border-color:#1F1F1F;background:#1F1F1F;color:#fff}
+.fg+.fg{margin-top:12px}
+.ld-t{display:flex;align-items:center;justify-content:center;min-width:152px;min-height:184px;padding:16px;border-radius:6px;background:#fff}
+@media(max-width:768px){.er-b{white-space:normal;height:auto;min-height:48px;padding:8px 16px}.er-f{width:200px}}
+@media(prefers-reduced-motion:reduce){.sk,.sp i{animation:none}}
 </style>
 </head>
 <body>
@@ -78,7 +99,7 @@
 <nav><div class="nav-in">
   <a href="index.html" class="nav-logo"><img src="favicon.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
   <div class="nav-links">
-    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html">Layout</a><a href="state.html" class="on">State</a><a href="writing.html">Writing</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html">Layout</a><a href="state.html" class="on">State</a><a href="motion.html">Motion</a><a href="writing.html">Writing</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
   </div>
 </div></nav>
 
@@ -86,7 +107,7 @@
 
 <main>
 <section><div class="w">
-  <div class="sh" data-r><h1>State</h1><p>누를 수 있는 요소의 상태별 모양.</p></div>
+  <div class="sh" data-r><h1>State</h1><p>누를 수 있는 요소의 상태별 모양, 불러오는 중과 오류 표시.</p></div>
   <div class="comp-layout">
     <aside class="comp-sidebar">
       <div class="comp-sidebar-label">State</div>
@@ -96,6 +117,8 @@
       <a href="#focus">Focus</a>
       <a href="#disabled">Disabled</a>
       <a href="#selected">Selected</a>
+      <a href="#loading">Loading</a>
+      <a href="#error">Error</a>
     </aside>
     <div class="comp-list doc">
 
@@ -214,6 +237,55 @@
             <tr><td>달력 날짜</td><td>글자 #000000</td><td>배경 #000000 원, 글자 #FFFFFF</td></tr>
           </tbody>
         </table></div>
+      </div>
+
+      <div class="comp-section" id="loading">
+        <h2>Loading</h2>
+        <p>내용을 불러오는 동안 화면을 비워 두지 않습니다. 들어올 내용의 모양을 알면 Skeleton을, 모르면 Spinner를 씁니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="ld-t"><div class="sk-grid"><div class="sk-card"><i class="sk ph"></i><i class="sk l1"></i><i class="sk l2"></i></div><div class="sk-card"><i class="sk ph"></i><i class="sk l1"></i><i class="sk l2"></i></div></div></div></div><span class="fg-cap">Skeleton<small>상품 목록</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="ld-t"><div class="sp"><i></i><img src="logo-text.svg" width="64" height="11" alt=""></div></div></div><span class="fg-cap">Spinner<small>주문 내역</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>쓰는 곳</th><th>모양</th></tr></thead>
+          <tbody>
+            <tr><td>Skeleton</td><td>배너, 카테고리, 상품 목록처럼 들어올 모양이 정해진 곳</td><td>회색 블록 #EBEBEB, Radius 4.<br>불투명도 100%와 50% 사이를 2초에 한 번 오감</td></tr>
+            <tr><td>Skeleton (상품 카드)</td><td>상품 목록</td><td>4:5 사진 자리 #E5E7EB와 글 줄. MO 2열 4개, PC 4열 8개</td></tr>
+            <tr><td>Spinner</td><td>주문 내역처럼 한 구역 전체를 기다리는 곳</td><td>원 80(MO), 128(PC). 선 3px 흰색에 한 칸만 검정.<br>1초에 한 바퀴. 가운데 athometrip 로고</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>Skeleton은 실제 내용과 같은 자리, 같은 크기로 둡니다.</b> 내용이 들어올 때 화면이 밀리지 않습니다.</li>
+          <li>Spinner는 높이 400 이상인 구역의 가운데에 둡니다.</li>
+          <li>움직이는 값은 <a href="motion.html#loading">Motion</a>에 있습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="error">
+        <h2>Error</h2>
+        <p>오류는 문제가 생긴 자리 가장 가까이에 알립니다. 빨간 글자에 아이콘을 함께 씁니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="er-f"><div class="er-in">abc</div><div class="er-m"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.9 2.9l8.2 8.2M2.9 11.1l8.2-8.2" stroke="#DF1D1D" stroke-width="2" stroke-linecap="round"/></svg>유효한 이메일을 입력해주세요.</div></div></div><span class="fg-cap">입력 칸 오류<small>칸 바로 아래</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="er-b"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#E7301D"/><path d="M8 8l7.8 7.8M8 15.8L15.8 8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>아이디 또는 패스워드가 잘못 입력되었습니다.</div></div><span class="fg-cap">폼 오류<small>버튼 바로 위</small></span></div>
+        </div></div>
+        <div class="fg"><div class="er-p"><strong>일시적인 오류가 발생했어요</strong><p>잠시 후 다시 시도해주세요. 문제가 계속되면 고객센터로 문의해주세요.</p><div class="er-p-b"><span class="k">새로고침</span><span>다시 시도</span><span>홈으로</span></div></div><span class="fg-cap" style="text-align:center">화면 오류<small>화면 전체</small></span></div>
+        <div class="fg"><div class="er-p"><strong>페이지를 찾을 수 없어요</strong><p>주소가 바뀌었거나 삭제된 페이지예요. 주소를 다시 확인해주세요.</p><div class="er-p-b"><span class="k">홈으로</span><span>이전 페이지</span></div></div><span class="fg-cap" style="text-align:center">페이지 없음 (404)<small>헤더와 푸터 사이</small></span></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>언제</th><th>모양</th></tr></thead>
+          <tbody>
+            <tr><td>입력 칸 오류</td><td>칸 하나의 값이 맞지 않을 때</td><td>칸 아래 4px. 칸 테두리는 그대로.<br>X 아이콘 14와 글자 12/16 #DF1D1D, 사이 5px</td></tr>
+            <tr><td>폼 오류</td><td>보낸 뒤 거절됐거나 어느 칸 문제인지 짚을 수 없을 때</td><td>버튼 위 16px. 높이 48, 배경 #FFE2DF, Radius 4, 안쪽 여백 16.<br>원형 X 아이콘 16과 글자 14/20 #E7301D, 사이 10px</td></tr>
+            <tr><td>화면 오류</td><td>화면을 그릴 수 없을 때</td><td>흰 바탕 가운데 정렬.<br>제목 20 SemiBold #1F1F1F, 설명 15 #5C5C5C, 사이 12px.<br>버튼 높이 48, Radius 8, 사이 8px</td></tr>
+            <tr><td>페이지 없음 (404)</td><td>없는 주소로 들어왔을 때</td><td>화면 오류와 같은 모양. 헤더와 푸터는 그대로 두고 그 사이 가운데에 둠.<br>버튼은 홈으로(검정 채움)와 이전 페이지</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>메시지는 한 번에 하나만 보입니다.</b> 빈 칸이 여러 개면 맨 위 칸부터 알립니다.</li>
+          <li><b>색만으로 알리지 않습니다.</b> 아이콘과 문장을 함께 둡니다.</li>
+          <li>화면 오류에는 새로고침, 다시 시도, 홈으로 버튼을 둡니다. 새로고침만 검정으로 채웁니다.</li>
+          <li><b>막힌 화면에는 나갈 길을 둡니다.</b> 화면 오류와 페이지 없음 모두 홈으로 가는 버튼이 있습니다.</li>
+          <li>문구는 <a href="writing.html#message">Writing</a>의 Error를 따릅니다.</li>
+        </ul>
       </div>
 
     </div>
