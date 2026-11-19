@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State | athometrip Design System</title>
+<meta name="description" content="앳홈트립 요소의 Hover, Pressed, Focus, Disabled, Selected 상태 규칙.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="athometrip Design System">
+<meta property="og:title" content="State | athometrip Design System">
+<meta property="og:description" content="앳홈트립 요소의 Hover, Pressed, Focus, Disabled, Selected 상태 규칙.">
+<meta property="og:url" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/state.html">
+<meta property="og:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<link rel="icon" type="image/svg+xml" href="logo-nav.svg">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+<style>
+.doc .comp-section a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)}
+.doc .comp-section a:hover{text-decoration-color:var(--ink)}
+.fg{margin-top:24px;padding:32px;border-radius:var(--r);background:var(--pv);overflow:hidden}
+.fg+p,.fg+ul,.fg+.ft-wrap{margin-top:24px}
+.doc .ft-wrap+ul{margin-top:24px}
+.doc h3+.fg,.doc h3+.ft-wrap>.ft{margin-top:0}
+.fg-cap{display:block;margin-top:12px;font-size:13px;line-height:20px;font-weight:600;color:var(--ink)}
+.fg-cap small{display:block;font-size:12px;line-height:18px;font-weight:400;color:var(--muted)}
+@media(max-width:768px){.fg{padding:20px 16px}}
+.st-row{display:flex;flex-wrap:wrap;justify-content:center;gap:32px 40px}
+.st-it{display:flex;flex-direction:column;align-items:center;min-width:0}
+.st-it .fg-cap{text-align:center}
+.st-row{align-items:stretch}
+.st-box{flex:1;display:flex;align-items:center;justify-content:center;min-height:56px}
+.st-btn{display:flex;align-items:center;justify-content:center;width:136px;height:48px;border-radius:4px;background:#000;color:#fff;font-size:15px;line-height:24px;font-weight:500}
+.st-btn.p{opacity:.9}.st-btn.d{background:#E0E0E0}.st-btn.d4{opacity:.4}
+.st-btn.f{outline:2px solid #000;outline-offset:2px}
+.st-step{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1.2px solid #E0E0E0;background:#fff}
+.st-step.d{border-color:transparent;background:#F8F8F8}
+.st-step::before{content:"";width:10px;height:1.5px;background:#000}
+.st-step.d::before{background:#C2C2C2}
+.st-nav{display:flex;gap:24px;font-size:16px;line-height:32px;letter-spacing:-.5px;color:#C2C2C2}
+.st-nav b{font-weight:500;color:#000}.st-nav .h{color:#000}
+.st-nav-w{padding:0 20px;border-radius:4px;background:#FAF9F4}
+.st-ph{position:relative;width:132px;height:88px;border-radius:6px;background:#8F846B;overflow:hidden}
+.st-ph.h{opacity:.8}
+.st-ar{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;border:1px solid #fff}
+.st-ar.h{background:rgba(255,255,255,.2)}
+.st-ar::before{content:"";width:9px;height:9px;border-right:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translate(-2px,-2px)}
+.st-dark{padding:16px 24px;border-radius:6px;background:#2F2B22}
+.st-in{display:flex;align-items:center;width:220px;height:48px;padding:0 12px;border:1px solid #DEDEDE;border-radius:4px;background:#fff;font-size:14px;color:#9CA3AF}
+.st-in.f{border-color:#000}.st-in.v{color:#000}
+.st-in.f::after{content:"";width:1px;height:18px;margin-left:1px;background:#000}
+.st-tabs{display:flex;gap:20px;padding:8px 16px 0;border-radius:4px;background:#FAF9F4;font-size:15px;line-height:24px;color:#9E9E9E}
+.st-tabs span{height:32px;border-bottom:2px solid transparent}
+.st-tabs .on{border-color:#000;font-weight:600;color:#000}
+.st-chips{display:flex;gap:6px;font-size:14px;line-height:20px}
+.st-chips span{padding:6px 14px;border:1px solid #E0E0E0;border-radius:41px;color:#9E9E9E}
+.st-chips .on{border-color:#000;border-radius:22px;background:#000;color:#fff;font-weight:500;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.st-chk{display:flex;gap:16px}
+.st-chk i{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border:1.5px solid #E0E0E0;border-radius:2px;background:#fff}
+.st-chk .on{border-color:#000;background:#000}
+.st-chk .on::before{content:"";width:9px;height:5px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;transform:rotate(-45deg) translateY(-1px)}
+.st-day{display:flex;gap:4px;font-size:14px;line-height:20px}
+.st-day span{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:29px;color:#000}
+.st-day .past{color:#C2C2C2}.st-day .today{background:#F3F4F6}.st-day .on{background:#000;color:#fff}
+.st-day-w{padding:8px;border-radius:4px;background:#fff}
+.st-in{white-space:nowrap}
+@media(max-width:768px){.st-row{gap:24px 20px}}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html">Layout</a><a href="state.html" class="on">State</a><a href="writing.html">Writing</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<section><div class="w">
+  <div class="sh" data-r><h1>State</h1><p>누를 수 있는 요소의 상태별 모양.</p></div>
+  <div class="comp-layout">
+    <aside class="comp-sidebar">
+      <div class="comp-sidebar-label">State</div>
+      <a href="#overview">개요</a>
+      <a href="#hover">Hover</a>
+      <a href="#pressed">Pressed</a>
+      <a href="#focus">Focus</a>
+      <a href="#disabled">Disabled</a>
+      <a href="#selected">Selected</a>
+    </aside>
+    <div class="comp-list doc">
+
+      <div class="comp-section" id="overview">
+        <h2>개요</h2>
+        <p>누를 수 있는 요소는 상태에 따라 모양이 바뀝니다. 상태는 <b>기본, Hover, Pressed, Focus, Disabled, Selected</b> 여섯 가지입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>상태</th><th>언제</th><th>바뀌는 것</th></tr></thead>
+          <tbody>
+            <tr><td>기본</td><td>아무 동작도 없을 때</td><td>없음</td></tr>
+            <tr><td>Hover</td><td>PC에서 마우스를 올렸을 때</td><td>글자색 또는 불투명도</td></tr>
+            <tr><td>Pressed</td><td>누르고 있는 동안</td><td>불투명도 90%</td></tr>
+            <tr><td>Focus</td><td>입력 중이거나 키보드로 옮겨 왔을 때</td><td>테두리 또는 바깥 선</td></tr>
+            <tr><td>Disabled</td><td>지금은 누를 수 없을 때</td><td>회색 배경 또는 불투명도 40%</td></tr>
+            <tr><td>Selected</td><td>여러 개 중 고른 것</td><td>검정 글자, 밑줄, 검정 채움</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>바뀌는 속도</b>는 0.15초, <code>cubic-bezier(.4, 0, .2, 1)</code>입니다.</li>
+          <li><b>MO에는 Hover가 없습니다.</b> Hover에서만 보이는 정보나 기능을 만들지 않습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="hover">
+        <h2>Hover</h2>
+        <p>색이나 불투명도만 바뀝니다. 크기와 위치는 바뀌지 않습니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="st-nav-w"><div class="st-nav"><b>뉴욕</b><span class="h">미서부</span><span>칸쿤</span></div></div></div><span class="fg-cap">글자 메뉴<small>미서부에 올린 모습</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-dark"><div class="st-ar h"></div></div></div><span class="fg-cap">사진 위 버튼<small>흰색 20%</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-ph h"></div></div><span class="fg-cap">사진<small>불투명도 80%</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>요소</th><th>기본</th><th>Hover</th></tr></thead>
+          <tbody>
+            <tr><td>헤더 지역 메뉴</td><td>#C2C2C2</td><td>#000000</td></tr>
+            <tr><td>경로 표시 링크</td><td>#9E9E9E</td><td>#5C5C5C</td></tr>
+            <tr><td>배너 위 원형 버튼</td><td>배경 없음, 흰 테두리</td><td>배경 흰색 20%</td></tr>
+            <tr><td>갤러리 사진</td><td>불투명도 100%</td><td>불투명도 80%</td></tr>
+            <tr><td>채워진 버튼, 카드</td><td>변화 없음</td><td>변화 없음</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="pressed">
+        <h2>Pressed</h2>
+        <p>누르는 동안 요소 전체의 불투명도를 90%로 낮춥니다. 색은 바꾸지 않습니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="st-btn">장바구니 담기</div></div><span class="fg-cap">기본</span></div>
+          <div class="st-it"><div class="st-box"><div class="st-btn p">장바구니 담기</div></div><span class="fg-cap">Pressed<small>불투명도 90%</small></span></div>
+        </div></div>
+      </div>
+
+      <div class="comp-section" id="focus">
+        <h2>Focus</h2>
+        <p>입력창은 테두리 색으로, 그 밖의 요소는 바깥 선으로 지금 위치를 알립니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="st-in">프로모션 코드를 입력해 주세요.</div></div><span class="fg-cap">입력창 기본<small>테두리 #DEDEDE</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-in f v">ATHOME</div></div><span class="fg-cap">입력창 Focus<small>테두리 #000000</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-btn f">로그인</div></div><span class="fg-cap">키보드 Focus<small>바깥 선 2, 간격 2</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>요소</th><th>Focus 표시</th></tr></thead>
+          <tbody>
+            <tr><td>입력창 (박스형)</td><td>테두리 1px #DEDEDE에서 #000000으로</td></tr>
+            <tr><td>입력창 (밑줄형)</td><td>아래 테두리 #C2C2C2에서 #111827로</td></tr>
+            <tr><td>버튼, 링크, 칩 (키보드로 옮겨 왔을 때)</td><td>바깥 선 2px #000000, 요소와 2px 띄움</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>바깥 선은 키보드로 옮겨 왔을 때만</b> 보입니다. 마우스나 손가락으로 눌렀을 때는 보이지 않습니다.</li>
+          <li>Focus 표시를 없애지 않습니다. 모양이 어울리지 않으면 위 규칙 안에서 색만 바탕에 맞춥니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="disabled">
+        <h2>Disabled</h2>
+        <p>누를 수 없다는 것만 알립니다. 요소를 숨기지 않고 자리에 둡니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="st-btn d">장바구니 담기</div></div><span class="fg-cap">채워진 버튼<small>배경 #E0E0E0</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-step d"></div></div><span class="fg-cap">수량 버튼<small>배경 #F8F8F8, 테두리 없음</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-btn d4" style="width:120px">다음</div></div><span class="fg-cap">하단 바 버튼<small>불투명도 40%</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>요소</th><th>기본</th><th>Disabled</th></tr></thead>
+          <tbody>
+            <tr><td>채워진 버튼</td><td>배경 #000000, 글자 #FFFFFF</td><td>배경 #E0E0E0, 글자 #FFFFFF</td></tr>
+            <tr><td>원형 수량 버튼</td><td>테두리 1.2px #E0E0E0</td><td>배경 #F8F8F8, 테두리 없음</td></tr>
+            <tr><td>하단 바의 다음 버튼</td><td>불투명도 100%</td><td>불투명도 40%</td></tr>
+            <tr><td>달력의 지난 날</td><td>글자 #000000</td><td>글자 #C2C2C2</td></tr>
+            <tr><td>달력 이전·다음 버튼</td><td>테두리 1px #E0E0E0, 화살표 #000000</td><td>배경 #F8F8F8, 화살표 #E0E0E0</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>필요한 선택이 끝나면 바로 풀립니다.</b> 장바구니 담기는 옵션을 모두 고르면 검정으로 바뀝니다.</li>
+          <li>Disabled 요소는 Hover와 Pressed에서 모양이 바뀌지 않습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="selected">
+        <h2>Selected</h2>
+        <p>고른 것은 검정으로, 고르지 않은 것은 회색으로 둡니다. 색 하나로만 구분하지 않고 굵기나 밑줄, 채움을 함께 바꿉니다.</p>
+        <div class="fg"><div class="st-row">
+          <div class="st-it"><div class="st-box"><div class="st-tabs"><span class="on">상품 정보</span><span>이용 안내</span><span>후기</span></div></div><span class="fg-cap">탭<small>SemiBold + 밑줄 2</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-chips"><span class="on">전체</span><span>친구와</span><span>연인과</span></div></div><span class="fg-cap">칩<small>검정 채움</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-chk"><i class="on"></i><i></i></div></div><span class="fg-cap">체크박스<small>검정 채움 + 흰 체크</small></span></div>
+          <div class="st-it"><div class="st-box"><div class="st-day-w"><div class="st-day"><span class="past">18</span><span class="today">19</span><span class="on">20</span><span>21</span></div></div></div><span class="fg-cap">날짜<small>검정 원</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>요소</th><th>고르지 않은 것</th><th>고른 것</th></tr></thead>
+          <tbody>
+            <tr><td>탭</td><td>Regular #9E9E9E</td><td>SemiBold #000000, 아래 선 2px #000000</td></tr>
+            <tr><td>헤더 지역 메뉴</td><td>Regular #C2C2C2</td><td>Medium #000000</td></tr>
+            <tr><td>칩</td><td>테두리 1px #E0E0E0, 글자 #9E9E9E</td><td>배경 #000000, 글자 #FFFFFF Medium</td></tr>
+            <tr><td>분할 탭</td><td>배경 없음, 글자 #9E9E9E</td><td>배경 #FFFFFF, 글자 #000000 Medium</td></tr>
+            <tr><td>체크박스</td><td>테두리 1.5px #E0E0E0</td><td>배경 #000000, 흰 체크</td></tr>
+            <tr><td>라디오</td><td>테두리 1.5px #E0E0E0</td><td>검정 테두리 6px</td></tr>
+            <tr><td>달력 날짜</td><td>글자 #000000</td><td>배경 #000000 원, 글자 #FFFFFF</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=document.querySelectorAll('.comp-section');
+function updateSidebar(){let current='';sections.forEach(s=>{if(s.getBoundingClientRect().top<=200)current=s.id});sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateSidebar,{passive:true});updateSidebar();
+</script>
+</body>
+</html>

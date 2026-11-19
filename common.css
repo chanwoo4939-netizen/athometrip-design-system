@@ -4,7 +4,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#FAF9F4;--surface:#fff;--ink:#000;--sub:#5C5C5C;--muted:#666666;
-  --line:#F5F3ED;--border:#E0E0E0;--warm:#8F846B;--warm-text:#70664F;--ds-muted:#757575;--ds-thick:#F2F2F2;--warm-light:#EEEBE2;--pv:#EEEBE2;--pv-line:#EEEBE2;
+  --line:#E9E5DA;--border:#E0E0E0;--warm:#8F846B;--warm-text:#70664F;--ds-muted:#757575;--ds-thick:#F2F2F2;--warm-light:#EEEBE2;--pv:#EEEBE2;--pv-line:#EEEBE2;
   --coral:#FB6764;--teal:#0D9488;--red:#E02A28;--blue:#155DFC;
   --w300:#E2DDD1;--w400:#C9C2B1;--w500:#AFA58D;--w700:#6F6551;--w800:#4F4839;--w900:#2F2B22;
   --r:6px;--on-ink:#fff;--on-ink-2:rgba(255,255,255,.75);--on-ink-3:rgba(255,255,255,.5);--shadow-chip:0 2px 8px rgba(0,0,0,.12);--shadow-float:0 4px 12px rgba(0,0,0,.15);
@@ -1386,3 +1386,130 @@ footer{padding:64px 0 40px}
 .lcc-info p{margin:0;font-size:12px;line-height:18px;color:#5C5C5C;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .lcc-promo{display:flex;align-items:center;justify-content:center;gap:4px;height:26px;border-radius:4px;background:#F3F4F6;font-size:12px;font-weight:500;line-height:20px;color:#4B5563}
 .lcc-promo img{width:16px;height:16px}
+
+/* ===== 21차 PC 형태 ===== */
+.chk-pc{gap:8px;font-size:16px;line-height:24px}
+.chk-pc i{width:20px;height:20px}
+.srt-pc .srt-btn{font-size:16px;line-height:24px}
+.srt-pc .srt-btn svg{width:20px;height:20px}
+.srt-pc .srt-menu{top:28px}
+.inf-pc{display:flex;gap:12px;width:auto}
+.inf-pc span{font-size:14px;font-weight:500;line-height:20px;white-space:nowrap}
+.clp-pc{width:600px}
+.clp-pc>b{font-size:16px;line-height:20px}
+.clp-pc .clp-body{height:76px}
+.clp-pc .clp-body p{color:#212121}
+.clp-pc .clp-btn{margin-top:12px}
+.clp-body::after{height:84px}
+.galp{display:grid;grid-template-columns:936px 256px;gap:8px;width:1200px;height:520px;flex-shrink:0;border-radius:6px;overflow:hidden}
+.galp img{display:block;width:100%;height:100%;object-fit:cover}
+.galp-main{position:relative;overflow:hidden}
+.galp-main i{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex}
+.galp-side{display:grid;grid-template-rows:256px 256px;gap:8px}
+.galp-side>span{position:relative;overflow:hidden}
+.pst-item{display:flex;flex-direction:column;min-width:0;text-align:left}
+.pst-txt{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.pst-txt small{font-size:11px;line-height:16px;color:#757575}
+.pst-txt b{font-size:14px;font-weight:600;line-height:20px;color:#000;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pst-txt p{margin:0;font-size:11px;line-height:16px;color:#757575;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pst-grid{gap:24px 8px}
+.pst-grid-pc{grid-template-columns:repeat(4,282px);gap:32px 24px;width:1200px}
+.pst-grid-pc .pst-ev{aspect-ratio:1/1.2}
+.pst-grid-pc .pst em{height:28px;font-size:13px;line-height:24px}
+.pst-grid-pc .pst-txt{margin-top:12px}
+.pst-grid-pc .pst-txt small{font-size:12px}
+.pst-grid-pc .pst-txt b{font-size:16px;line-height:22px}
+.pst-grid-pc .pst-txt p{font-size:14px;line-height:20px}
+.lcc-pc{width:508px;gap:16px;padding:16px}
+.lcc-pc .lcc-top{gap:16px}
+.lcc-pc .lcc-ph{flex-basis:104px;height:104px}
+.lcc-pc .lcc-ph em{height:18px;padding:0 5px;font-size:11px;line-height:11px}
+.lcc-pc .lcc-info{gap:6px}
+.lcc-pc .lcc-tags{gap:6px}
+.lcc-pc .lcc-tag{height:24px;font-size:13px;font-weight:500}
+.lcc-pc .lcc-tag img{width:16px;height:16px}
+.lcc-pc .lcc-info b{font-size:16px;line-height:24px}
+.lcc-pc .lcc-info p{font-size:14px;line-height:20px}
+.lcc-pc .lcc-promo{height:32px;font-size:14px}
+.lcc-pc .lcc-promo img{width:20px;height:20px}
+/* ===== 스펙 (부위별 속성 목록) ===== */
+.cd-spec .sx{margin-top:0}
+.sx{--sx-part:168px;--sx-key:168px;margin-top:20px;font-size:13px;line-height:20px;color:var(--ink)}
+.sx-part{display:grid;grid-template-columns:var(--sx-part) minmax(0,1fr);column-gap:24px}
+.sx-part.sx-head{padding:0 0 10px;border-bottom:1px solid var(--border)}
+.sx-head h4,.sx-head th,.sx-head td{padding-top:0;padding-bottom:0;font-size:12px;font-weight:600;line-height:18px;color:var(--muted)}
+.sx-part{padding:16px 0;border-bottom:1px solid var(--line)}
+.sx-part h4{margin:0;padding:3px 0;font-size:14px;font-weight:600;line-height:20px;color:var(--ink)}
+.sx-part table{width:100%;border-collapse:collapse;table-layout:fixed}
+.sx-part th,.sx-part td{padding:3px 0;vertical-align:top;text-align:left;font-weight:400;word-break:keep-all}
+.sx-part th{width:calc(var(--sx-key) + 24px);padding-right:24px;color:var(--sub)}
+.sx-part td{font-variant-numeric:tabular-nums}
+.sx-part td+td{padding-left:24px}
+.sx-c{display:inline-block;width:12px;height:12px;margin-right:6px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);vertical-align:-1px}
+.sx-note{margin-top:14px;font-size:12px;line-height:18px;color:var(--muted)}
+@media(max-width:768px){
+  .sx{--sx-key:96px}
+  .sx-head h4{display:none}
+  .sx-part{grid-template-columns:minmax(0,1fr);row-gap:6px}
+  .sx-part th{width:calc(var(--sx-key) + 12px);padding-right:12px}
+  .sx-part td+td{padding-left:12px}
+}
+.cd-sec .sx-part h4{margin:0;font-size:14px;font-weight:600;line-height:20px}
+.cd-sec .sx-head h4{font-size:12px;line-height:18px;color:var(--muted)}
+@media(max-width:900px){.comp-sidebar,.comp-sidebar.has-jump{border-top:1px solid var(--line)}}
+/* ===== 속성 섹션 다듬기: 위계, 이름 모양 통일, 설명 위치 ===== */
+.cd-sec h4{margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line);font-size:13px;font-weight:600;line-height:20px;color:var(--muted)}
+.cd-sec h3+h4{margin-top:0}
+.cd-row{grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.cd-row+.cd-row{margin-top:20px}
+.cd-txt{padding-top:8px}
+.cd-txt b{font-size:16px;line-height:24px}
+.cd-txt p{margin-top:6px}
+.cd-row-t{grid-template-columns:160px minmax(0,1fr);gap:28px;align-items:baseline}
+.cd-row-t+.cd-row-t{margin-top:12px}
+.cd-row+.cd-row-t,.cd-row-t+.cd-row{margin-top:20px}
+.cd-row-t>b{padding:0;border-radius:0;background:none;font-size:16px;font-weight:600;line-height:24px;white-space:normal;word-break:keep-all}
+@media(max-width:900px){
+  .cd-row{grid-template-columns:minmax(0,1fr);gap:10px}
+  .cd-row+.cd-row,.cd-row+.cd-row-t,.cd-row-t+.cd-row{margin-top:32px}
+  .cd-row>.cd-txt{order:-1;padding-top:0}
+  .cd-row-t{grid-template-columns:minmax(0,1fr);gap:2px}
+  .cd-row-t+.cd-row-t{margin-top:16px}
+}
+.cd-sec .sx-part h4{padding:3px 0;border:0;color:var(--ink)}
+.cd-sec .sx-head h4{padding:0;color:var(--muted)}
+.cd-sec .sx-head h4{padding-top:3px}
+/* ===== Props (가이드라인 다음, 스펙 앞. 스펙과 같은 펼친 섹션) ===== */
+.cd-props-in{overflow-x:auto}
+.cd-props .props-table th{padding-bottom:10px}
+@media(max-width:768px){.cd-props .props-table{min-width:520px}}
+.cd-props .props-table code{background:var(--warm-light);padding:2px 6px;border-radius:4px}
+/* ===== Guidelines: Do / Don't 한 쌍 (그림 + 아래 색 선 + 연한 색 설명 박스) ===== */
+.cd-dd{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.cd-dd-i{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden}
+.cd-dd-i .cd-fig{flex:1;min-height:200px;align-items:center;padding:32px 24px;border-radius:0}
+.cd-dd-i .cd-fig::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:#0D9488}
+.cd-dont .cd-fig::after{background:#F13B38}
+.cd-dd-i>p{display:flex;gap:8px;align-items:flex-start;margin:0;padding:12px 16px;background:#E6F7F4;font-size:15px;line-height:24px;color:var(--ink);word-break:keep-all}
+.cd-dont>p{background:#FDECEC}
+.cd-dd-ic{flex-shrink:0;margin-top:2px;color:#0D9488}
+.cd-dont .cd-dd-ic{color:#F13B38}
+@media(max-width:768px){.cd-dd{grid-template-columns:minmax(0,1fr);gap:16px}.cd-dd-i .cd-fig{min-height:0}}
+/* ===== Related: 비슷한 컴포넌트 구분 (Props 표와 같은 표 모양) ===== */
+.rel{width:100%;border-collapse:collapse;font-size:14px;line-height:22px}
+.rel thead th{padding:0 0 10px;border-bottom:1px solid var(--border);text-align:left;font-size:12px;font-weight:600;line-height:18px;color:var(--muted)}
+.rel tbody th,.rel tbody td{padding:12px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rel tbody tr:last-child th,.rel tbody tr:last-child td{border-bottom:0}
+.rel tbody th{width:220px;padding-right:24px;font-weight:600;color:var(--ink);white-space:nowrap}
+.rel tbody td{color:var(--sub);word-break:keep-all}
+.rel a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)}
+.rel a:hover{text-decoration-color:var(--ink)}
+.rel .me td{color:var(--ink)}
+.rel th i{margin-left:8px;padding:2px 6px;border-radius:4px;background:var(--warm-light);font-style:normal;font-size:12px;font-weight:500;line-height:16px;color:var(--warm-text);vertical-align:1px}
+@media(max-width:768px){.rel tbody th{width:132px;padding-right:12px;white-space:normal}.rel th i{display:table;margin:4px 0 0}}
+.cd-dd-i>p{color:#0F766E}
+.cd-dont>p{color:#D92D20}
+.cd-props .props-table .type{color:#4B5563}
+.cd-props .props-table .type code{background:#E5E7EB}
+.cd-props .props-table th:nth-child(3),.cd-props .props-table td:nth-child(3){padding-right:20px;white-space:nowrap}
+.cd-dd .sg span{white-space:nowrap}

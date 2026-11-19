@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout | athometrip Design System</title>
+<meta name="description" content="앳홈트립 화면의 브레이크포인트, 내용 폭, 열 구성, 세로 간격, 겹침 순서.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="athometrip Design System">
+<meta property="og:title" content="Layout | athometrip Design System">
+<meta property="og:description" content="앳홈트립 화면의 브레이크포인트, 내용 폭, 열 구성, 세로 간격, 겹침 순서.">
+<meta property="og:url" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/layout.html">
+<meta property="og:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<link rel="icon" type="image/svg+xml" href="logo-nav.svg">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+<style>
+.doc .comp-section a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)}
+.doc .comp-section a:hover{text-decoration-color:var(--ink)}
+.fg{margin-top:24px;padding:32px;border-radius:var(--r);background:var(--pv);overflow:hidden}
+.fg+p,.fg+ul,.fg+.ft-wrap{margin-top:24px}
+.doc .ft-wrap+ul{margin-top:24px}
+.doc h3+.fg,.doc h3+.ft-wrap>.ft{margin-top:0}
+.fg-cap{display:block;margin-top:12px;font-size:13px;line-height:20px;font-weight:600;color:var(--ink)}
+.fg-cap small{display:block;font-size:12px;line-height:18px;font-weight:400;color:var(--muted)}
+@media(max-width:768px){.fg{padding:20px 16px}}
+.lo-frames{display:flex;align-items:flex-end;justify-content:center;gap:40px}
+.lo-f{min-width:0}
+.lo-mo{flex:0 0 112px}.lo-pc{flex:0 1 420px}
+.lo-scr{display:flex;flex-direction:column;background:#FAF9F4;border-radius:4px;overflow:hidden}
+.lo-hd{display:flex;align-items:center;padding:0 8px;font-size:10px;line-height:1;color:#fff;background:#000}
+.lo-mo .lo-hd{height:16px}.lo-pc .lo-hd{height:26px}
+.lo-bd{display:flex;height:150px}
+.lo-m{flex:none;background:repeating-linear-gradient(135deg,rgba(251,103,100,.38) 0 3px,rgba(251,103,100,.12) 3px 6px)}
+.lo-mo .lo-m{width:5px}.lo-pc .lo-m{flex:1 1 0}
+.lo-c{flex:1 1 0;display:flex;flex-direction:column;gap:8px;padding:10px 0;min-width:0}
+.lo-pc .lo-c{flex:0 1 84%}
+.lo-c i{display:block;border-radius:2px;background:#E2DDD1}
+.lo-c i:first-child{height:44px;background:#8F846B}
+.lo-c i:nth-child(2){height:30px}.lo-c i:nth-child(3){flex:1}
+.lo-grid{display:flex;flex-direction:column;gap:14px}
+.lo-row{display:grid;grid-template-columns:104px minmax(0,1fr);align-items:center;gap:16px}
+.lo-row b{font-size:13px;line-height:18px;font-weight:600;color:var(--ink)}
+.lo-row b small{display:block;font-size:12px;font-weight:400;color:var(--muted)}
+.lo-cols{display:grid;gap:2%;height:36px}
+.lo-cols i{border-radius:3px;background:#8F846B}
+.lo-cols.c6{grid-template-columns:repeat(6,1fr)}.lo-cols.c4{grid-template-columns:repeat(4,1fr)}.lo-cols.c3{grid-template-columns:repeat(3,1fr)}.lo-cols.c2{grid-template-columns:repeat(2,1fr)}
+.lo-det{grid-template-columns:60fr 36fr;gap:4%}
+.lo-det i:last-child{background:#FB6764}
+.lo-mos{display:flex;flex-wrap:wrap;justify-content:center;gap:32px}
+.lo-ph{width:150px}
+.lo-ph-s{height:92px;padding:10px 0 10px 6px;border-radius:4px;background:#FAF9F4;overflow:hidden}
+.lo-ph-r{display:flex;gap:3px;height:100%}
+.lo-ph-r i{flex:none;border-radius:3px;background:#8F846B}
+.lo-ph .g3{padding-right:6px}.lo-ph .g3 i{flex:1 1 0}
+.lo-ph .s2 i{width:59px}.lo-ph .s1 i{width:129px}
+.lo-z{display:flex;flex-direction:column;gap:6px;max-width:520px;margin:0 auto}
+.lo-z div{display:flex;align-items:center;justify-content:space-between;gap:12px;height:40px;padding:0 16px;border-radius:4px;background:#FAF9F4;font-size:13px;font-weight:500;color:var(--ink)}
+.lo-z div span{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:400}
+.lo-z .z50{background:#000;color:#fff}.lo-z .z50 span{color:rgba(255,255,255,.7)}
+.lo-z .z30{background:#8F846B;color:#fff;margin:0 16px}.lo-z .z30 span{color:rgba(255,255,255,.8)}
+.lo-z .z20{background:#E2DDD1;margin:0 32px}
+.lo-z .z10{margin:0 48px}
+@media(max-width:768px){
+  .lo-frames{gap:16px}.lo-mo{flex-basis:84px}
+  .lo-row{grid-template-columns:minmax(0,1fr);gap:6px}
+  .lo-z .z30{margin:0 8px}.lo-z .z20{margin:0 16px}.lo-z .z10{margin:0 24px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html" class="on">Layout</a><a href="state.html">State</a><a href="writing.html">Writing</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<section><div class="w">
+  <div class="sh" data-r><h1>Layout</h1><p>브레이크포인트, 내용 폭, 열 구성, 겹침 순서.</p></div>
+  <div class="comp-layout">
+    <aside class="comp-sidebar">
+      <div class="comp-sidebar-label">Layout</div>
+      <a href="#overview">개요</a>
+      <a href="#breakpoint">브레이크포인트</a>
+      <a href="#container">컨테이너</a>
+      <a href="#columns">열 구성</a>
+      <a href="#vertical">세로 간격</a>
+      <a href="#layer">고정 요소와 겹침 순서</a>
+    </aside>
+    <div class="comp-list doc">
+
+      <div class="comp-section" id="overview">
+        <h2>개요</h2>
+        <p>화면은 <b>1024px</b> 하나를 기준으로 MO와 PC 두 가지 구성으로 나뉩니다. MO는 화면 폭을 따라 늘어나고, PC는 1200px 폭 안에 가운데로 놓입니다.</p>
+      </div>
+
+      <div class="comp-section" id="breakpoint">
+        <h2>브레이크포인트</h2>
+        <p>구성이 바뀌는 지점은 한 곳입니다. 태블릿은 MO 구성을 그대로 넓혀 씁니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>구성</th><th>화면 폭</th><th>헤더 높이</th><th>좌우 여백</th><th>내용 폭</th></tr></thead>
+          <tbody>
+            <tr><td>MO</td><td>1023px 이하</td><td>56</td><td>16</td><td>화면 폭 − 32</td></tr>
+            <tr><td>PC</td><td>1024px 이상</td><td>96</td><td>없음 (가운데 정렬)</td><td>최대 1200</td></tr>
+          </tbody>
+        </table></div>
+        <div class="fg">
+          <div class="lo-frames">
+            <div class="lo-f lo-mo"><div class="lo-scr"><div class="lo-hd">56</div><div class="lo-bd"><span class="lo-m"></span><div class="lo-c"><i></i><i></i><i></i></div><span class="lo-m"></span></div></div><span class="fg-cap">MO<small>좌우 16</small></span></div>
+            <div class="lo-f lo-pc"><div class="lo-scr"><div class="lo-hd">96</div><div class="lo-bd"><span class="lo-m"></span><div class="lo-c"><i></i><i></i><i></i></div><span class="lo-m"></span></div></div><span class="fg-cap">PC<small>내용 1200, 남는 폭은 양쪽에 똑같이</small></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-section" id="container">
+        <h2>컨테이너</h2>
+        <p>PC에서 내용을 담는 폭은 화면 종류에 따라 두 가지입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>컨테이너</th><th>폭</th><th>쓰이는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>기본</td><td>1200</td><td>메인 랜딩, 목록, 상단 배너, 이미지 갤러리</td></tr>
+            <tr><td>상세</td><td>1000</td><td>상품 상세 본문. 본문 600 + 간격 40 + 옵션 패널 360</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>상품 상세의 옵션 패널</b>은 스크롤해도 본문 옆에 붙어 따라옵니다.</li>
+          <li><b>MO에서 화면 끝까지 닿는 요소</b>는 상단 배너, 탭 줄, 옆으로 넘기는 카드 줄입니다. 나머지는 좌우 16px 안에 놓습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="columns">
+        <h2>열 구성</h2>
+        <h3>PC</h3>
+        <p>1200px를 카드 수로 나눕니다. 카드 사이는 항상 24px입니다.</p>
+        <div class="fg"><div class="lo-grid">
+          <div class="lo-row"><b>6열<small>카드 180</small></b><div class="lo-cols c6"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="lo-row"><b>4열<small>카드 282</small></b><div class="lo-cols c4"><i></i><i></i><i></i><i></i></div></div>
+          <div class="lo-row"><b>3열<small>카드 384</small></b><div class="lo-cols c3"><i></i><i></i><i></i></div></div>
+          <div class="lo-row"><b>2열<small>카드 588</small></b><div class="lo-cols c2"><i></i><i></i></div></div>
+          <div class="lo-row"><b>상세<small>600 + 360</small></b><div class="lo-cols lo-det"><i></i><i></i></div></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>열 수</th><th>카드 폭</th><th>간격</th><th>쓰이는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>6열</td><td>180</td><td>24</td><td>랭킹 상품</td></tr>
+            <tr><td>4열</td><td>282</td><td>24</td><td>상품 카드 줄, 이벤트, 매거진</td></tr>
+            <tr><td>3열</td><td>384</td><td>24</td><td>큰 상품 카드, 테마 추천</td></tr>
+            <tr><td>2열</td><td>588</td><td>24</td><td>배너 카드</td></tr>
+          </tbody>
+        </table></div>
+        <h3>MO</h3>
+        <p>카드 사이는 8px입니다. 옆으로 넘기는 줄은 다음 카드가 조금 보이게 잘라 더 있다는 것을 알립니다.</p>
+        <div class="fg"><div class="lo-mos">
+          <div class="lo-ph"><div class="lo-ph-s"><div class="lo-ph-r g3"><i></i><i></i><i></i></div></div><span class="fg-cap">3열 고정<small>랭킹 상품</small></span></div>
+          <div class="lo-ph"><div class="lo-ph-s"><div class="lo-ph-r s2"><i></i><i></i><i></i></div></div><span class="fg-cap">2장 + 다음 카드<small>상품 카드 줄</small></span></div>
+          <div class="lo-ph"><div class="lo-ph-s"><div class="lo-ph-r s1"><i></i><i></i></div></div><span class="fg-cap">1장 + 다음 카드<small>큰 상품 카드</small></span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>구성</th><th>카드 폭 (390 화면)</th><th>간격</th><th>쓰이는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>3열 고정</td><td>110</td><td>8</td><td>랭킹 상품</td></tr>
+            <tr><td>2장 + 다음 카드</td><td>153</td><td>8</td><td>상품 카드 줄, 이벤트, 매거진</td></tr>
+            <tr><td>1장 + 다음 카드</td><td>336</td><td>8</td><td>큰 상품 카드, 테마 추천</td></tr>
+            <tr><td>1열</td><td>화면 폭 − 32</td><td>12</td><td>배너 카드</td></tr>
+            <tr><td>5열</td><td>57</td><td>16</td><td>퀵 메뉴. 줄 전체 폭은 최대 480</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="comp-section" id="vertical">
+        <h2>세로 간격</h2>
+        <p>섹션과 섹션 사이는 한 값으로 통일합니다. PC는 MO의 두 배입니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>위치</th><th>MO</th><th>PC</th></tr></thead>
+          <tbody>
+            <tr><td>섹션 사이</td><td>40</td><td>80</td></tr>
+            <tr><td>상단 배너와 첫 섹션 사이</td><td>24</td><td>80</td></tr>
+            <tr><td>마지막 섹션과 푸터 위 영역 사이</td><td>40</td><td>80</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li>섹션 안의 간격은 <a href="tokens.html#spacing">간격 토큰</a>을 따릅니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="layer">
+        <h2>고정 요소와 겹침 순서</h2>
+        <p>스크롤해도 자리를 지키는 요소는 아래 순서로 겹칩니다. 숫자가 클수록 위에 놓입니다.</p>
+        <div class="fg"><div class="lo-z">
+          <div class="z50">어두운 배경, 바텀시트, 헤더<span>50</span></div>
+          <div class="z30">MO 하단 구매 바<span>30</span></div>
+          <div class="z20">콘텐츠 탭<span>20</span></div>
+          <div class="z10">목록 정렬 줄<span>10</span></div>
+          <div>본문<span>0</span></div>
+        </div></div>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>요소</th><th>방식</th><th>위치</th><th>순서</th></tr></thead>
+          <tbody>
+            <tr><td>헤더</td><td>스크롤해도 맨 위에 붙음</td><td>top 0. MO 56, PC 96</td><td>50</td></tr>
+            <tr><td>어두운 배경과 바텀시트</td><td>화면 전체를 덮음</td><td>배경은 검정 50%</td><td>50</td></tr>
+            <tr><td>MO 하단 구매 바</td><td>화면 아래에 고정</td><td>bottom 0, 높이 80. PC에는 없음</td><td>30</td></tr>
+            <tr><td>콘텐츠 탭</td><td>헤더 바로 아래에 붙음</td><td>top MO 56, PC 96</td><td>20</td></tr>
+            <tr><td>목록 정렬 줄</td><td>목록 위에 붙음</td><td>후기 목록의 필터와 정렬</td><td>10</td></tr>
+            <tr><td>PC 옵션 패널</td><td>본문 옆에서 따라옴</td><td>상세 컨테이너 오른쪽 360</td><td>본문과 같음</td></tr>
+          </tbody>
+        </table></div>
+        <ul>
+          <li><b>하단 구매 바가 있는 화면</b>은 본문 맨 아래에 바 높이만큼 여백을 둡니다. 마지막 내용이 바에 가려지지 않게 합니다.</li>
+          <li><b>새 고정 요소</b>는 위 단계 중 하나에 맞춥니다. 사이 값을 새로 만들지 않습니다.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=document.querySelectorAll('.comp-section');
+function updateSidebar(){let current='';sections.forEach(s=>{if(s.getBoundingClientRect().top<=200)current=s.id});sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateSidebar,{passive:true});updateSidebar();
+</script>
+</body>
+</html>

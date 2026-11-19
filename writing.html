@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing | athometrip Design System</title>
+<meta name="description" content="앳홈트립 화면 문구의 말투, 금액, 날짜, 단위, 버튼, 기호 표기 규칙.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="athometrip Design System">
+<meta property="og:title" content="Writing | athometrip Design System">
+<meta property="og:description" content="앳홈트립 화면 문구의 말투, 금액, 날짜, 단위, 버튼, 기호 표기 규칙.">
+<meta property="og:url" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/writing.html">
+<meta property="og:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chanwoo4939-netizen.github.io/athometrip-design-system/og.png">
+<link rel="icon" type="image/svg+xml" href="logo-nav.svg">
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>@font-face{font-family:'Filson Pro';src:local('Filson Pro Bold');font-weight:700;font-display:swap}@font-face{font-family:'Filson Pro';src:local('Filson Pro Medium');font-weight:500;font-display:swap}</style>
+<link rel="stylesheet" href="common.css">
+<style>
+.doc .comp-section a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)}
+.doc .comp-section a:hover{text-decoration-color:var(--ink)}
+.wr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:24px}
+.wr+p,.wr+ul,.wr+.ft-wrap,.wr+h3{margin-top:24px}
+.doc .ft-wrap+ul{margin-top:24px}
+.doc h3+.wr{margin-top:0}
+.wr div{position:relative;padding:14px 20px 14px 48px;border-radius:var(--r);background:#E6F7F4;color:#0F766E}
+.wr div.no{background:#FDECEC;color:#D92D20}
+.wr-ic{position:absolute;left:18px;top:16px;color:#0D9488}
+.wr .no .wr-ic{color:#F13B38}
+.wr p{font-size:15px;line-height:24px;color:inherit;max-width:none}
+.wr p+p{margin-top:4px}
+@media(max-width:600px){.wr{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <a href="index.html" class="nav-logo"><img src="logo-nav.svg" alt="athometrip" style="height:28px"><span>Design System</span></a>
+  <div class="nav-links">
+    <a href="color.html">Color</a><a href="type.html">Typography</a><a href="tokens.html">Tokens</a><a href="icons.html">Icons</a><a href="layout.html">Layout</a><a href="state.html">State</a><a href="writing.html" class="on">Writing</a><i class="nav-sep"></i><a href="components.html">Components</a><a href="patterns.html">Patterns</a>
+  </div>
+</div></nav>
+
+<div class="copy-toast" id="copyToast">복사됨</div>
+
+<main>
+<section><div class="w">
+  <div class="sh" data-r><h1>Writing</h1><p>말투, 금액과 날짜 표기, 버튼과 안내 문구.</p></div>
+  <div class="comp-layout">
+    <aside class="comp-sidebar">
+      <div class="comp-sidebar-label">Writing</div>
+      <a href="#overview">개요</a>
+      <a href="#tone">말투</a>
+      <a href="#price">금액</a>
+      <a href="#date">날짜와 시간</a>
+      <a href="#unit">수량과 단위</a>
+      <a href="#button">버튼과 링크</a>
+      <a href="#message">안내 문구</a>
+      <a href="#english">영문</a>
+      <a href="#symbol">기호</a>
+    </aside>
+    <div class="comp-list doc">
+
+      <div class="comp-section" id="overview">
+        <h2>개요</h2>
+        <p>화면의 글은 <b>짧게, 같은 표기로, 다음에 할 일이 보이게</b> 씁니다. 같은 뜻은 어느 화면에서나 같은 말과 같은 표기로 적습니다.</p>
+      </div>
+
+      <div class="comp-section" id="tone">
+        <h2>말투</h2>
+        <p>고객에게 건네는 글은 <b>해요체</b>로, 규정과 약관은 <b>합니다체</b>로 씁니다. 한 묶음 안에서는 두 말투를 섞지 않습니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>글의 종류</th><th>말투</th><th>예</th></tr></thead>
+          <tbody>
+            <tr><td>안내, 빈 화면, 추천</td><td>해요체</td><td>사용할 수 있는 쿠폰이 아직 없어요</td></tr>
+            <tr><td>요청</td><td>~해 주세요</td><td>프로모션 코드를 입력해 주세요</td></tr>
+            <tr><td>규정, 유의 사항, 약관</td><td>합니다체</td><td>한 주문에 장바구니 쿠폰은 1개만 사용할 수 있습니다.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>친구에게 링크를 공유해 보세요.</p><p>날짜를 선택해 주세요</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>친구에게 링크를 공유하십시오.</p><p>날짜를 선택해주세요</p></div></div>
+        <ul>
+          <li><b>"해 주세요"는 띄어 씁니다.</b> 입력해 주세요, 선택해 주세요, 확인해 주세요.</li>
+          <li>고객을 부를 때는 "회원님"을 씁니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="price">
+        <h2>금액</h2>
+        <p>금액은 모두 달러로 적습니다. 원화로 바꿔 적지 않습니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>규칙</th><th>표기</th></tr></thead>
+          <tbody>
+            <tr><td>기호는 숫자 앞에 붙여 씀</td><td>$62</td></tr>
+            <tr><td>천 단위마다 쉼표</td><td>$1,250</td></tr>
+            <tr><td>센트가 있을 때만 소수점 둘째 자리까지</td><td>$56.06</td></tr>
+            <tr><td>가장 낮은 금액부터 시작할 때</td><td>$47~</td></tr>
+            <tr><td>할인 금액</td><td>$10 SAVE</td></tr>
+            <tr><td>한 사람 기준</td><td>1인당 $10</td></tr>
+            <tr><td>문장 안의 범위</td><td>최대 $94</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>$62</p><p>$1,250</p><p>$10 SAVE</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>$ 62, 62$, 62달러</p><p>$1250</p><p>$10 할인, SAVE $10</p></div></div>
+        <ul>
+          <li><b>정가와 할인가를 함께 적을 때</b>는 두 금액의 소수점 자릿수를 맞춥니다. $52와 $60처럼 적습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="date">
+        <h2>날짜와 시간</h2>
+        <p>숫자로만 적을 때와 문장 안에 넣을 때의 표기가 다릅니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>표기</th><th>쓰이는 곳</th></tr></thead>
+          <tbody>
+            <tr><td>날짜</td><td>2026.08.06</td><td>후기 작성일, 주문일, 사용 기간</td></tr>
+            <tr><td>날짜와 시간</td><td>2026.04.30 13:22</td><td>주문 내역</td></tr>
+            <tr><td>문장 안의 날짜</td><td>2026년 10월 6일</td><td>규정, 안내 문장</td></tr>
+            <tr><td>시간</td><td>09:00, 17:40</td><td>24시간 표기</td></tr>
+            <tr><td>시간 범위</td><td>09:00 - 18:00</td><td>운영 시간. 붙임표 앞뒤로 한 칸</td></tr>
+            <tr><td>요일 범위</td><td>월-토</td><td>붙임표, 띄우지 않음</td></tr>
+            <tr><td>남은 기간</td><td>D-125</td><td>만료, 마감</td></tr>
+            <tr><td>월과 일만</td><td>12/25</td><td>휴무일 목록</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>2026.08.06</p><p>09:00 - 18:00</p><p>만료 D-125</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>2026-08-06, 26.8.6</p><p>오전 9시~오후 6시</p><p>125일 남음</p></div></div>
+        <ul>
+          <li>한 자리 월과 일은 앞에 0을 붙여 두 자리로 맞춥니다.</li>
+          <li>현지 시간으로 적고, 헷갈릴 수 있는 곳에는 "현지 기준"을 덧붙입니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="unit">
+        <h2>수량과 단위</h2>
+        <p>숫자와 단위는 붙여 씁니다. 숫자는 아라비아 숫자로 적습니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>표기</th></tr></thead>
+          <tbody>
+            <tr><td>인원</td><td>4인, 1인당, 최소인원 4인</td></tr>
+            <tr><td>개수</td><td>총 2개, 1개만</td></tr>
+            <tr><td>시간 길이</td><td>3시간, 10~15분, 1박2일</td></tr>
+            <tr><td>글자 수 범위</td><td>8~15자</td></tr>
+            <tr><td>진행 현황</td><td>0 / 2</td></tr>
+            <tr><td>평점과 후기 수</td><td>4.7(144)</td></tr>
+            <tr><td>나이</td><td>만 5세 이상</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>총 2개</p><p>10~15분</p><p>4.7(144)</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>총 두 개, 총 2 개</p><p>10-15분</p><p>4.7점 / 후기 144개</p></div></div>
+        <ul>
+          <li><b>수량의 범위는 물결표(~)</b>로 잇습니다. 시간 범위의 붙임표와 구분합니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="button">
+        <h2>버튼과 링크</h2>
+        <p>버튼은 누르면 일어나는 일을 그대로 적습니다. "~하기" 또는 명사로 끝내고, 마침표를 찍지 않습니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>예</th></tr></thead>
+          <tbody>
+            <tr><td>주요 동작</td><td>장바구니 담기, 픽패스 구매하기, 픽패스 사용하기</td></tr>
+            <tr><td>보조 동작</td><td>혜택 계산하기, 바로 담기, 코드 복사</td></tr>
+            <tr><td>더 보기</td><td>더보기, 자세히 보기, 리뷰 전체보기</td></tr>
+            <tr><td>한 단어</td><td>로그인, 회원가입, 등록, 검색</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>장바구니 담기</p><p>픽패스 구매하기</p><p>자세히 보기</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>장바구니에 담을게요</p><p>지금 바로 픽패스를 구매해 보세요</p><p>여기를 눌러 확인</p></div></div>
+        <ul>
+          <li><b>길이는 2~8자</b>를 기준으로 합니다. 한 줄을 넘기지 않습니다.</li>
+          <li>같은 동작은 어느 화면에서나 같은 말로 적습니다. "담기"와 "추가"를 섞지 않습니다.</li>
+        </ul>
+      </div>
+
+      <div class="comp-section" id="message">
+        <h2>안내 문구</h2>
+        <h3>입력창</h3>
+        <p>입력창 안의 글은 무엇을 넣는지 또는 어떤 형식인지를 적습니다. 마침표는 찍지 않습니다.</p>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>궁금한 키워드를 입력해 보세요</p><p>대문자, 소문자, 숫자 포함 8~15자</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>검색</p><p>비밀번호를 형식에 맞게 입력하세요.</p></div></div>
+        <h3>오류</h3>
+        <p>무엇이 빠졌는지와 무엇을 하면 되는지를 한 문장으로 적습니다. 고객의 잘못으로 말하지 않습니다.</p>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>아이디를 입력해 주세요.</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>잘못된 입력입니다.</p><p>오류가 발생했습니다.</p></div></div>
+        <h3>빈 화면</h3>
+        <p>첫 줄에 지금 상태를, 둘째 줄에 다음에 할 수 있는 일을 적습니다.</p>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>사용할 수 있는 쿠폰이 아직 없어요</p><p>이벤트 및 혜택 참여 후 쿠폰을 받아보세요</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>쿠폰 없음</p><p>데이터가 없습니다.</p></div></div>
+      </div>
+
+      <div class="comp-section" id="english">
+        <h2>영문</h2>
+        <p>영문은 뱃지와 브랜드 이름에만 씁니다. 메뉴와 버튼, 안내는 한글로 적습니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>종류</th><th>표기</th></tr></thead>
+          <tbody>
+            <tr><td>뱃지</td><td>BEST, HOT, ONLY, SAVE, EVENT. 모두 대문자</td></tr>
+            <tr><td>픽패스의 단위</td><td>PICK. 1 PICK당 $27</td></tr>
+            <tr><td>서비스 이름</td><td>픽패스, 앳홈 라운지, 앳홈 로컬쿠폰, 앳홈스테이. 한글로</td></tr>
+            <tr><td>줄임말</td><td>FAQ, Q&amp;A, ID</td></tr>
+            <tr><td>상품의 영문 이름</td><td>Brooklyn Sunset Snap+Walking Tour. 단어 첫 글자만 대문자</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>BEST</p><p>픽패스</p><p>1 PICK</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>Best, best</p><p>PICK PASS, Pickpass</p><p>1픽, 1 pick</p></div></div>
+      </div>
+
+      <div class="comp-section" id="symbol">
+        <h2>기호</h2>
+        <p>기호는 쓰임마다 하나로 정해 씁니다.</p>
+        <div class="ft-wrap"><table class="ft">
+          <thead><tr><th>기호</th><th>쓰임</th><th>예</th></tr></thead>
+          <tbody>
+            <tr><td>가운뎃점 ·</td><td>같은 무게의 말을 나열</td><td>주말·공휴일, 취소·환불, 마케팅·제휴</td></tr>
+            <tr><td>빗금 /</td><td>둘 중 하나, 또는 같은 묶음</td><td>유심/이심, 라운지/바</td></tr>
+            <tr><td>물결표 ~</td><td>수량의 범위, 시작 금액</td><td>10~15분, $47~</td></tr>
+            <tr><td>붙임표 -</td><td>시간과 요일의 범위, 남은 기간</td><td>09:00 - 18:00, 월-토, D-125</td></tr>
+            <tr><td>꺾쇠 &gt;</td><td>메뉴 경로</td><td>마이페이지 &gt; 내 여행</td></tr>
+            <tr><td>샵 #</td><td>검색 키워드</td><td>#픽패스, #전망대</td></tr>
+            <tr><td>괄호 ( )</td><td>덧붙이는 정보, 개수</td><td>리뷰 전체보기 (190)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="wr"><div><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-label="권장"><circle cx="10" cy="10" r="6.5"/></svg><p>취소·환불</p><p>마이페이지 &gt; 내 여행</p></div><div class="no"><svg class="wr-ic" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-label="피하기"><path d="M4.5 4.5l11 11M15.5 4.5l-11 11"/></svg><p>취소/환불, 취소, 환불</p><p>마이페이지에서 내 여행으로 이동</p></div></div>
+        <ul>
+          <li><b>가운뎃점은 앞뒤를 띄우지 않습니다.</b></li>
+          <li><b>이모지는 쓰지 않습니다.</b> 그림이 필요하면 <a href="icons.html">아이콘</a>을 씁니다.</li>
+          <li>제목, 버튼, 라벨, 빈 화면 문구에는 마침표를 찍지 않습니다. 두 문장 이상 이어지는 본문과 규정에는 찍습니다.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="w"><div class="ft-in">
+  <a href="index.html" class="ft-brand"><img src="logo-text.svg" width="90" height="15" alt="athometrip"><span>Design System</span></a>
+  <div class="ft-nav"><a href="https://www.athometrip.com/newyork" target="_blank" rel="noopener">뉴욕</a><a href="https://www.athometrip.com/us-west" target="_blank" rel="noopener">미서부</a><a href="https://www.athometrip.com/cancun" target="_blank" rel="noopener">칸쿤</a><a href="https://www.athometrip.com/hawaii" target="_blank" rel="noopener">하와이</a></div>
+  <span class="ft-by">Designed by Chanwoo Jun</span>
+</div></div></footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script src="common.js"></script>
+<script>
+const sidebarLinks=document.querySelectorAll('.comp-sidebar a');
+const sections=document.querySelectorAll('.comp-section');
+function updateSidebar(){let current='';sections.forEach(s=>{if(s.getBoundingClientRect().top<=200)current=s.id});sidebarLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+current))}
+window.addEventListener('scroll',updateSidebar,{passive:true});updateSidebar();
+</script>
+</body>
+</html>
