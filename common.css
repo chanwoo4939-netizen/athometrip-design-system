@@ -1121,7 +1121,7 @@ footer{padding:64px 0 40px}
 /* 모바일: 페이지 안 메뉴(칩, 컴포넌트 선택)를 헤더 아래에 붙여 둠 */
 @media(max-width:900px){
   .comp-layout{display:block}
-  .comp-sidebar,.comp-sidebar.has-jump{position:sticky;top:53px;z-index:50;flex-wrap:nowrap;overflow-x:auto;max-height:none;margin:0 -40px 24px;padding:10px 40px;background:var(--bg);border-bottom:1px solid var(--line)}
+  .comp-sidebar,.comp-sidebar.has-jump{position:sticky;top:52px;z-index:50;flex-wrap:nowrap;overflow-x:auto;max-height:none;margin:0 -40px 24px;padding:10px 40px;background:var(--bg);border-bottom:1px solid var(--line)}
   .comp-sidebar a{flex-shrink:0;white-space:nowrap}
   html{scroll-padding-top:120px}
 }
