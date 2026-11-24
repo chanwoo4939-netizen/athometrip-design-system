@@ -149,6 +149,9 @@ window.dsDocEnd=(function(){
     fit();
     sb.classList.toggle('more-up',wide.matches&&sb.scrollTop>4);
     sb.classList.toggle('more-down',wide.matches&&sb.scrollTop+sb.clientHeight<sb.scrollHeight-4);
+    // 모바일 가로 탭: 넘친 쪽만 흐리게
+    sb.classList.toggle('more-left',!wide.matches&&sb.scrollLeft>4);
+    sb.classList.toggle('more-right',!wide.matches&&sb.scrollLeft+sb.clientWidth<sb.scrollWidth-4);
   }
   function reveal(){
     const a=sb.querySelector('a.on');if(!a||!wide.matches){edges();return}
